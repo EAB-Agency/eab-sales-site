@@ -11,7 +11,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-
+console.log(posts)
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
@@ -44,7 +44,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+  allContentfulBlogPost(sort: { fields: [publishDate], order: DESC } filter: {node_locale: {eq: "en-US"}}) {
       edges {
         node {
           title

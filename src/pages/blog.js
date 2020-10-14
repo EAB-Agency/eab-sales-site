@@ -43,7 +43,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+  allContentfulBlogPost(sort: { fields: [publishDate], order: DESC } filter: {node_locale: {eq: "en-US"}}) {
       edges {
         node {
           title
