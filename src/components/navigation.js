@@ -13,7 +13,7 @@ export default () => (
       </li>
 
       <li className={styles.navigationItem}>
-        <Link to="/funding/">Funding</Link>
+        <Link to="/financial-aid/">Financial Aid</Link>
       </li>
       <li className={styles.navigationItem}>
         <Link to="/adminssions/">Admissions</Link>

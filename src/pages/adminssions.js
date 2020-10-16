@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 
-class FundingIndex extends React.Component {
+class AdmissionsIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
 
@@ -18,4 +18,4 @@ class FundingIndex extends React.Component {
   }
 }
 
-export default FundingIndex
+export default AdmissionsIndex
