@@ -2,10 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import Hero from '../components/hero'
 import Layout from '../components/layout'
-import ArticlePreview from '../components/article-preview'
-import { Button, Stack, Box, Columns } from '../components/'
+// import { Button, Stack, Box, Columns } from '../components/'
 
 class RootIndex extends React.Component {
   render() {
@@ -54,29 +52,6 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    allContentfulBlogPost(
-      sort: { fields: [publishDate], order: DESC }
-      filter: { node_locale: { eq: "en-US" } }
-    ) {
-      edges {
-        node {
-          title
-          slug
-          publishDate(formatString: "MMMM Do, YYYY")
-          tags
-          heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-          description {
-            childMarkdownRemark {
-              html
-            }
-          }
-        }
       }
     }
     allContentfulPerson(
