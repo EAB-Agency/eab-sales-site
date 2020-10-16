@@ -1,13 +1,11 @@
 {
-  "name": "Contentful Gatsby Starter",
-  "description": "Gatsby starter for a Contentful project.",
+  "name": "EAB Sales",
+  "description": "EAB Sales of TET Products.",
   "keywords": [
-    "contentful",
-    "gatsby",
-    "static",
-    "ssg"
+    "EAB",
+    "TET",
+    "Youvisit"
   ],
-  "repository": "https://github.com/contentful-userland/gatsby-contentful-starter",
   "success_url": "/",
   "buildpacks": [
     {
