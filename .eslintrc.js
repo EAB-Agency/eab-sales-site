@@ -5,7 +5,11 @@ module.exports = {
   },
   "plugins": [
     "react",
+    "prettier",
   ],
+  "rules": {
+    "prettier/prettier": "error"
+  },
   "globals": {
     "graphql": false,
   },

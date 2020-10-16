@@ -5,30 +5,42 @@ import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import { Button, Stack, Box, Columns } from '../components/'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-console.log(posts)
     return (
       <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
-          <Hero data={author.node} />
+        <div>
+          <Helmet />
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+            <h2 className="section-headline">Home</h2>
           </div>
+
+          {/* <Button
+            variant="solid"
+            color="primary"
+            size="small"
+            enableElevation
+            // disabled
+          >
+            Small Outline Elevated Button
+          </Button>
+          <Box padding="small" paddingTop="medium" paddingBottom="medium">
+            Simple Box Component
+          </Box>
+          <Stack space="small">
+            <Box marginTop="medium"> Item 1</Box>
+            <Box> Item 2</Box>
+            <Box> Item 3</Box>
+          </Stack>
+          <Columns space="small">
+            <Box> Item 1</Box>
+            <Box> Item 2</Box>
+            <Box> Item 3</Box>
+          </Columns> */}
         </div>
       </Layout>
     )
@@ -44,7 +56,10 @@ export const pageQuery = graphql`
         title
       }
     }
-  allContentfulBlogPost(sort: { fields: [publishDate], order: DESC } filter: {node_locale: {eq: "en-US"}}) {
+    allContentfulBlogPost(
+      sort: { fields: [publishDate], order: DESC }
+      filter: { node_locale: { eq: "en-US" } }
+    ) {
       edges {
         node {
           title
