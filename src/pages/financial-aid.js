@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../components/hero'
+import get from 'lodash/get'
 import Layout from '../components/layout'
 
 class FinancialAid extends React.Component {
