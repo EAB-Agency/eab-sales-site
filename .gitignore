@@ -1,3 +1,7 @@
+# OS Crap
+.DS_Store
+nohup.out
+
 # Logs
 logs
 *.log
