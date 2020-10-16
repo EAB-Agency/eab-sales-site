@@ -5,11 +5,13 @@
 Setting up development environtment for running Gatsby
 
 
-## `yarn run dev`
+### Installing Gatsby
 
-Run in the project locally.
+[Start here to install gatsby](https://www.gatsbyjs.com/tutorial/part-zero/) and then run the following to clone this repo to your computer
 
-[Start here](https://www.gatsbyjs.com/tutorial/part-zero/)
+### `gatsby new eab-sales https://github.com/EAB-Sales/eab-sales-site`
+
+'Install' this project locally. `cd eab-sales-site` and then `gatsby develop` to start the development server.
 
 
 ## Crucial Commands
