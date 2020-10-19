@@ -4,7 +4,7 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Button, Stack, Box, Columns } from '../components/'
+import { Button, Box, Columns } from '../components/'
 
 const NewsIndex = ({ data }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -43,7 +43,9 @@ const NewsIndex = ({ data }) => {
             opportunities. The center also will contain space to house student
             businesses, a student maker space and technology-infused classrooms.
           </p>
-          <button>Follow Our Progress</button>
+          <Button variant="solid" color="primary">
+            Follow Our Progress
+          </Button>
           <div style={{ height: '500px' }}>
             <a
               alt="Launch Experience"
@@ -66,7 +68,12 @@ const NewsIndex = ({ data }) => {
             Campaign for CoA today.
           </p>
         </article>
-        <button>Learn about the Campaign</button> <button>Make a Gift</button>
+        <Button variant="solid" color="secondary">
+          Learn about the Campaign
+        </Button>
+        <Button variant="solid" color="tertiary">
+          Make a Gift
+        </Button>
         <section>
           <Columns space="small">
             <Box>

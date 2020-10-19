@@ -27,10 +27,14 @@ export default () => (
         <Link to="/news/">News</Link>
       </li>
       <li className={styles.navigationItem}>
-        <Button>Apply Now</Button>
+        <Button variant="solid" color="primary">
+          Apply Now
+        </Button>
       </li>
       <li className={styles.navigationItem}>
-        <Button>Request Info</Button>
+        <Button variant="solid" color="primary">
+          Request Info
+        </Button>
       </li>
     </ul>
   </nav>

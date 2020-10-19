@@ -13,6 +13,16 @@ const palette = {
     light: '#146DD6',
     contrastText: white,
   },
+  secondary: {
+    main: '#004647',
+    light: '#185F61',
+    contrastText: white,
+  },
+  tertiary: {
+    main: '#996E00',
+    light: '#B98F23',
+    contrastText: white,
+  },
   error: {
     main: '#A51C30',
     light: '#A7333F',
@@ -38,7 +48,7 @@ const typography = {
 }
 
 const shape = {
-  borderRadius: spacing['xxsmall'],
+  borderRadius: spacing['0'],
 }
 
 export const theme = {

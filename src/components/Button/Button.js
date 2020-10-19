@@ -124,7 +124,7 @@ const StyledButton = ({
   }
 }
 
-const IGNORED_PROPS = ['color']
+const IGNORED_PROPS = []
 
 const buttonConfig = {
   shouldForwardProp: (prop) =>
