@@ -21,6 +21,9 @@ export default () => (
       <li className={styles.navigationItem}>
         <Link to="/student-life/">Student Life</Link>
       </li>
+      <li className={styles.navigationItem}>
+        <Link to="/news/">News</Link>
+      </li>
     </ul>
   </nav>
 )
