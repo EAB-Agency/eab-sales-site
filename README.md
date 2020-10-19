@@ -9,7 +9,7 @@ Setting up development environtment for running Gatsby
 
 [Start here to install gatsby](https://www.gatsbyjs.com/tutorial/part-zero/) and then run the following to clone this repo to your computer
 
-### `gatsby new eab-sales https://github.com/EAB-Sales/eab-sales-site`
+### `git clone git@github.com:EAB-Sales/eab-sales-site.git`
 
 'Install' this project locally. `cd eab-sales-site` and then `gatsby develop` to start the development server.
 
