@@ -47,8 +47,7 @@ class NewsIndex extends React.Component {
             <div style={{ height: '500px' }}>
               <a
                 alt="Launch Experience"
-                href="https://www.youvisit.com/tour/whitney.pratt/143200?command=3"
-                className="virtualtour_embed"
+                href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
               >
                 Launch Experience
               </a>

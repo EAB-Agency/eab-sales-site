@@ -10,11 +10,9 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
       <Layout location={this.props.location}>
-        <div>
           <Helmet title={siteTitle} />
           <div className="wrapper">
             <h2 className="section-headline">Home</h2>
-          </div>
 
           {/* <Button
             variant="solid"
@@ -38,6 +36,76 @@ class RootIndex extends React.Component {
             <Box> Item 2</Box>
             <Box> Item 3</Box>
           </Columns> */}
+
+          <div style={{ height: '500px' }}>
+            <h3>Construction Site</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+            >
+              Launch Experience
+            </a>
+          </div>
+
+          <div style={{ height: '500px' }}>
+            <h3>Residence Hall</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143201&"
+            >
+              Launch Experience
+            </a>
+          </div>
+
+          <div style={{ height: '500px' }}>
+            <h3>VR Anatomy Lab</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&"
+            >
+              Launch Experience
+            </a>
+          </div>
+
+          <div style={{ height: '500px' }}>
+            <h3>Megan Bursch</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143203&"
+            >
+              Launch Experience
+            </a>
+          </div>
+
+          <div style={{ height: '500px' }}>
+            <h3>Admissions Ambassadors</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143204&"
+            >
+              Launch Experience
+            </a>
+          </div>
+
+          <div style={{ height: '500px' }}>
+            <h3>Dining Hall</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143215&"
+            >
+              Launch Experience
+            </a>
+          </div>
+
+          <div style={{ height: '500px' }}>
+            <h3>Rec Center</h3>
+            <a
+              alt="Launch Experience"
+              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143216&"
+            >
+              Launch Experience
+            </a>
+          </div>
         </div>
       </Layout>
     )
