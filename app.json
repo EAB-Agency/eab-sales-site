@@ -1,0 +1,18 @@
+{
+  "name": "EAB Sales",
+  "description": "EAB Sales of TET Products.",
+  "keywords": [
+    "EAB",
+    "TET",
+    "Youvisit"
+  ],
+  "success_url": "/",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-static"
+    }
+  ]
+}
