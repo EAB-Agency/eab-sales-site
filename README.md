@@ -11,7 +11,7 @@ Setting up development environtment for running Gatsby
 
 ### `git clone git@github.com:EAB-Sales/eab-sales-site.git`
 
-'Install' this project locally. `cd eab-sales-site` and then `gatsby develop` to start the development server.
+'Install' this project locally. `cd eab-sales-site` and then run `npm install` and then you'll be ready to start developing with `gatsby develop` to start the development server.
 
 
 ## Crucial Commands
