@@ -68,13 +68,13 @@ module.exports = {
       },
     },
 
-    {
-      resolve: 'gatsby-plugin-load-script',
-      options: {
-        src: 'https://www.youvisit.com/tour/Embed/js3',
-        crossorigin: 'anonymous',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-load-script',
+    //   options: {
+    //     src: 'https://www.youvisit.com/tour/Embed/js3',
+    //     crossorigin: 'anonymous',
+    //   },
+    // },
 
     {
       resolve: 'gatsby-plugin-google-tagmanager',
