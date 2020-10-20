@@ -2,10 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Layout from '../components/layout'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import IWC from '../components/iwc'
 
 const NewsIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -43,14 +44,12 @@ const NewsIndex = ({ data, location, pageContext }) => {
           <Button variant="solid" color="primary">
             Follow Our Progress
           </Button>
-          <div style={{ height: '500px' }}>
-            <a
-              alt="Launch Experience"
-              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
-            >
-              Launch Experience
-            </a>
-          </div>
+          <IWC
+            height="500px"
+            title="Ground Breaking Construction"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+          />
+
           <p>
             Built through a public-private partnership, the $42 million project
             is being funded through a combination of tax-exempt bonds and

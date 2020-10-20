@@ -58,14 +58,11 @@ class RootIndex extends React.Component {
           </div>
 
           <h3>VR Anatomy Lab</h3>
-          <div style={{ height: '500px' }}>
-            <a
-              alt="Launch Experience"
-              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&"
-            >
-              Launch Experience
-            </a>
-          </div>
+          <IWC
+            height="490px"
+            title="Anotomy Lab"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&"
+          />
 
           <h3>Megan Bursch</h3>
           <IWC
