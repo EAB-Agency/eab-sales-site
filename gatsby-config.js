@@ -46,6 +46,29 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
+      resolve: `gatsby-plugin-breadcrumb`,
+      options: {
+        useAutoGen: true,
+        // autoGenHomeLabel: optional 'Home' is default
+        autoGenHomeLabel: `University Home`,
+
+        defaultCrumb: {
+          location: {
+            pathname: '/',
+          },
+          crumbLabel: 'University Home',
+          crumbSeparator: ' / ',
+        },
+        crumbLabelUpdates: [
+          {
+            pathname: '/undergraduate-admissions',
+            crumbLabel: 'Undergraduate Admissions',
+          },
+        ],
+      },
+    },
+
+    {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: gtmId,

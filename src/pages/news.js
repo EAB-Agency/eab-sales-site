@@ -5,23 +5,20 @@ import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Button, Box, Columns } from '../components/'
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
-const NewsIndex = ({ data }) => {
+const NewsIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+  const {
+    breadcrumb: { crumbs },
+  } = pageContext
 
   return (
     <Layout>
       <Helmet title={siteTitle} />
       <div className="wrapper">
         <h2 className="section-headline">News &amp; Events</h2>
-        <ol className="breadcrumbs">
-          <li>
-            <Link to="/">University Home</Link>
-          </li>
-          <li>
-            <Link to="/news">News &amp; Events</Link>
-          </li>
-        </ol>
+        <Breadcrumb crumbs={crumbs} crumbLabel="News &amp; Events" />
         <article>
           <h1>Construction begins on residence hall</h1>
           <p>

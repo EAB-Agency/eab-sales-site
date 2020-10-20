@@ -3,7 +3,6 @@ import { Link } from 'gatsby'
 import styles from './navigation.module.css'
 import { Button } from '../components/'
 
-
 export default () => (
   <nav role="navigation">
     <ul className={styles.navigation}>
@@ -11,14 +10,14 @@ export default () => (
         <Link to="/">Home</Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/programs/">Programs</Link>
+        <Link to="/academics/programs/assistant/">Programs</Link>
       </li>
 
       <li className={styles.navigationItem}>
         <Link to="/financial-aid/">Financial Aid</Link>
       </li>
       <li className={styles.navigationItem}>
-        <Link to="/adminssions/">Admissions</Link>
+        <Link to="/undergraduate-admissions/admissions/">Admissions</Link>
       </li>
       <li className={styles.navigationItem}>
         <Link to="/student-life/">Student Life</Link>
