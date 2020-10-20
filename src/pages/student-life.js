@@ -6,6 +6,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import IWC from '../components/iwc'
 
 const StudentLifeIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -67,34 +68,25 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
         </aside>
         <section className="iwc-breakout">
           <h3>Residence Life</h3>
-          <div style={{ height: '455px' }}>
-            <a
-              alt="Launch Experience"
-              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
-            >
-              Launch Experience
-            </a>
-          </div>
+          <IWC
+            height="455px"
+            title="See Resident Life"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+          />
           <Columns>
             <Box>
-              <div style={{ height: '373px' }}>
-                <a
-                  alt="Launch Experience"
-                  href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143215&"
-                >
-                  Launch Experience
-                </a>
-              </div>
+              <IWC
+                height="373px"
+                title="Dining Hall"
+                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143215&"
+              />
             </Box>
             <Box>
-              <div style={{ height: '373px' }}>
-                <a
-                  alt="Launch Experience"
-                  href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143216&"
-                >
-                  Launch Experience
-                </a>
-              </div>
+              <IWC
+                height="373px"
+                title="Rec Center"
+                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143216&"
+              />
             </Box>
           </Columns>
         </section>
