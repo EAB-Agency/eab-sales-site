@@ -4,19 +4,14 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import IWC from '../components/iwc'
-import { appendScript } from '../utils/appendScript'
 
 class RootIndex extends React.Component {
-  componentDidMount() {
-    appendScript('https://www.youvisit.com/tour/Embed/js3')
-  }
-
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
       <Layout location={this.props.location}>
         <Helmet title={siteTitle}>
-          {/* <script src="https://www.youvisit.com/tour/Embed/js3" /> */}
+          <script src="https://www.youvisit.com/tour/Embed/js3" />
         </Helmet>
 
         <div className="wrapper">
