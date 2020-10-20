@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
-// import { Button, Stack, Box, Columns } from '../components/'
+import IWC from '../components/iwc'
 
 class RootIndex extends React.Component {
   render() {
@@ -68,24 +68,17 @@ class RootIndex extends React.Component {
           </div>
 
           <h3>Megan Bursch</h3>
-          <div style={{ height: '500px' }}>
-            <a
-              alt="Launch Experience"
-              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143203&"
-            >
-              Launch Experience
-            </a>
-          </div>
+          <IWC
+            height="564px"
+            title="Megan Bursch"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143203&"
+          />
 
           <h3>Admissions Ambassadors</h3>
-          <div style={{ height: '500px' }}>
-            <a
-              alt="Launch Experience"
-              href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143204&"
-            >
-              Launch Experience
-            </a>
-          </div>
+          <IWC
+            title="Admissions Ambassadors"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143204&"
+          />
 
           <h3>Dining Hall</h3>
           <div style={{ height: '500px' }}>

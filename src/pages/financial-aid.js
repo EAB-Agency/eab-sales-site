@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Video from '../components/video'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button, Box, Columns } from '../components'
+import IWC from '../components/iwc'
 
 const FinancialAidIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -111,7 +112,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 that allows you to complete the FAFSA on your phone.
               </p>
               <Video
-                videoSrcURL="https://www.youtube.com/watch?v=Y8nfk5ApcQ4&ab_channel=fafsamadeeasy"
+                videoSrcURL="https://www.youtube.com/embed/Y8nfk5ApcQ4"
                 videoTitle="Free Application For Federal Student Aid"
               />
               <h4>How to Fill out Your FAFSA</h4>
@@ -126,6 +127,102 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
             </Box>
             <Box>
               <h3>State Aid</h3>
+              <p>
+                In-state applicants may be eligible for special grants and
+                scholarships. To qualify, you or your parent/guardian (if you
+                are a dependent) must be a resident for 12 consecutive months
+                prior to the first day of classes for the academic year for
+                which state aid funds are being requested. Certain exceptions
+                apply, so we encourage you to review CoA’s State Aid Application
+                for more details.
+              </p>
+              <Button variant="outline" color="primary">
+                CoA’s State Aid Application
+              </Button>
+              <h4>Explore Florida Scholarship and Grant Programs</h4>
+              <p>
+                Merit- and need-based opportunities are available for residents.
+              </p>
+              <ul>
+                <li>
+                  <a href="#">Bright Futures Scholarship Program</a>
+                </li>
+                <li>
+                  <a href="#">Benacquisto Scholarship Program</a>
+                </li>
+                <li>
+                  <a href="#">
+                    EASE: Effective Access to Student Education Grant
+                  </a>
+                </li>
+                <li>
+                  <a href="#">SAG: Student Assistance Grant</a>
+                </li>
+              </ul>
+              <Button variant="outline" color="primary">
+                More Aid Opportunities
+              </Button>
+            </Box>
+          </Columns>
+        </section>
+        <section>
+          <Columns>
+            <Box>
+              <h4>Scholarships</h4>
+              <p>
+                Scholarships are one of the best ways to pay for your college
+                education. They don’t cost you anything, you don’t have to pay
+                them back and some are considered prestigious honors that you
+                can reference on your resume. College of America offers both
+                need- and merit-based scholarships, and our friendly staff is
+                available to help you find private scholarships to supplement
+                your financial aid package if needed.
+              </p>
+              <Button variant="solid" color="grey">
+                Find a Scholarship
+              </Button>
+
+              <h4>Student Employment</h4>
+              <p>
+                Are you ready to get more than a paycheck while earning your
+                degree? CoA provides assistance to students who are looking for
+                employment opportunities they can balance with their school
+                responsibilities. Students can participate in either need-based
+                employment programs, such as Federal Work-Study, or
+                non-need-based programs, such as the Student Employment Program
+                (on campus) and the Job Location and Development Program (off
+                campus).
+              </p>
+              <Button variant="solid" color="grey">
+                Job Opportunities
+              </Button>
+
+              <h4>Tuition Calculator</h4>
+              <p>
+                Using your own financial information, estimate how much your
+                degree from CoA could cost. It could be much less than you
+                think!
+              </p>
+              <p>
+                Before getting started, you may want to collect any information
+                about your family’s income over the past year, your FAFSA
+                documents and any scholarships you may have received.
+              </p>
+              <Button variant="solid" color="grey">
+                Calculate Your Costs
+              </Button>
+            </Box>
+            <Box>
+              <h3>Student Success</h3>
+              <IWC
+                height="564px"
+                title="Megan Bursch"
+                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143203&"
+              />
+              <h4>
+                Megan Bursch, 2nd Place Winner in NACAC’s First Video
+                Scholarship Contest
+              </h4>
             </Box>
           </Columns>
         </section>
