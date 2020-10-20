@@ -1,12 +1,22 @@
 import React, { Component } from 'react'
+
 class IWC extends Component {
-  componentDidMount() {
-    const script = document.createElement('script')
-    script.src = 'https://www.youvisit.com/tour/Embed/js3'
-    script.async = true
-    // this.instance.appendChild(script)
-    // document.getElementsByTagName('body').appendChild(script)
+  constructor(props) {
+    super(props)
+    this.jsSource = 'https://www.youvisit.com/tour/Embed/js3'
   }
+  loadScript() {
+    // load podigee player scripts when the component was mounted
+    const script = document.createElement('script')
+    script.src = this.jsSource
+    script.async = true
+    document.body.appendChild(script)
+  }
+
+  componentDidMount() {
+    this.loadScript()
+  }
+
   render() {
     return (
       <div className="iwc" style={{ height: this.props.height || '500px' }}>
@@ -17,4 +27,5 @@ class IWC extends Component {
     )
   }
 }
+
 export default IWC
