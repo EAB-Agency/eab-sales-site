@@ -10,9 +10,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
       <Layout location={this.props.location}>
-        <Helmet title={siteTitle}>
-          <script src="https://www.youvisit.com/tour/Embed/js3" />
-        </Helmet>
+        <Helmet title={siteTitle}></Helmet>
 
         <div className="wrapper">
           <h2 className="section-headline">Home</h2>

@@ -15,7 +15,9 @@ const ProgramsIndex = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={siteTitle} />
+      <Helmet title={siteTitle}>
+        <script src="https://www.youvisit.com/tour/Embed/js3" />
+      </Helmet>
       <div className="wrapper">
         <h2 className="section-headline">Academic Programs</h2>
         <Breadcrumb crumbs={crumbs} crumbLabel="Physician assistant" />
