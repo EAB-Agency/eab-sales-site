@@ -226,6 +226,39 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
             </Box>
           </Columns>
         </section>
+        <section>
+          <h3>Premier Program Scholarships</h3>
+          <Columns>
+            <Box>
+              <h4>Full Tuition*</h4>
+              <p>
+                <b>Presidential Scholars</b>
+                <br />
+                (*Up to Full Tuition, by Invitation Only)
+              </p>
+            </Box>
+            <Box>
+              <h4>$23,000*</h4>
+              <p>
+                <b>American Excellence Scholarship</b>
+                <br />
+                (Tuition + Roomand Board)
+              </p>
+            </Box>
+            <Box>
+              <h4>$19,000</h4>
+              <p>
+                <b>The Teaching Academy Scholarship</b>
+              </p>
+            </Box>
+            <Box>
+              <h4>$19,000</h4>
+              <p>
+                <b>Business Innovation Academy Scholarship</b>
+              </p>
+            </Box>
+          </Columns>
+        </section>
       </div>
     </Layout>
   )

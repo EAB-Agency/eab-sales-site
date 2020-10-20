@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from '../components'
 
 const PreFooter = () => {
   return (
@@ -13,7 +14,9 @@ const PreFooter = () => {
       <p>
         <b>Explore campus and see yourself at CoA:</b>
       </p>
-      <button>Take a Virtual Tour</button>
+      <Button variant="solid" color="grey">
+        Take a Virtual Tour
+      </Button>
     </section>
   )
 }
