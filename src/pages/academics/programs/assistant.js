@@ -209,7 +209,7 @@ const ProgramsIndex = ({ data, location, pageContext }) => {
           <p>
             *While CoA has instituted a test-optional policy for the 2021-22
             admission cycle, Dual Admission applicants must still submit
-            official SAT or ACT scores. Learn more >
+            official SAT or ACT scores. Learn more
           </p>
           <p>
             **Anatomy and Physiology, and Living Environment may be substituted
@@ -278,7 +278,6 @@ const ProgramsIndex = ({ data, location, pageContext }) => {
 }
 
 export default ProgramsIndex
-
 
 export const squareImage = graphql`
   fragment squareImage on File {
