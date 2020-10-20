@@ -17,7 +17,6 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
   return (
     <Layout>
       <Helmet title={siteTitle}>
-        <script src="https://www.youvisit.com/tour/Embed/js3" />
       </Helmet>
       <div className="wrapper">
         <h2 className="section-headline">Student Life</h2>
