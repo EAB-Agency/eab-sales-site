@@ -32,6 +32,11 @@ const { gtmId } = gtmConfig
 module.exports = {
   siteMetadata: {
     title: 'College of America',
+    titleTemplate: '%s · The Real College',
+    description:
+      'Hogwarts Potions master, Head of Slytherin house and former Death Eater.',
+    url: 'https://www.collegeofamerica.com', // No trailing slash allowed!
+    image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
   },
   plugins: [
     'gatsby-plugin-react-helmet',

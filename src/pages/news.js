@@ -7,6 +7,7 @@ import Img from 'gatsby-image'
 import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
+import SEO from '../components/seo'
 
 const NewsIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -16,8 +17,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
 
   return (
     <Layout>
-      <Helmet title={siteTitle}>
-      </Helmet>
+      <SEO />
       <div className="wrapper">
         <h2 className="section-headline">News &amp; Events</h2>
         <Breadcrumb crumbs={crumbs} crumbLabel="News &amp; Events" />

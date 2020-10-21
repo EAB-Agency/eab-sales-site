@@ -6,6 +6,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button, Box, Columns } from '../../../components'
 import IWC from '../../../components/iwc'
 import Img from 'gatsby-image'
+import SEO from '../../../components/seo'
 
 const ProgramsIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -15,8 +16,7 @@ const ProgramsIndex = ({ data, location, pageContext }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title={siteTitle}>
-      </Helmet>
+      <SEO />
       <div className="wrapper">
         <h2 className="section-headline">Academic Programs</h2>
         <Breadcrumb crumbs={crumbs} crumbLabel="Physician assistant" />

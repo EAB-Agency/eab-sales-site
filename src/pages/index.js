@@ -4,14 +4,14 @@ import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import Layout from '../components/layout'
 import IWC from '../components/iwc'
+import SEO from '../components/seo'
 
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     return (
       <Layout location={this.props.location}>
-        <Helmet title={siteTitle}>
-        </Helmet>
+        <SEO />
 
         <div className="wrapper">
           <h2 className="section-headline">Home</h2>

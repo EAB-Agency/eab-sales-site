@@ -6,6 +6,7 @@ import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Button, Box, Columns } from '../../components'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
+import SEO from '../../components/seo'
 
 const AdmissionsIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -14,9 +15,8 @@ const AdmissionsIndex = ({ data, location, pageContext }) => {
   } = pageContext
 
   return (
-    <Layout location={location}>
-      <Helmet title={siteTitle}>
-      </Helmet>
+    <Layout>
+      <SEO />
       <div className="wrapper">
         <h2 className="section-headline">Undergrad Admissions</h2>
         <Breadcrumb crumbs={crumbs} crumbLabel="Freshman Applicants" />
