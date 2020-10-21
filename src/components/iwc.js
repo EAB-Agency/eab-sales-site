@@ -6,7 +6,7 @@ class IWC extends Component {
     this.YVSource = 'https://www.youvisit.com/tour/Embed/js3'
   }
   onScriptLoad() {
-    // global.YVScript.scanEmbeds()
+    window.YVScript.scanEmbeds()
   }
 
   componentDidMount() {
@@ -15,12 +15,12 @@ class IWC extends Component {
       s.type = 'text/javascript'
       s.src = this.YVSource
       s.async = true
-      // var x = document.getElementsByTagName('script')[0]
-      document.body.appendChild(s)
-      // x.parentNode.insertBefore(s, x)
-      // s.addEventListener('load', (e) => {
-      this.onScriptLoad()
-      // })
+      var x = document.getElementsByTagName('script')[0]
+      // document.body.appendChild(s)
+      x.parentNode.insertBefore(s, x)
+      s.addEventListener('load', (e) => {
+        this.onScriptLoad()
+      })
     } else {
       this.onScriptLoad()
     }

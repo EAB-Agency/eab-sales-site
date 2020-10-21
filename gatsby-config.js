@@ -41,6 +41,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://www.youvisit.com/tour/Embed/js3',
+        // crossorigin: 'anonymous',
+        // onLoad: `() => Sentry.init({dsn:"${process.env.SENTRY_DSN}"})`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

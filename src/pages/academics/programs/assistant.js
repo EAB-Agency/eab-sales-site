@@ -1,6 +1,6 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
+import { graphql } from 'gatsby'
 import Layout from '../../../components/layout'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button, Box, Columns } from '../../../components'
