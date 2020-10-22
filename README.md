@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/EAB-Sales/eab-sales-site.svg?branch=main)](https://travis-ci.com/EAB-Sales/eab-sales-site)
+
 # EAB Sales Demo Site
 
 ## Getting started
