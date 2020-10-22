@@ -11,7 +11,7 @@ const TestIndex = ({ data, location, pageContext }) => {
           height="200px"
           width="200px"
           title="Ground Breaking Construction"
-          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-hover-height=70%&data-hover-width=90%&data-image-height=100%&data-image-width=100%&data-ims-hide-panels=1&data-loc=143200&"
         />
       </section>
       <section>
@@ -20,7 +20,7 @@ const TestIndex = ({ data, location, pageContext }) => {
           height="100px"
           width="100%"
           title="Ground Breaking Construction"
-          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-hover-height=70%&data-hover-width=90%&data-image-height=100%&data-image-width=100%&data-ims-hide-panels=1&data-loc=143200&"
         />
       </section>
     </Container>

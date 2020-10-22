@@ -14,7 +14,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO title="Funding Your Education" />
 
       {/*CONTENT HEADER*/}
       <header className="content-header">

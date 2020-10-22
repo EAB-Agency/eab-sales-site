@@ -34,7 +34,7 @@ module.exports = {
     title: 'College of America',
     titleTemplate: '%s · The Real College',
     description:
-      'Hogwarts Potions master, Head of Slytherin house and former Death Eater.',
+      'Founded in 1492, %s is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
     url: 'https://www.collegeofamerica.com', // No trailing slash allowed!
     image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
   },
@@ -87,7 +87,7 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-sass",
+    'gatsby-plugin-sass',
     // {
     //   resolve: 'gatsby-source-contentful',
     //   options: contentfulConfig,

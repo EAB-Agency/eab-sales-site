@@ -33,7 +33,15 @@ class IWC extends Component {
         className="iwc"
         style={{ height: this.props.height, width: this.props.width }}
       >
-        <a alt={this.props.title || 'Launch Experience'} href={this.props.url}>
+        <a
+          alt={this.props.title || 'Launch Experience'}
+          href={this.props.url}
+          data-hover-height="70%"
+          data-hover-width="90%"
+          data-image-height="100%"
+          data-image-width="100%"
+          data-ims-hide-panels="1"
+        >
           {this.props.title || 'Launch Experience'}
         </a>
       </div>
