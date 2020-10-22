@@ -3,12 +3,12 @@
 // Settings (fonts, colors, breakpoints, variables, etc)
 // ============================
 
-
 // ===========================
 // FONTS
 // ===========================
+// using gatsby-config.js to bring in google fonts
 // @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap');
 
 // @include fontFace("eab-sales-icons", "eab-sales-icons", normal, normal);
 
@@ -28,34 +28,33 @@ $f-copyblocks: $f-sans;
 // ICONS
 // ===========================
 
-$i-arrow: "\e900";
-$i-box: "\e902";
-$i-checkmark: "\e903";
-$i-calendar: "\e904";
-$i-certificate: "\e905";
-$i-classroom: "\e906";
-$i-facebook: "\e907";
-$i-finsup: "\e908";
-$i-linkedin: "\e909";
-$i-moneyman: "\e90a";
-$i-photos: "\e90b";
-$i-truck: "\e90c";
-$i-twitter: "\e90d";
-$i-youtube: "\e90e";  
-
+$i-arrow: '\e900';
+$i-box: '\e902';
+$i-checkmark: '\e903';
+$i-calendar: '\e904';
+$i-certificate: '\e905';
+$i-classroom: '\e906';
+$i-facebook: '\e907';
+$i-finsup: '\e908';
+$i-linkedin: '\e909';
+$i-moneyman: '\e90a';
+$i-photos: '\e90b';
+$i-truck: '\e90c';
+$i-twitter: '\e90d';
+$i-youtube: '\e90e';
 
 // ===========================
 // COLORS
 // ===========================
 
-$c-blue: #0032A0;
-$c-purple:#45296B;
-$c-green:#004647;
-$c-red:#731F14;
-$c-yellow: #996E00;
-$c-darkgrey: #2C2A22;
-$c-mediumgrey: #77756E;
-$c-lightblue2: #4A9EFF;
+$c-blue: #0032a0;
+$c-purple: #45296b;
+$c-green: #004647;
+$c-red: #731f14;
+$c-yellow: #996e00;
+$c-darkgrey: #2c2a22;
+$c-mediumgrey: #77756e;
+$c-lightblue2: #4a9eff;
 
 // Social colors
 $c-facebook: #3b5998;
