@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from '../components/container'
 import IWC from '../components/iwc'
-import Layout from '../components/layout'
 
 const TestIndex = ({ data, location, pageContext }) => {
   return (
