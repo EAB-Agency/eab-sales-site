@@ -252,8 +252,8 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           <h3>We are with you from the very beginning.</h3>
           <IWC
             height="500px"
-            title="Ground Breaking Construction"
-            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+            title="Admissions Ambassadors"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143204&"
           />
         </div>
       </section>
