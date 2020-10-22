@@ -39,6 +39,13 @@ module.exports = {
     image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/fonts/`,
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-load-script',
@@ -80,6 +87,11 @@ module.exports = {
         ],
       },
     },
+    "gatsby-plugin-sass",
+    // {
+    //   resolve: 'gatsby-source-contentful',
+    //   options: contentfulConfig,
+    // },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {

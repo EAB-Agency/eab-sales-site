@@ -1,0 +1,354 @@
+  ///////////////////
+//MIXINS
+///////////////////
+
+////////////
+//Transitions
+////////////
+@mixin single-transition($property: $default-transition-property, $duration: $default-transition-duration, $function: $default-transition-function, $delay: $default-transition-delay) {
+  @include transition(compact($property $duration $function $delay));
+}
+
+///////////////
+//Animations
+//////////////
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+
+//////////////////////////////////////////////////////
+// Buttons
+//////////////////////////////////////////////////////
+
+
+
+@mixin buttons ($primary-color: black, $text-color: white, $border-color: $primary-color, $icon-color: white){ 
+  display: block;
+  width: 70%;
+  position:relative;
+  background: $primary-color ;
+  color: $text-color;
+  text-decoration: none;
+  padding: 0.85em 1.1em 0.85em 1.1em;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: $f-sans;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $border-color;
+  margin: 0.5em auto;
+  line-height: 1;
+  transition: all 0.2s;
+  cursor: pointer;
+  outline: none;
+
+  @media(min-width: $mq-600){
+    display: inline-block;
+    width: auto;
+  }
+
+
+  &:hover,
+  &:focus{
+    cursor: pointer;
+    background: darken($primary-color, 15%);
+    color: $text-color ;
+
+    // &::after{
+    //   color: $icon-color !important;
+    // }
+  }
+
+}
+
+
+@mixin arrownav($icon-color){
+  &::after{
+    content: $i-arrow;
+    font-family: $f-icons;
+    color: $icon-color !important;
+    position: absolute;
+    right: 0.8em;
+    top: 50%;
+    @include transform(translateY(-50%));
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 0;
+    transition: all 0.2s;
+  }
+}
+
+
+////////////////////////////
+// CIRCLES
+////////////////////////////
+@mixin makeCircle($csize:1em, $cbg:$black){
+  width: $csize;
+  height: $csize;
+  border-radius: 100%;
+  background: $cbg;
+}
+
+////////////////////////////
+//TRIANGLES
+///////////////////////
+@mixin makeTriangle($direction:left, $mainaxis:1em, $baseaxis:2em, $tcolor:$black){
+
+  $finalbaseaxis: $baseaxis/2;
+
+  @if $direction==up{
+    border-right: $finalbaseaxis solid transparent;
+    border-left: $finalbaseaxis solid transparent;
+    border-bottom: $mainaxis solid $tcolor;
+  } @else if $direction==down{
+    border-right: $finalbaseaxis solid transparent;
+    border-left: $finalbaseaxis solid transparent;
+    border-top: $mainaxis solid $tcolor;
+  } @else if $direction==left{
+    border-top: $finalbaseaxis solid transparent;
+    border-bottom: $finalbaseaxis solid transparent;
+    border-left: $mainaxis solid $tcolor;
+  } @else if $direction==right{
+    border-top: $finalbaseaxis solid transparent;
+    border-bottom: $finalbaseaxis solid transparent;
+    border-right: $mainaxis solid $tcolor;
+  }
+}
+
+
+////////////////////////////
+// NEW MIXINS
+////////////////////////////
+
+// ===========================
+// @font-face Declaration
+// ===========================
+$x-fontFix:0;
+@mixin fontFace($_p-file-name, $_f-font-family:$_file-name, $_f-font-weight:normal, $_f-font-style:normal){
+
+  //
+  // Chrome font fix
+  ////
+  // If the font fix styles haven't been applied yet, write styles
+  @if ($x-fontFix == 0) {
+    $x-fontFix:1;
+    body {
+      -webkit-animation-delay: 0.1s;
+      -webkit-animation-name: fontfix;
+      -webkit-animation-duration: 0.1s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: linear; 
+    }
+    @-webkit-keyframes fontfix { from { opacity: 1; } to { opacity: 1; } }
+  }
+
+  @font-face {
+    font-family: '#{$_f-font-family}';
+    src: font-url('#{$_p-file-name}.woff')  format('woff'), 
+      font-url('#{$_p-file-name}.ttf') format('truetype');
+    font-weight: $_f-font-weight;
+    font-style: $_f-font-style;
+  }
+}
+
+// ================
+// Fluid Sizes
+
+@mixin fluidRem($_x-prop, $_d-minRem, $_d-maxRem, $_important: 0, $_mq-min: $mq-300, $_mq-max: $mq-1200) {
+
+////// Description:
+  // - mixin to fluidly scale a property from a minimum to a maximum size, within a range of viewport sizes
+  // - don't use this mixin on the <html> element; this can cause unexpected side effects
+  ////
+
+////// @param $_d-minRem
+  // - the smallest size that the property should be
+  // - must be a REM value
+  // - REQUIRED parameter
+  ////
+
+////// @param $_d-maxRem
+  // - the largest size that the property should be
+  // - must be a REM value
+  // - REQUIRED parameter
+  ////
+
+////// @param $_mq-min
+  // - the viewport size at which the property should begin growing
+  // - must be a REM value
+  ////
+
+////// @param $_mq-max
+  // - the viewport size at which the property should stop growing
+  // - must be a REM value
+  ////
+
+  $_d-mid: "";
+  $_importantx: "";
+
+  @for $_x-i from 1 through length($_d-maxRem) {
+    $_d-iMin: nth($_d-minRem, $_x-i);
+    $_d-iMax: nth($_d-maxRem, $_x-i);
+
+    @if $_d-iMin == 0 {
+      $_d-iMin: 0rem;
+    }
+
+    @if $_d-iMax == 0 {
+      $_d-iMax: 0rem;
+    }
+
+    $_d-iMid: calc(#{$_d-iMin} + #{($_d-iMax - $_d-iMin) / 1rem} *
+      ((100vw - #{$_mq-min}) / #{($_mq-max - $_mq-min) / 1rem}));
+
+    @if ($_x-i > 1) {
+      $_d-mid: $_d-mid + " ";
+    }
+
+    $_d-mid: $_d-mid + $_d-iMid;
+  }
+
+  @if ($_important == 1) {
+
+     #{$_x-prop}: #{$_d-minRem} !important;
+
+      @media (min-width: #{$_mq-min}) {
+        #{$_x-prop}: #{$_d-mid} !important;
+      }
+
+      @media (min-width: #{$_mq-max}) {
+        #{$_x-prop}: #{$_d-maxRem} !important;
+      }  
+  }@else{
+     #{$_x-prop}: #{$_d-minRem};
+
+      @media (min-width: #{$_mq-min}) {
+        #{$_x-prop}: #{$_d-mid};
+      }
+
+      @media (min-width: #{$_mq-max}) {
+        #{$_x-prop}: #{$_d-maxRem};
+      }  
+  }
+
+  
+}
+
+// =============================================================
+// Slick Buttons
+
+@mixin slickNavBtns($mainSlickColor){
+  .slick-slider{
+    position: relative;
+
+    .slick-arrow{
+      display: none !important  ;
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      padding: 0;
+      text-indent: -999em;
+      background: transparent !important;
+      border: none !important;
+      z-index: 100;
+      top: 50%;
+      @include transform(translateY(-50%));
+
+      &::before{
+        content: $i-arrow;
+        font-family: $f-icons;
+        display: block;
+        color: rgba($mainSlickColor, 0.6);
+        text-indent: 0;
+        font-size: 2em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translateY(-50%) translateX(-50%));
+      }
+
+      @media(min-width: $mq-900){
+        display: block !important;
+      }
+
+      &:hover{
+        &::before{
+          color: $mainSlickColor;
+        }
+      }
+
+
+    }
+    .slick-prev{
+      left: 1em;
+      &::before{
+        @include transform(translateY(-50%) translateX(-50%) rotate(180deg));
+      }
+    }
+    .slick-next{
+      right: 1em;
+    }
+    .slick-dots{
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      @include transform(translateX(-50%));
+      @include flexbox();
+
+      li{
+        margin-right: 0.3em;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
+        button{
+          text-indent: -999em;
+          border-radius: 100% !important;
+          width: 1em !important;
+          height: 1em !important;
+          padding: 0 !important;
+          border: 1px solid $mainSlickColor !important;
+          background: rgba($mainSlickColor, 0.5) !important;
+        }
+
+        &.slick-active{
+          button{
+            background: $mainSlickColor !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+/////////////////
+//HEAD
+/////////////////
+
+// @include keyframes(stickyheader){
+// 	0% {background: rgba($c-blue, 0);}
+// 	100% {background: rgba($c-blue, 1);}
+// }
+
+.site-header{	
+	// position: fixed;
+	// top: 0;
+	// @include animation(stickyheader 0.2s ease forwards);
+	
+	
+	// @media screen and (-webkit-min-device-pixel-ratio:0) {
+	// 	position: -webkit-sticky;
+	// 	position: sticky;
+	// }
+
+	// &.sticked{
+	// 	// position: -webkit-sticky;
+	// 	// position: sticky;
+	// 	// position: fixed;
+	// 	// top: 0;
+	// 	@include animation(stickyheader 0.2s ease forwards);
+	// 	// box-shadow: 0 0.1em 0em rgba(black, 0);
+	// 	transition: all 0.2s;
+		
+		
+	// }
+
+	// @media(max-width: $nav-breakpoint) {
+	// 	height: 4em;
+	// 	transition: height 0.2s;
+	// }
+
+	&.sticked-shadow{
+		transition: box-shadow 0.2s;
+
+		@media(max-width: $nav-breakpoint) {
+			height: 3.2em;
+			transition: height 0.2s;
+		}
+
+		.site-branding-nav {
+			// margin: 0.3em auto;
+		}
+	}
+
+
+	
+}
+
+.site-branding-nav{
+	display: block;
+	width:100%;
+	max-width: $mq-1300;
+	margin: 0.5em auto;
+	@include flexbox();
+	@include flex-direction(column);
+	position: relative;
+
+	// ============================
+	// Toggled styles when Nav Hamburguer clicked.
+	&.toggled{
+
+		@media(max-width: $nav-breakpoint){
+			// background: white;
+		}
+
+		.site-branding{
+			// margin-bottom: 0.3em;
+			padding-bottom: 2em;
+			background: $c-blue;
+			position: relative;
+
+			&::after{
+				content: "";
+				display: block;
+				width: 100%;
+				border-top: 1px solid $c-red;
+				position: absolute;
+				bottom: 1em;
+			}
+		}
+	}
+
+	@media(min-width: $nav-breakpoint){
+		@include flex-direction(row);
+		@include align-items(center);
+		@include justify-content(space-between);
+	}
+}
+
+.site-content{
+	// margin-top: 5em !important;
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		// margin-top: 1em !important;
+	}
+}

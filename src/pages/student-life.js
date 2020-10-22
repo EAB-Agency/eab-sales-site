@@ -7,6 +7,7 @@ import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
+import AltNav from '../components/alternate-navigation'
 
 const StudentLifeIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -14,213 +15,129 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext
 
-  return (
-    <Layout>
-      <SEO />
-      <div className="wrapper">
-        <h2 className="section-headline">Student Life</h2>
-        <Breadcrumb crumbs={crumbs} crumbLabel="Student Life" />
-        <h1>Living On Campus</h1>
-        <p>
-          On-campus living is a huge part of the college experience. You’ll meet
-          new people from all over the world, and you’ll make lasting
-          friendships that will define your life.
-        </p>
-        <p>
-          Plus, when you live on campus, everything is convenient. Walk over to
-          a friend's place to hang out. Stop by the library to get some work
-          done. Attend an athletic event right outside your room. Go to
-          Starbucks at midnight for a study break. Participate in a variety of
-          club and organizational events in the halls.
-        </p>
-        <p>
-          You don’t have to worry about paying utility bills or shopping for
-          groceries. That’s more time you can spend in the rec center or soaking
-          in the culture downtown.
-        </p>
-        <p>
-          Keep reading to explore where you could live, eat and play as a CoA
-          student. You’ll see why we call this “the good life.”
-        </p>
-        <aside>
-          <ul>
-            <li>
-              <Button variant="solid" color="primary">
-                Campus Housing
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Clubs &amp; Associations
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Athletics
-              </Button>
-            </li>
-            <li>
-              <Button variant="outline" color="primary">
-                Take a Virtual Tour
-              </Button>
-            </li>
-          </ul>
-        </aside>
-        <section className="iwc-breakout">
-          <h3>Residence Life</h3>
-          <IWC
-            height="455px"
-            title="See Resident Life"
-            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
-          />
-          <Columns>
-            <Box>
-              <IWC
-                height="373px"
-                title="Dining Hall"
-                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143215&"
-              />
-            </Box>
-            <Box>
-              <IWC
-                height="373px"
-                title="Rec Center"
-                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143216&"
-              />
-            </Box>
-          </Columns>
-        </section>
-        <section>
-          <Columns space="small">
-            <Box>
-              <h4>Top 100</h4>
-              <p>Best College Campuses in America (niche.com)</p>
-            </Box>
-            <Box>
-              <h4>120+</h4>
-              <p>Clubs and Organizations</p>
-            </Box>
-            <Box>
-              <h4>99%</h4>
-              <p>Students Participate in Campus Activities</p>
-            </Box>
-            <Box>
-              <h4>17</h4>
-              <p>NCAA DII Athletic Teams</p>
-            </Box>
-          </Columns>
+    return (
+      <Layout location={this.props.location}>
+        <Helmet title={siteTitle} />
+        {/*CONTENT HEADER*/}
+        <header className="content-header">
+          <div className="hero-image">
+            <img src="news-events-hero.jpg" />
+          </div>
+          <div className="page-title-container">
+            <h2 className="page-title">Student Life</h2>
+            <div className="breadcrumb"><p>Univertisy Home / Student Life</p></div>
+          </div>
+        </header>
+
+        {/*PAGE DESCRIPTION*/}
+        <section className="page-description wrapper cols">
+          <div className="col-70">
+            <h3>Living On Campus</h3>
+            <p>On-campus living is a huge part of the college experience. You’ll meet new people from all over the world, and you’ll make lasting friendships that will define your life. </p>
+            <p>Plus, when you live on campus, everything is convenient. Walk over to a friend's place to hang out. Stop by the library to get some work done. Attend an athletic event right outside your room. Go to Starbucks at midnight for a study break. Participate in a variety of club and organizational events in the halls. </p>
+            <p>You don’t have to worry about paying utility bills or shopping for groceries. That’s more time you can spend in the rec center or soaking in the culture downtown.</p>
+            <p>Keep reading to explore where you could live, eat and play as a CoA student. You’ll see why we call this “the good life.”</p>
+          </div>
+          <div className="col-30 alternate-navigation">
+            <AltNav />
+          </div>
         </section>
 
-        <section>
-          <Columns space="small">
-            <Box>
-              <h4>Events</h4>
-              <p>There’s something going on every day of the week at CoA.</p>
-              <Button variant="outline" color="grey">
-                See What’s Happening
-              </Button>
-            </Box>
-            <Box>
-              <h4>CoA Traditions</h4>
-              <p>
-                Every year, there are a handful of big events students enjoy.
-              </p>
-              <Button variant="outline" color="grey">
-                Discover CoA Traditions
-              </Button>
-            </Box>
-            <Box>
-              <h4>Secret Handshake</h4>
-              <p>Get a head start on showing your CoA pride with this move.</p>
-              <Button variant="outline" color="grey">
-                Learn the CoA Clap
-              </Button>
-            </Box>
-          </Columns>
+        {/*IWC*/}
+        <section className="iwc dark-grey-section">
+          <div className="wrapper">
+            <h3>Residence Life</h3>
+          </div>
         </section>
-        <section>
-          <Columns>
-            <Box>
-              <h5>
-                Get ready for your first big CoA tradition: Move-In Weekend
-              </h5>
-              <Columns>
-                <Box>
-                  After you unpack, come explore the welcome booths all over
-                  campus. And in the evening, rock out at our annual welcome
-                  show!
-                </Box>
-                <Box>
-                  Current CoA students will help you move into your room and
-                  answer any questions you still have about living on campus.
-                </Box>
-              </Columns>
-            </Box>
-            <Box>
-              <Img fluid={data.imageFive.childImageSharp.fluid} alt="" />
-            </Box>
-          </Columns>
+
+        {/*PURPLE SECTION*/}
+        <section className="purple-section statistics">
+          <div className="wrapper">
+            <ul className="no-list">
+              <li><strong>Top 100</strong> Best College Campuses in America (niche.com)</li>
+              <li><strong>120+</strong>  Clubs and Organizations</li>
+              <li><strong>99%</strong> Students Participate in Campus Activities</li>
+              <li><strong>17</strong> NCAA DII Athletic Teams</li>
+            </ul>
+          </div>
         </section>
-        <section>
-          <Columns>
-            <Box>
-              <Img fluid={data.imageSix.childImageSharp.fluid} alt="" />
-            </Box>
-            <Box>
-              <blockquote>
-                Everyone was so welcoming at CoA when I came to visit that I
-                knew this would be my second home. I’ve truly found a family
-                here.
-              </blockquote>
-              <cite>Callie Robertson</cite>
-            </Box>
-          </Columns>
+
+        {/*LIGHT GREY SECTION*/}
+        <section className="grey-section student-links">
+          <div className="wrapper">
+            <ul className="no-list">
+              <li><strong>Events</strong> There’s something going on every day of the week at CoA.<a href="" className="button wire-button">See What’s Happening</a></li>
+              <li><strong>CoA Traditions</strong>  Every year, there are a handful of big events students enjoy.<a href="" className="button wire-button">Discover CoA Traditions</a></li>
+              <li><strong>Secret Handshake</strong> Get a head start on showing your CoA pride with this move.<a href="" className="button wire-button">Learn the CoA Clap</a></li>
+            </ul>
+          </div>
         </section>
-        <section>
-          <Columns space="small">
-            <Box>
-              <article>
-                <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
-                <h3>Megan Bursch takes 2nd place in 3MT competition</h3>
-                <p>
-                  Senior Megan Bursch presents her findings and wins big.
-                  Congrats!
-                </p>
-              </article>
-            </Box>
-            <Box>
-              <article>
-                <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
-                <h3>CoA students support public health with mask project</h3>
-                <p>
-                  See how our Future Physicians club members strengthen the
-                  community.
-                </p>
-              </article>
-            </Box>
-            <Box>
-              <article>
-                <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
-                <h3>Construction begins on residence hall</h3>
-                <p>
-                  A dynamic blended living and learning space is coming soon.
-                </p>
-              </article>
-            </Box>
-            <Box>
-              <article>
-                <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
-                <h3>Looking for a practical summer reading list?</h3>
-                <p>
-                  Learn what our professors recommend to sharpen your skills.
-                </p>
-              </article>
-            </Box>
-          </Columns>
+
+        {/*WHITE SECTION*/}
+        < section className="white-section moving-section" >
+          <div className="wrapper cols">
+            <div className="col-50">
+              <h3>Get ready for your first big CoA tradition: Move-In Weekend</h3>
+              <div className="cols">
+                <div className="group col-50 box-icon">
+                  <p>After you unpack, come explore the welcome booths all over campus. And in the evening, rock out at our annual welcome show!</p >
+                </div>
+                <div className="group col-50 truck-icon">
+                  <p>Current CoA students will help you move into your room and answer any questions you still have about living on campus.</p >
+                </div>
+              </div>
+            </div>
+            <figure className="col-50"><img src="" /></figure>
+
+          </div>
+        </section >
+
+        {/*BLUE SECTION*/}
+        <section className="blue-section testimonial">
+          <div className="wrapper cols">
+            <figure className="col-50"><img src="" /></figure>
+            <p className="col-50"><q>Everyone was so welcoming at CoA when I came to visit that I knew this would be my second home. I’ve truly found a family here.</q><small>Callie Robertson</small></p>
+          </div >
+        </section >
+
+        {/*WHITE SECTION*/}
+        < section className="white-section student-stories" >
+          <div className="wrapper">
+            <div className="group">
+              <figure><img src="" /></figure>
+              <h5>Megan Bursch takes 2nd place in 3MT competition</h5>
+              <p>Senior Megan Bursch presents her findings and wins big. Congrats!</p >
+            </div>
+            <div className="group">
+              <figure><img src="" /></figure>
+              <h5>CoA students support public health with mask project</h5>
+              <p>See how our Future Physicians club members strengthen the community.</p >
+            </div>
+            <div className="group">
+              <figure><img src="" /></figure>
+              <h5>Construction begins on  residence hall</h5>
+              <p>A dynamic blended living and learning space is coming soon.</p >
+            </div>
+            <div className="group">
+              <figure><img src="" /></figure>
+              <h5>Looking for a practical summer reading list?</h5>
+              <p>Learn what our professors recommend to sharpen your skills.</p >
+            </div>
+          </div>
+        </section >
+
+        {/*DARK GREY SECTION*/}
+        <section className="dark-grey-section">
+          <div className="wrapper narrow centered">
+            <h3>Why College of America?</h3>
+            <p><center>Here, you’ll have access to all the resources of a large public research university—and the personalized attention that makes you feel like part of a tight-knit community. This combination is why we’re nationally recognized for excellence and why our alumni outcomes can’t be beat.</center></p>
+            <p>Explore campus and see yourself at CoA:</p>
+            <a href="" className="button grey-button">Take a Virtual Tour</a>
+          </div>
         </section>
-      </div>
-    </Layout>
-  )
+      </Layout>
+    )
+  }
 }
 
 export default StudentLifeIndex
