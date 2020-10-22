@@ -266,11 +266,11 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
             <div className="wrapper">
               <h3>Student Success</h3>
               <IWC
-                height="564px"
+                containerHeight="564px"
                 title="Megan Bursch"
-                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-hover-height=70%&data-hover-width=90%&data-image-height=100%&data-image-width=100%&data-ims-hide-panels=1&data-loc=143203&"
+                institution="121317"
+                location="143203"
               />
-
               <p>
                 Megan Bursch, 2nd Place <br />
                 Winner in NACAC’s First Video <br />

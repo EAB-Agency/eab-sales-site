@@ -31,9 +31,12 @@ class IWC extends Component {
     return (
       <div
         className="iwc"
-        style={{ height: this.props.height, width: this.props.width }}
+        style={{
+          height: this.props.containerHeight,
+          width: this.props.containerWidth,
+        }}
       >
-        <a
+        {/* <a
           alt={this.props.title || 'Launch Experience'}
           href={this.props.url}
           data-hover-height="70%"
@@ -43,10 +46,53 @@ class IWC extends Component {
           data-ims-hide-panels="1"
         >
           {this.props.title || 'Launch Experience'}
+        </a> */}
+
+        {/* <a
+          href="https://www.youvisit.com"
+          alt={this.props.title}
+          className="virtualtour_embed"
+          title={this.props.title}
+          data-platform="v"
+          data-link-type={this.props.linkType}
+          data-image-width={this.props.iwcWidth}
+          data-image-height={this.props.iwcHeight}
+          data-inst={this.props.institution}
+          data-loc={this.props.location}
+        >
+          {this.props.title}
+        </a> */}
+
+        <a
+          href="https://www.youvisit.com"
+          className="virtualtour_embed"
+          title={this.props.title}
+          data-platform="v"
+          data-link-type={this.props.linkType}
+          data-inst={this.props.institution}
+          data-image-width={this.props.iwcWidth}
+          data-image-height={this.props.iwcHeight}
+          data-loc={this.props.location}
+          data-hover-width={this.props.hoverWidth}
+          data-hover-height={this.props.hoverHeight}
+        >
+          Virtual Tour
         </a>
       </div>
     )
   }
+}
+
+IWC.defaultProps = {
+  containerHeight: '300px',
+  containerWidth: '100%',
+  title: 'Launch Experience',
+  linkType: 'immersive',
+  iwcWidth: '100%',
+  iwcHeight: '100%',
+  location: '',
+  hoverWidth: '90%',
+  hoverHeight: '70%',
 }
 
 export default IWC

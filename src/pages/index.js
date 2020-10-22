@@ -85,10 +85,12 @@ const ProgramsIndex = ({ data, pageContext }) => {
       <section className="iwc dark-grey-section">
         <div className="wrapper">
           <h3>Make your dream a reality. Explore the Virtual Anatomy Lab</h3>
+
           <IWC
-            height="490px"
+            containerHeight="490px"
             title="Anotomy Lab"
-            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-hover-height=70%&data-hover-width=90%&data-image-height=100%&data-image-width=100%&data-ims-hide-panels=1&"
+            institution="121317"
+            location=""
           />
         </div>
       </section>
