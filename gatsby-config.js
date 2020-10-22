@@ -34,7 +34,15 @@ module.exports = {
     title: 'College of America',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/fonts/`,
+      },
+    },
     'gatsby-plugin-react-helmet',
+    "gatsby-plugin-sass",
     // {
     //   resolve: 'gatsby-source-contentful',
     //   options: contentfulConfig,
