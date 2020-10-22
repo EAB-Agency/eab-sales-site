@@ -7,16 +7,16 @@ import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
-import AltNav from '../components/alternate-navigation'
 
-const StudentLifeIndex = ({ data, location, pageContext }) => {
+const StudentLifeIndex = ({ data, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
   const {
     breadcrumb: { crumbs },
   } = pageContext
 
   return (
-    <Layout location={location}>
+    <Layout>
+      <SEO />
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
@@ -24,9 +24,7 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Student Life</h2>
-          <div className="breadcrumb">
-            <p>Univertisy Home / Student Life</p>
-          </div>
+          <Breadcrumb crumbs={crumbs} crumbLabel="Student Life" />
         </div>
       </header>
 
@@ -57,7 +55,30 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
           </p>
         </div>
         <div className="col-30 alternate-navigation">
-          <AltNav />
+          {/* <AltNav /> */}
+
+          <ul className="no-list">
+            <li>
+              <Button variant="solid" color="primary">
+                Campus Housing
+              </Button>
+            </li>
+            <li>
+              <Button variant="solid" color="primary">
+                Clubs &amp; Associations
+              </Button>
+            </li>
+            <li>
+              <Button variant="solid" color="primary">
+                Athletics
+              </Button>
+            </li>
+            <li>
+              <Button variant="outline" color="primary">
+                Take a Virtual Tour
+              </Button>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -65,6 +86,27 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
       <section className="iwc dark-grey-section">
         <div className="wrapper">
           <h3>Residence Life</h3>
+          <IWC
+            height="455px"
+            title="See Resident Life"
+            url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143200&"
+          />
+          <Columns>
+            <Box>
+              <IWC
+                height="373px"
+                title="Dining Hall"
+                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143215&"
+              />
+            </Box>
+            <Box>
+              <IWC
+                height="373px"
+                title="Rec Center"
+                url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-image-width=100%&data-image-height=100%&data-loc=143216&"
+              />
+            </Box>
+          </Columns>
         </div>
       </section>
 
@@ -140,7 +182,7 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
             </div>
           </div>
           <figure className="col-50">
-            <img src="" />
+            <Img fluid={data.imageFive.childImageSharp.fluid} alt="" />
           </figure>
         </div>
       </section>
@@ -149,7 +191,7 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
       <section className="blue-section testimonial">
         <div className="wrapper cols">
           <figure className="col-50">
-            <img src="" />
+            <Img fluid={data.imageSix.childImageSharp.fluid} alt="" />
           </figure>
           <p className="col-50">
             <q>
@@ -166,7 +208,7 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
         <div className="wrapper">
           <div className="group">
             <figure>
-              <img src="" />
+              <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
             </figure>
             <h5>Megan Bursch takes 2nd place in 3MT competition</h5>
             <p>
@@ -175,7 +217,7 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
           </div>
           <div className="group">
             <figure>
-              <img src="" />
+              <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
             </figure>
             <h5>CoA students support public health with mask project</h5>
             <p>
@@ -185,36 +227,18 @@ const StudentLifeIndex = ({ data, location, pageContext }) => {
           </div>
           <div className="group">
             <figure>
-              <img src="" />
+              <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
             </figure>
             <h5>Construction begins on residence hall</h5>
             <p>A dynamic blended living and learning space is coming soon.</p>
           </div>
           <div className="group">
             <figure>
-              <img src="" />
+              <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
             </figure>
             <h5>Looking for a practical summer reading list?</h5>
             <p>Learn what our professors recommend to sharpen your skills.</p>
           </div>
-        </div>
-      </section>
-
-      {/*DARK GREY SECTION*/}
-      <section className="dark-grey-section">
-        <div className="wrapper narrow centered">
-          <h3>Why College of America?</h3>
-          <center>
-            Here, you’ll have access to all the resources of a large public
-            research university—and the personalized attention that makes you
-            feel like part of a tight-knit community. This combination is why
-            we’re nationally recognized for excellence and why our alumni
-            outcomes can’t be beat.
-          </center>
-          <p>Explore campus and see yourself at CoA:</p>
-          <a href="" className="button grey-button">
-            Take a Virtual Tour
-          </a>
         </div>
       </section>
     </Layout>

@@ -6,6 +6,7 @@ class IWC extends Component {
     this.YVSource = 'https://www.youvisit.com/tour/Embed/js3'
   }
   onScriptLoad() {
+    // still a problem constantly reloading in dev
     window.YVScript.scanEmbeds()
   }
 
