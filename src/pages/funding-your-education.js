@@ -6,6 +6,7 @@ import Video from '../components/video'
 import SEO from '../components/seo'
 import { Link, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import IWC from '../components/iwc'
 
 const FinancialAidIndex = ({ data, location, pageContext }) => {
   const {
