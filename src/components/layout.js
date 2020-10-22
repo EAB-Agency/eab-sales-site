@@ -4,6 +4,7 @@ import Container from './container'
 import Navigation from './navigation'
 import Footer from './Footer'
 import PreFooter from './preFooter'
+import Head from './head'
 
 class Template extends React.Component {
   render() {
