@@ -1,11 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import base from './base.css'
 import Container from './container'
 import Navigation from './navigation'
 import Footer from './Footer'
 import PreFooter from './preFooter'
-import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
 class Template extends React.Component {
   render() {

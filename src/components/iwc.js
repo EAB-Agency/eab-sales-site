@@ -28,7 +28,10 @@ class IWC extends Component {
 
   render() {
     return (
-      <div className="iwc" style={{ height: this.props.height || '500px' }}>
+      <div
+        className="iwc"
+        style={{ height: this.props.height, width: this.props.width }}
+      >
         <a alt={this.props.title || 'Launch Experience'} href={this.props.url}>
           {this.props.title || 'Launch Experience'}
         </a>
