@@ -19,7 +19,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <img src="news-events-hero.jpg" />
+          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">News & Events</h2>
@@ -174,6 +174,13 @@ export const query = graphql`
       relativePath: { eq: "news-thumbnails/news-microchip.jpg" }
     ) {
       ...squareImage
+    }
+    bannerImage: file(relativePath: { eq: "headers/news-header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440, maxHeight: 350) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `

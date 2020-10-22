@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
@@ -7,6 +6,7 @@ import '../styles/sass/styles.scss'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
+import { Link, graphql } from 'gatsby'
 
 // import { Button, Stack, Box, Columns } from '../components/'
 
@@ -22,7 +22,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <img src="academic-programs-hero.jpg" />
+          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Academic Programs</h2>
@@ -352,6 +352,13 @@ export const query = graphql`
       relativePath: { eq: "inset-photos/female-testimonial.jpg" }
     ) {
       ...squareImage
+    }
+    bannerImage: file(relativePath: { eq: "headers/program-header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440, maxHeight: 350) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `

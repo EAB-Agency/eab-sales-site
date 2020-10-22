@@ -4,6 +4,8 @@ import { Button } from '../components'
 import Layout from '../components/layout'
 import Video from '../components/video'
 import SEO from '../components/seo'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const FinancialAidIndex = ({ data, location, pageContext }) => {
   const {
@@ -17,7 +19,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <img src="programs-hero.jpg" />
+          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Funding Your Education</h2>
@@ -299,3 +301,15 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
 }
 
 export default FinancialAidIndex
+
+export const query = graphql`
+  query {
+    bannerImage: file(relativePath: { eq: "headers/funding-header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440, maxHeight: 350) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

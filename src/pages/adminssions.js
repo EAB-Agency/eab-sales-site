@@ -4,8 +4,10 @@ import { Button } from '../components'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import SEO from '../components/seo'
 import IWC from '../components/iwc'
+import Img from 'gatsby-image'
+import { Link, graphql } from 'gatsby'
 
-const AdmissionsIndex = ({ pageContext }) => {
+const AdmissionsIndex = ({ data, pageContext }) => {
   const {
     breadcrumb: { crumbs },
   } = pageContext
@@ -16,7 +18,7 @@ const AdmissionsIndex = ({ pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <img src="news-events-hero.jpg" />
+          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Undergrad Admissions</h2>
@@ -301,3 +303,15 @@ const AdmissionsIndex = ({ pageContext }) => {
 }
 
 export default AdmissionsIndex
+
+export const query = graphql`
+  query {
+    bannerImage: file(relativePath: { eq: "headers/admissions-header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440, maxHeight: 350) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

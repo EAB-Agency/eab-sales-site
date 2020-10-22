@@ -20,7 +20,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <img src="news-events-hero.jpg" />
+          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Student Life</h2>
@@ -282,6 +282,13 @@ export const query = graphql`
     }
     imageSix: file(relativePath: { eq: "inset-photos/male-testimonial.jpg" }) {
       ...squareImage
+    }
+    bannerImage: file(relativePath: { eq: "headers/student-life-header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440, maxHeight: 350) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
   }
 `
