@@ -24,12 +24,14 @@ nav[role=navigation] {
 
 		@media(min-width: $nav-breakpoint){
 			display: flex;
+			align-items: center;
+			justify-content: flex-end;
 		}
 
 
 		li{
-			// flex-shrink: 0;
 			margin-right: 0.5em;
+			margin-bottom: 0;
 
 			&:last-child{
 				margin: 0;
@@ -81,9 +83,9 @@ nav[role=navigation] {
 				}
 			}
 
-			.button{
-				color: white;
-				@include buttons($c-cta);
+			button{
+				// color: white;
+				// @include buttons($c-cta);
 				margin: 0;
 			}
 		}
@@ -145,23 +147,20 @@ nav[role=navigation] {
 
 	}
 
-	.social-main-menu{
-		display: none;
-	}
 }
 
-.sticked-shadow{
-	ul li {
+// .sticked-shadow{
+// 	ul li {
 
-		a {
-			height: 3em !important;
-		}
+// 		a {
+// 			height: 3em !important;
+// 		}
 
-		ul{
-			top: 2.5em !important;
-		}
-	}
-}
+// 		ul{
+// 			top: 2.5em !important;
+// 		}
+// 	}
+// }
 
 // End Nav Desktop
 // =================================
@@ -199,24 +198,15 @@ nav[role=navigation] {
 				100% {top:0; opacity: 1;}
 			}
 			@include animation(showNav 0.2s ease-out forwards);
-
-			ul {
-				display: flex;
-				flex-direction: column;
-			}
-
-			.social-main-menu {
-				display: block;
-			}
-
 		
 
 		ul {
+			display: flex;
+				flex-direction: column;
 			li{
 				margin: 0 !important;
 				a{
 					font-size: 1rem;
-					// background: $c-blue !important;
 					color: white !important;
 					border-bottom: 1px solid rgba(white,0.2) !important;
 					height: auto;
@@ -399,120 +389,4 @@ nav[role=navigation] {
 	// End hamburguer
 	// =============================
 	
-}
-
-
-
-// ==============================
-// Social menu
-
-#social-menu{
-	list-style: none;
-	padding: 0;
-	margin: 2em 0 0;
-	flex-direction: row !important;
-	justify-content: flex-start;
-
-	@media(min-width: $mq-700){
-		margin:0 0 0 1em;
-		justify-content: space-between;
-	}
-
-
-	li:not(.telephone){
-		margin-right: 1rem;
-
-		a{
-			display: block;
-			width: 1.8em;
-			height: 1.8em;
-			position: relative;
-			text-indent: 999em;
-			text-decoration: none;
-			line-height: 1;
-			overflow: hidden;
-
-			&::before{
-				content: $i-facebook;
-				display: block;
-				font-family: $f-icons;
-				text-indent: 0;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				transform:translateX(-50%)translateY(-50%);
-				line-height: 1;
-				font-size: 1.4em;
-				color: $c-links;
-				transition: all 0.2s;
-			}
-
-			&:hover, &:focus{
-				&::before{
-					transition: all 0.2s;
-				}
-			}
-
-		}
-
-		// a[href*="instagram"]{
-		// 	&::before{
-		// 		content: $i-instagram;
-		// 	}
-		// }
-
-		a[href*="twitter"]{
-			&::before{
-				content: $i-twitter;
-			}
-		}
-
-		// a[href*="youtube"]{
-		// 	&::before{
-		// 		content: $i-youtube;
-		// 	}
-		// }
-
-		a[href*="linkedin"]{
-			&::before{
-				content: $i-linkedin;
-			}
-		}
-	}
-
-	li.telephone{
-		display: none;
-
-		@media(min-width: $mq-800){
-			display: block;
-		}
-	}
-}
-
-
-.social-main-menu{
-	display: block;
-	width:  100%;
-	max-width: 8em;
-	margin: auto 0 2em auto;
-
-	&::before{
-		content:"";
-		display: block;
-		width: calc(100% - 1.5em);
-		border-top: 1px solid $c-links;
-		margin: 0 auto;
-	}
-
-	ul#social-menu {
-		margin-top: 0.5em;
-		li{
-			a{
-				background: none !important;
-				&::before{
-					color: $c-links;
-				}
-			}
-		}
-	}
 }

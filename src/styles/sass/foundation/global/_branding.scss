@@ -5,9 +5,9 @@
 .logo{
   display: block;
   // width: 30em;
-  @include fluidRem(width, 10rem, 25rem);
+  @include fluidRem(width, 10rem, 21rem);
   // height: 2.8em;
-  @include fluidRem(height, 1rem, 2.8rem);
+  @include fluidRem(height, 1rem, 2.7rem);
   text-indent: -999em;
   position: relative;
 

@@ -37,7 +37,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       <section className="page-description wrapper cols">
         <div className="col-70">
           <h3>
-            <span>Dual Admission:</span> Physician Assistan Program
+            <span>Dual Admission:</span> Physician Assistant Program
           </h3>
           <p>
             If you’re interested in providing compassionate and personalized

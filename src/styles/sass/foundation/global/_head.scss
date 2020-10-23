@@ -8,14 +8,13 @@
 }
 
 .site-header{
-	display: block;
+	display: flex;
 	width: 100%;
 	max-width: $mq-1300;
 	margin: 0 auto;
 	@include fluidRem(padding, 1rem, 2rem);
 	max-width: $mq-1440;
 	z-index: 9999;
-	display: flex !important;
 	justify-content: space-between;
 
 	nav{
