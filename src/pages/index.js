@@ -90,7 +90,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             containerHeight="490px"
             title="Anotomy Lab"
             institution="121317"
-            type="inline-embed"
+            dataType="inline-embed"
             location="143202"
           />
         </div>

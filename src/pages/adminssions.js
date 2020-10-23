@@ -254,7 +254,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             containerHeight="560px"
             title="Admissions Ambassadors"
             institution="121317"
-            type="inline-embed"
+            dataType="inline-embed"
             location="143204"
           />
         </div>

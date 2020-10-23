@@ -269,7 +269,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 containerHeight="564px"
                 title="Megan Bursch"
                 institution="121317"
-                type="inline-embed"
+                dataType="inline-embed"
                 location="143203"
               />
               <p>
