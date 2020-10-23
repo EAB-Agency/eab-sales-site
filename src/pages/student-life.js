@@ -279,10 +279,12 @@ export const query = graphql`
     imageFour: file(relativePath: { eq: "news-thumbnails/news-books.jpg" }) {
       ...squareImage
     }
-    imageFive: file(
-      relativePath: { eq: "inset-photos/female-testimonial.jpg" }
-    ) {
-      ...squareImage
+    imageFive: file(relativePath: { eq: "inset-photos/community-hands.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600, maxHeight: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
     imageSix: file(relativePath: { eq: "inset-photos/male-testimonial.jpg" }) {
       ...squareImage
