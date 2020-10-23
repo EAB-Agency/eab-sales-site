@@ -52,9 +52,6 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             take on the world, but you will emerge prepared to dominate your
             future.
           </p>
-          <p>
-            Read on to explore the unique opportunities waiting for you at CoA.
-          </p>
         </div>
         <div className="col-30 alternate-navigation">
           {/* <AltN av /> */}

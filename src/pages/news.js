@@ -34,13 +34,13 @@ const NewsIndex = ({ data, location, pageContext }) => {
           <p>
             <strong>
               The $42 million Premier Living-Learning Community at College of
-              Amerida will provide housing for 500 students and flexible spaces
+              America will provide housing for 500 students and flexible spaces
               to study and attend class.
             </strong>
           </p>
 
           <p>
-            College of Amerida has broken ground for an innovative mixed-purpose
+            College of America has broken ground for an innovative mixed-purpose
             residence hall, which is set to open in July 2021.
           </p>
 

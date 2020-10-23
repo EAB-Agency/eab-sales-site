@@ -266,7 +266,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
             <div className="wrapper">
               <h3>Student Success</h3>
               <IWC
-                containerHeight="564px"
+                containerHeight="640px"
                 title="Megan Bursch"
                 institution="121317"
                 dataType="inline-embed"

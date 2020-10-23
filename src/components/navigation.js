@@ -28,7 +28,7 @@ export default class App extends Component {
               <Link to="/funding-your-education/">Funding</Link>
             </li>
             <li>
-              <Link to="/adminssions/">Admissions</Link>
+              <Link to="/admissions/">Admissions</Link>
             </li>
             <li>
               <Link to="/student-life/">Student Life</Link>
