@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Container from './container'
 import Navigation from './navigation'
 
 export default function Layout({ children }) {

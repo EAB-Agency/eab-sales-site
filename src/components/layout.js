@@ -1,7 +1,5 @@
 import React from 'react'
-import base from './base.css'
 import Container from './container'
-import Navigation from './navigation'
 import Footer from './Footer'
 import PreFooter from './preFooter'
 import Head from './head'
