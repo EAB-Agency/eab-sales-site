@@ -109,6 +109,7 @@
 }
 
 .student-success {
+  overflow: hidden;
   .cols {
     &.centered {
       width: 100%;
@@ -250,6 +251,29 @@
         &::before {
           content: url(../../images/finups.svg);
         }
+      }
+    }
+  }
+}
+
+.iwc{
+  .css-fzsut5{
+    display: flex;
+    flex-direction: column;
+
+    .css-15jaxh1{
+      margin-top: 1em;
+    }
+
+    @media(min-width: $mq-900){
+      flex-direction: row;
+    }
+
+    .css-15jaxh1{
+      margin-right: 1em;
+
+      &:last-child{
+        margin: 0;
       }
     }
   }

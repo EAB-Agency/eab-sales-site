@@ -28,19 +28,6 @@ body {
   @include fluidRem(padding, 2rem 1rem, 5rem 2rem);
 }
 
-.site-header {
-  @extend %wrapper;
-  @include fluidRem(padding, 1rem, 2rem);
-  max-width: $mq-1440;
-  z-index: 9999;
-  display: flex;
-  justify-content: space-between;
-
-  nav {
-    flex-shrink: 0;
-  }
-}
-
 .wrapper {
   @extend %wrapper;
   @extend %padding;
@@ -461,6 +448,6 @@ body {
   @extend small;
 }
 
-figure {
-  background: lightslategrey;
-}
+// figure {
+//   background: lightslategrey;
+// }
