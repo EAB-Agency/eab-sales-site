@@ -90,6 +90,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             containerHeight="455px"
             title="See Resident Life"
             institution="121317"
+            type="inline-embed"
             location="143201"
           />
 
@@ -99,6 +100,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
                 containerHeight="373px"
                 title="Dining Hall"
                 institution="121317"
+                type="inline-embed"
                 location="143215"
               />
             </Box>
@@ -107,6 +109,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
                 containerHeight="373px"
                 title="Rec Center"
                 institution="121317"
+                type="inline-embed"
                 location="143216"
               />
             </Box>

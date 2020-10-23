@@ -121,7 +121,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             <p>
               Applying to College of America is quick and easy whether you
               choose to apply with our{' '}
-              <a href="">CoA Choice Application or the Common App.</a>
+              <a href="" >CoA Choice Application</a> or the <a href="" >Common App.</a>
             </p>
             <p>
               Either way, the <strong>essay is optional.</strong> You can choose
@@ -185,7 +185,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                 Your guidance counselor will need to submit your transcripts and
                 recommendation. They can do so electronically through Naviance,
                 SENDedu or the Common App, or by mail using the address above.
-                If you’re applying with the <a href="">Common App</a>, your
+                If you’re applying with the <a href="" >Common App</a>, your
                 counselor should also complete the School Report and submit it
                 with your transcripts and school profile.
               </p>
@@ -251,9 +251,10 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <h3>We are with you from the very beginning.</h3>
           <IWC
-            containerHeight="500px"
+            containerHeight="560px"
             title="Admissions Ambassadors"
             institution="121317"
+            type="inline-embed"
             location="143204"
           />
         </div>

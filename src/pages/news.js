@@ -67,6 +67,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
               containerHeight="500px"
               title="Ground Breaking Construction"
               institution="121317"
+              type="inline-embed"
               location="143200"
             />
           </figure>

@@ -242,7 +242,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
               <p>
                 <b>American Excellence Scholarship</b>
                 <br />
-                (Tuition + Roomand Board)
+                (Tuition + Room and Board)
               </p>
             </Box>
             <Box>

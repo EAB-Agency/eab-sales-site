@@ -90,7 +90,8 @@ const ProgramsIndex = ({ data, pageContext }) => {
             containerHeight="490px"
             title="Anotomy Lab"
             institution="121317"
-            location=""
+            type="inline-embed"
+            location="143202"
           />
         </div>
       </section>
@@ -162,7 +163,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
 
       {/*LIGHT GREY SECTION*/}
       <section className="grey-section">
-        <div className="wrapper">
+        <div className="wrapper narrow centered">
           <h3>Program Overview</h3>
           <p>
             The Dual Admission Physician Assistant program takes{' '}
@@ -219,7 +220,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
 
       {/*LIGHT GREY SECTION*/}
       <section className="grey-section">
-        <div className="wrapper">
+        <div className="wrapper narrow centered">
           <h3>Eligibility</h3>
           <p>
             To be considered for dual admission and fill your reserved seat in
@@ -236,7 +237,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
 
       {/*BLUE SECTION*/}
       <section className="blue-section statistics">
-        <div className="wrapper">
+        <div className="wrapper narrow">
           <h3>Undergraduate Admission Requirements</h3>
           <ul className="no-list">
             <li>
@@ -250,14 +251,18 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <strong>118,800</strong> Number of Jobs as of 2018
             </li>
           </ul>
-          <center>
-            *While CoA has instituted a test-optional policy for the 2021-22
-            admission cycle, Dual Admission applicants must still submit
-            official SAT or ACT scores. <a href="">Learn more</a>
-          </center>
+          <p>
+            <center>
+              *While CoA has instituted a test-optional policy for the 2021-22
+              admission cycle, Dual Admission applicants must still submit
+              official SAT or ACT scores. <a href="">Learn more</a>
+            </center>
+          </p>
           <small>
-            ** Anatomy and Physiology, and Living Environment may be substituted
-            for Biology.
+            <center>
+              ** Anatomy and Physiology, and Living Environment may be substituted
+              for Biology.
+            </center>
           </small>
         </div>
       </section>

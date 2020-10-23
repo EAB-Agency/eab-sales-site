@@ -101,6 +101,7 @@ body {
 .breadcrumb {
   display: block;
   position: relative;
+  @include fluidRem(padding-right, 1rem, 2rem);
   margin-top: -1px;
   &::before {
     content: '';
@@ -328,6 +329,25 @@ body {
   }
 }
 
+.buttons {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $mq-600) {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    a,
+    .button,
+    button {
+      margin: 0 1em 1em 0;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+}
 .checkmarked {
   h4 {
     position: relative;
