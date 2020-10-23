@@ -75,6 +75,7 @@ class IWC extends Component {
           data-loc={this.props.location}
           data-hover-width={this.props.hoverWidth}
           data-hover-height={this.props.hoverHeight}
+          data-type={this.props.dataType}
         >
           Virtual Tour
         </a>
@@ -88,6 +89,7 @@ IWC.defaultProps = {
   containerWidth: '100%',
   title: 'Launch Experience',
   linkType: 'immersive',
+  dataType: '',
   iwcWidth: '100%',
   iwcHeight: '100%',
   location: '',

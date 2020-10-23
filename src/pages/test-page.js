@@ -6,22 +6,78 @@ const TestIndex = ({ data, location, pageContext }) => {
   return (
     <Container>
       <section>
-        <h2>width: 200px, height: 200px</h2>
         <IWC
-          height="200px"
-          width="200px"
-          title="Ground Breaking Construction"
-          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-hover-height=70%&data-hover-width=90%&data-image-height=100%&data-image-width=100%&data-ims-hide-panels=1&data-loc=143200&"
+          containerHeight="200px"
+          containerWidth="200px"
+          dataType="inline-embed"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
         />
-      </section>
-      <section>
-        <h2>width: 100%, height: 100px</h2>
+        <p>width: 200px, height: 200px; inline-embed</p>
+
         <IWC
-          height="100px"
-          width="100%"
-          title="Ground Breaking Construction"
-          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=121317&data-hover-height=70%&data-hover-width=90%&data-image-height=100%&data-image-width=100%&data-ims-hide-panels=1&data-loc=143200&"
-        />
+          containerHeight="200px"
+          containerWidth="200px"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 200px, height: 200px; hover</p>
+
+        <IWC
+          containerHeight="350px"
+          containerWidth="700px"
+          dataType="inline-embed"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 700px, height: 350px; inline-embed</p>
+        <IWC
+          containerHeight="350px"
+          containerWidth="700px"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 700px, height: 350px; hover</p>
+
+        <IWC
+          containerHeight="500px"
+          containerWidth="300px"
+          dataType="inline-embed"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 300px, height: 500px; inline-embed</p>
+        <IWC
+          containerHeight="500px"
+          containerWidth="300px"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 300px, height: 500px; hover</p>
+
+        <IWC
+          containerHeight="400px"
+          containerWidth="100%"
+          dataType="inline-embed"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 100%, height: 400px; inline-embed</p>
+        <IWC
+          containerHeight="400px"
+          containerWidth="100%"
+          title="IWC Testing"
+          institution="121104"
+          location="143233"
+          />
+          <p>width: 100%, height: 400px; hover</p>
       </section>
     </Container>
   )
