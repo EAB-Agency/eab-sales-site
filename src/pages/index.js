@@ -314,7 +314,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
         </div>
         <div className="wrapper cols">
           <figure className="col-50">
-            <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+            <Img fluid={data.startJourney.childImageSharp.fluid} alt="" />
           </figure>
           <div className="col-50">
             <h3>Start Your Journey to a Rewarding Career in Medicine Today</h3>
@@ -355,10 +355,12 @@ export const squareImage = graphql`
 
 export const query = graphql`
   query {
-    imageOne: file(
-      relativePath: { eq: "inset-photos/female-testimonial.jpg" }
-    ) {
-      ...squareImage
+    startJourney: file(relativePath: { eq: "inset-photos/female-testimonial.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, maxHeight: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
     bannerImage: file(relativePath: { eq: "headers/program-header.jpg" }) {
       childImageSharp {

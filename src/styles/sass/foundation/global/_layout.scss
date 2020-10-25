@@ -53,15 +53,6 @@ body {
       picture{
         display: block;
         @include fluidRem(height, 15rem, 20rem);
-        // img {
-        //   display: block;
-        //   width: 100%;
-        //   object-fit: cover;
-        //   object-position: center;
-        // }
-        img{
-          // height: auto !important;
-        }
       }
     }
   }
@@ -262,7 +253,6 @@ body {
     margin-bottom: 1em;
 
     @media (min-width: $mq-800) {
-      // @include fluidRem(margin-right, 1rem, 2rem);
       margin-right: 10vw;
     }
 
@@ -356,9 +346,6 @@ body {
     color: $c-darkgrey;
 
     &::before {
-      // content: $i-checkmark;
-      // font-family: 'icomoon';
-      // font-size: 3rem;
       content: url(../../images/checkmark.svg);
       display: block;
       width: 1.8em;

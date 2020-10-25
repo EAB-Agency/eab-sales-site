@@ -290,7 +290,11 @@ export const query = graphql`
       }
     }
     imageSix: file(relativePath: { eq: "inset-photos/male-testimonial.jpg" }) {
-      ...squareImage
+      childImageSharp {
+        fluid(maxWidth: 500, maxHeight: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
     bannerImage: file(relativePath: { eq: "headers/student-life-header.jpg" }) {
       childImageSharp {
