@@ -70,7 +70,6 @@ class IWC extends Component {
           data-platform="v"
           data-link-type={this.props.linkType}
           data-inst={this.props.institution}
-          data-type={this.props.dataType}
           data-image-width={this.props.iwcWidth}
           data-image-height={this.props.iwcHeight}
           data-loc={this.props.location}
