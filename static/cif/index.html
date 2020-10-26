@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registration Prototype</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_mobile.css">
+
+
+</head>
+
+<body>
+    <div id="initial-loader"></div>
+    <div id="container">
+
+        <div id="progress-bar">
+            <div id="progress-bar-bg"></div>
+            <div id="progress-bar-fill"></div>
+            <div id="confetti"></div>
+        </div>
+
+        <p id="insight">
+        </p>
+
+        <div id="illustration">
+            <img src="img/Tell us_2x.png" class="welcome-illustration">
+        </div>
+        <div id="welcome">
+            <!--<h1>Let's personalize your experience!</h1>-->
+            <img src="img/welcome.png">
+        </div>
+
+        <div id="fields">
+            <div class="message welcome">Your Email</div>
+            <input type="text" value="" autocomplete="email" class="all-col"
+                placeholder="We won't judge if it's hotmail" data-field-id="1" />
+            <label class="checkbox-container"> By checking this box, you understand that this form collects your
+                responses, and will be provided to the institution.
+                <input type="checkbox">
+                <span class="checkmark"></span>
+            </label>
+            <div id="proceed">
+                <a href="#" class="proceed-button">START</a>
+                <p class="proceed-hint">press ENTER</p>
+            </div>
+
+        </div>
+        <div id="options"></div>
+        <div id="multi-select-field"></div>
+        <div id="completion-screen">
+            <img src="img/completion.png">
+            <h1>Alright!</h1>
+            <p>Get ready for an immersive ride</p>
+            <div id="loading">
+                <div id="preloader"></div>
+                <p>Personalizing your experience...</p>
+            </div>
+        </div>
+        <div id="social-login">
+            <!--
+            <img src="img/social-logins.png">
+            <div id="social-login-facebook" class="platform" data-platform="Facebook"></div>
+            <div id="social-login-google" class="platform" data-platform="Google"></div>
+            <div id="social-login-snapchat" class="platform" data-platform="Snapchat"></div>
+            <div id="social-login-instagram" class="platform" data-platform="Instagram"></div>
+            -->
+        </div>
+        <div id="dialog">Social logins are currently under works. Let's use the good old email for now.</div>
+    </div>
+
+
+    <div id="visitor-type">
+
+        <div class="step1">
+            <h1>The Physician Assistant program is a great choice!</h1>
+            <h2>Sounds like helping others is your passion. It's ours too.</h2>
+            <p>ARE YOU A...</p>
+            <a href="" id="prospective-student-button" class="primary-button">Prospective Student</a>
+            <a href="" id="parent-button" class="primary-button" data-field-id="0">Parent</a>
+            <a href="" id="other-button" class="primary-button" data-field-id="0">Other</a>
+
+        </div>
+        <div class="step2">
+            <p>What Best Describes You?</p>
+            <a href="" data-field-id="0">High School Student</a>
+            <a href="" data-field-id="0">High School Graduate</a>
+            <a href="" data-field-id="0">College Student</a>
+            <a href="" data-field-id="0">College Graduate</a>
+            <a href="" data-field-id="0">Adult Learner</a>
+            <a href="" data-field-id="0">Middle School Student</a>
+        </div>
+
+        <div id="login"></div>
+
+    </div>
+    <img src="img/close-button.svg" id="close-button">
+    <!-- <script src="https://s3.amazonaws.com/youvisit/assets/js/registration/app.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <script src="js/jquery.transit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/4.13.0/bodymovin.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

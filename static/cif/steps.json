@@ -1,0 +1,86 @@
+[
+    {
+        "progress":0,
+        "illustration":"welcome.png",
+        "message":"Your Email",
+        "fields":[
+            {"label":"YOUR EMAIL", "fieldName":"email", "placeholder":"We won't judge if it's hotmail", "width":"100%", "fieldId":"1"}
+        ],
+        "proceed_label":"NEXT"
+    },
+    {
+        "progress":15,
+        "illustration":"illustration1.png",
+        "message":"Your name",
+        "fields":[
+            {"label":"YOUR NAME", "fieldName":"given-name", "placeholder":"First", "width":"50%", "fieldId":"2"},
+            {"label":"", "fieldName":"family-name", "placeholder":"Last", "width":"50%", "fieldId":"3"}
+        ],
+        "proceed_label":"NEXT"
+    },
+    {
+        "progress":25,
+        "illustration":"illustration3.png",
+        "message":"When do you plan to enroll?",
+        "options":[
+            {"label":"2019", "fieldId":"4"},
+            {"label":"2020", "fieldId":"4"},
+            {"label":"2021", "fieldId":"4"},
+            {"label":"others", "fieldId":"4"}
+        ],
+        "proceed_label":"NEXT"
+    },
+    {
+        "progress":40,
+        "illustration":"illustration4.png",
+        "message":"Which high school do you go to?",
+        "fields":[
+            {"label":"", "placeholder":"Type to find school", "width":"100%", "fieldId":"5"}
+        ],
+        "proceed_label":"NEXT",
+        "insight":"245 students like you just visited, you came to the right place."
+    },
+    {
+        "progress":55,
+        "illustration":"major_2x.png",
+        "message":"Any interested majors?",
+        "autocomplete":"true",
+        "fields":[
+            {"label":"", "placeholder":"No rush, skip if undecided", "width":"100%", "fieldId":"6"}
+        ],
+        "proceed_label":"NEXT"
+    },
+    {
+        "progress":70,
+        "illustration":"illustration6.png",
+        "message":"Show your numbers!",
+        "fields":[
+            {"label":"", "type":"number","placeholder":"SAT Score", "width":"50%", "fieldId":"7"},
+            {"label":"", "type":"number","placeholder":"GPA", "width":"50%", "fieldId":"8"}
+        ],
+        "proceed_label":"NEXT"
+    },
+    {
+        "progress":80,
+        "illustration":"world_2x.png",
+        "message":"Where are you from?",
+        "fields":[
+            {"label":"", "fieldName":"country-name", "placeholder":"Country", "width":"50%", "value":"United States", "fieldId":"9"},
+            {"label":"", "type":"number", "fieldName":"postal-code", "placeholder":"Zipcode", "width":"50%", "autofocus":"true", "fieldId":"10"}
+        ],
+        "proceed_label":"NEXT"
+    },
+    {
+        "progress":90,
+        "custom_fields":"true",
+        "fields":[
+            {"label":"Phone", "type":"text", "fieldName":"tel", "placeholder":"", "width":"100%", "value":"", "autofocus":"true", "fieldId":"11"},
+            {"label":"Date of birth", "fieldName":"bday", "placeholder":"MM/DD/YY", "width":"100%", "fieldId":"12"},
+            {"label":"Gender (optional)", "type":"select", "fieldName":"gender", "placeholder":"-- Gender --", "width":"50%", "options":[ "-- Gender --", "Male", "Female", "3rd Gender"], "fieldId":"13"},
+            {"label":"Ethnicity (optional)", "type":"select", "placeholder":"-- Ethnicity --", "width":"50%", "options":[ "-- Ethnicity --", "American Indian or Alaska Native", "Asian", "Black or African American", "Hispanic or Latino", "Native Hawaiian or Other Pacific Islander", "White"], "fieldId":"14"}
+        ],
+        "proceed_label":"DONE",
+        "insight":"Almost done!"
+    }
+    
+]
