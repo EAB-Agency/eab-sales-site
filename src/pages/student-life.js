@@ -60,6 +60,11 @@ const StudentLifeIndex = ({ data, pageContext }) => {
 
           <ul className="no-list">
             <li>
+              <Button variant="outline" color="primary">
+                Take a Virtual Tour
+              </Button>
+            </li>
+            <li>
               <Button variant="solid" color="primary">
                 Campus Housing
               </Button>
@@ -72,11 +77,6 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             <li>
               <Button variant="solid" color="primary">
                 Athletics
-              </Button>
-            </li>
-            <li>
-              <Button variant="outline" color="primary">
-                Take a Virtual Tour
               </Button>
             </li>
           </ul>

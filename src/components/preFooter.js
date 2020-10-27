@@ -10,11 +10,11 @@ const PreFooter = () => {
           Here, you’ll have access to all the resources of a large public
           research university—and the personalized attention that makes you feel
           like part of a tight-knit community. This combination is why we’re
-          nationally recognized for excellence and why our alumni outcomes can’t
+          <a href=""> nationally recognized for excellence</a> and why our <a href="">alumni outcomes</a> can’t
           be beat.
         </p>
         <p>
-          <b>Explore campus and see yourself at CoA:</b>
+          <strong>Explore campus and see yourself at CoA:</strong>
         </p>
         <Button variant="solid" color="grey">
           Take a Virtual Tour

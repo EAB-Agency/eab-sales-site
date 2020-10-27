@@ -154,7 +154,7 @@ body {
   color: white;
   @extend %centeredTitle;
 
-  p {
+  p, a {
     color: white;
   }
 }

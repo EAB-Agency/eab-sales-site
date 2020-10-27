@@ -43,8 +43,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           <p>
             Whether you want to make the world a better place through a career
             in health care, business, public service or even the arts, CoA will
-            help you plan your path—and seize your future. That’s because our
-            community holds the shar
+            help you plan your path—and seize your future.
           </p>
           <p>
             Your classes and extracurriculars will prepare you for a real

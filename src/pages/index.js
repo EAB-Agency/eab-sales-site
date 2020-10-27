@@ -42,7 +42,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <p>
             If you’re interested in providing compassionate and personalized
             care as a P.A., College of America’s Physician Assistant Dual
-            Admission program can help you reach your goals. Our P.A. program
+            Admission program can help you reach your goals. Our nationally ranked P.A. program
             trains competent, caring medical professionals who are dedicated to
             improving health care quality and outcomes. Through clinical
             experiences and professional exposure, you’ll practice diagnosing
@@ -84,7 +84,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*IWC*/}
       <section className="iwc dark-grey-section">
         <div className="wrapper">
-          <h3>Make your dream a reality. Explore the Virtual Anatomy Lab</h3>
+          <h3>Make Your Dream a Reality: Explore the Virtual Anatomy Lab</h3>
 
           <IWC
             containerHeight="490px"
