@@ -92,9 +92,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
 
           <div className="iwc-container cols">
             <div className="iwc-iframe col-70">
-              <Button variant="solid" color="primary">
-                Request Info
-                  </Button>
+
               <IWC
                 containerHeight="351px"
                 title="See Resident Life"
@@ -114,9 +112,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
 
           <div className="iwc-container grey-section cols">
             <div className="iwc-iframe col-70">
-              <Button variant="solid" color="primary">
-                Request Info
-                  </Button>
+
               <IWC
                 containerHeight="351px"
                 title="Dining Hall"
@@ -136,9 +132,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </div>
           <div className="iwc-container cols">
             <div className="iwc-iframe col-70">
-              <Button variant="solid" color="primary">
-                Request Info
-                  </Button>
+
               <IWC
                 containerHeight="373px"
                 title="Rec Center"

@@ -456,19 +456,19 @@ picture{
     position: relative;
     z-index: 10;
     
-    & > button{
-      position: absolute;
-      right: 1.5em;
-      top: 1.2em;
-      max-width: 11em;
-      z-index: 999;
-      background: #146DE1;
-      border-color: #146DE1;
-      &:hover, &focus{
-        background: darken(#146DE1, 20%);
-      }
+    // & > button{
+    //   position: absolute;
+    //   right: 1.5em;
+    //   top: 1.2em;
+    //   max-width: 11em;
+    //   z-index: 999;
+    //   background: #146DE1;
+    //   border-color: #146DE1;
+    //   &:hover, &focus{
+    //     background: darken(#146DE1, 20%);
+    //   }
 
-    }
+    // }
 
     @media(min-width:$mq-800){
       margin-right: 3em;
