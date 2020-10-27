@@ -8,6 +8,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 
+
 const StudentLifeIndex = ({ data, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
   const {
@@ -59,6 +60,11 @@ const StudentLifeIndex = ({ data, pageContext }) => {
 
           <ul className="no-list">
             <li>
+              <Button variant="outline" color="primary">
+                Take a Virtual Tour
+              </Button>
+            </li>
+            <li>
               <Button variant="solid" color="primary">
                 Campus Housing
               </Button>
@@ -73,38 +79,60 @@ const StudentLifeIndex = ({ data, pageContext }) => {
                 Athletics
               </Button>
             </li>
-            <li>
-              <Button variant="outline" color="primary">
-                Take a Virtual Tour
-              </Button>
-            </li>
           </ul>
         </div>
       </section>
 
       {/*IWC*/}
-      <section className="iwc dark-grey-section">
+      <section className="iwc residence-life">
         <div className="wrapper">
-          <h3>Residence Life</h3>
-          <IWC
-            containerHeight="455px"
-            title="See Resident Life"
-            institution="121317"
-            dataType="inline-embed"
-            location="143201"
-          />
+          <header className="dark-grey-section">
+            <h3>Residence Life</h3>
+          </header>
 
-          <Columns>
-            <Box>
+          <div className="iwc-container cols">
+            <div className="iwc-iframe col-70">
+
               <IWC
-                containerHeight="373px"
+                containerHeight="351px"
+                title="See Resident Life"
+                institution="121317"
+                dataType="inline-embed"
+                location="143201"
+              />
+            </div>
+            <div className="iwc-copy col-30">
+              <h4>Freshman Housing</h4>
+              <p>Many freshmen choose to live in The Commons. This coed, state-of-the-art, living learning community includes more than 500 student beds, various classrooms and meeting spaces, 16 community living rooms, 16 study rooms and plenty of indoor and outdoor common space.</p>
+              <Button variant="solid" color="primary">
+                Live On Campus
+               </Button>
+            </div>
+          </div>
+
+          <div className="iwc-container grey-section cols">
+            <div className="iwc-iframe col-70">
+
+              <IWC
+                containerHeight="351px"
                 title="Dining Hall"
                 institution="121317"
                 dataType="inline-embed"
                 location="143215"
               />
-            </Box>
-            <Box>
+            </div>
+            <div className="iwc-copy col-30">
+              <h4>On Campus Dining</h4>
+              <p>All students who live on campus are required to enroll in a meal plan. You can use your funds at any CoA Dining location, which includes dining halls as well as popular restaurants like Subway, Einstein Brothers, Sushi Maki and more.
+              Vegetarian or vegan? We ensure all our facilities have delicious options for you!</p>
+              <Button variant="solid" color="primary">
+                Eat On Campus
+               </Button>
+            </div>
+          </div>
+          <div className="iwc-container cols">
+            <div className="iwc-iframe col-70">
+
               <IWC
                 containerHeight="373px"
                 title="Rec Center"
@@ -112,10 +140,27 @@ const StudentLifeIndex = ({ data, pageContext }) => {
                 dataType="inline-embed"
                 location="143216"
               />
-            </Box>
-          </Columns>
+            </div>
+            <div className="iwc-copy col-30">
+              <h4>The RecPlex</h4>
+              <p>Whether you’re interested in group fitness classes, hitting the weight racks, running laps or starting a game of pickup basketball, the RecPlex is a perfect place to stay active. There’s even a world-class rock climbing room with certified instructors so you can practice your skills before hitting the local climbing spots.</p>
+              <Button variant="solid" color="primary">
+                Play On Campus
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
+
+      {/*DARK GREY SECTION*/}
+      <setion className="explore-more dark-grey-section centered">
+        <div className="wrapper">
+          <h4>Explore More Places Where You’ll Live and Learn at CoA</h4>
+          <Button variant="solid" color="primary">
+            Take a Virtual Tour
+              </Button>
+        </div>
+      </setion>
 
       {/*PURPLE SECTION*/}
       <section className="purple-section statistics">
@@ -205,7 +250,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               Everyone was so welcoming at CoA when I came to visit that I knew
               this would be my second home. I’ve truly found a family here.
             </q>
-            <small>Callie Robertson</small>
+            <small>Michael Robertson</small>
           </p>
         </div>
       </section>
@@ -213,7 +258,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       {/*WHITE SECTION*/}
       <section className="white-section student-stories">
         <div className="wrapper">
-          <div className="group">
+          <div className="group news-article">
             <figure>
               <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
             </figure>
@@ -222,7 +267,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               Senior Megan Bursch presents her findings and wins big. Congrats!
             </p>
           </div>
-          <div className="group">
+          <div className="group news-article">
             <figure>
               <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
             </figure>
@@ -232,14 +277,16 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               community.
             </p>
           </div>
-          <div className="group">
-            <figure>
-              <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
-            </figure>
-            <h5>Construction begins on residence hall</h5>
-            <p>A dynamic blended living and learning space is coming soon.</p>
+          <div className="group news-article">
+            <Link to="/news/">
+              <figure>
+                <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+              </figure>
+              <h5>Construction begins on residence hall</h5>
+              <p>A dynamic blended living and learning space is coming soon.</p>
+            </Link>
           </div>
-          <div className="group">
+          <div className="group news-article">
             <figure>
               <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
             </figure>
@@ -256,51 +303,51 @@ export default StudentLifeIndex
 
 export const squareImage = graphql`
   fragment squareImage on File {
-    childImageSharp {
-      fluid(maxWidth: 255, maxHeight: 260) {
-        ...GatsbyImageSharpFluid
-      }
+      childImageSharp {
+      fluid(maxWidth: 355, maxHeight: 360) {
+      ...GatsbyImageSharpFluid
+    }
     }
   }
 `
 
 export const query = graphql`
   query {
-    imageOne: file(
-      relativePath: { eq: "news-thumbnails/news-conference.jpg" }
+      imageOne: file(
+      relativePath: {eq: "news-thumbnails/news-conference.jpg" }
     ) {
       ...squareImage
     }
-    imageTwo: file(relativePath: { eq: "news-thumbnails/news-masks.jpg" }) {
+    imageTwo: file(relativePath: {eq: "news-thumbnails/news-masks.jpg" }) {
       ...squareImage
     }
     imageThree: file(
-      relativePath: { eq: "news-thumbnails/news-construction.jpg" }
+      relativePath: {eq: "news-thumbnails/news-construction.jpg" }
     ) {
       ...squareImage
     }
-    imageFour: file(relativePath: { eq: "news-thumbnails/news-books.jpg" }) {
+    imageFour: file(relativePath: {eq: "news-thumbnails/news-books.jpg" }) {
       ...squareImage
     }
-    imageFive: file(relativePath: { eq: "inset-photos/community-hands.jpg" }) {
+    imageFive: file(relativePath: {eq: "inset-photos/community-hands.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 600) {
-          ...GatsbyImageSharpFluid
-        }
+      fluid(maxWidth: 600, maxHeight: 450) {
+      ...GatsbyImageSharpFluid
+    }
       }
     }
-    imageSix: file(relativePath: { eq: "inset-photos/male-testimonial.jpg" }) {
+    imageSix: file(relativePath: {eq: "inset-photos/male-testimonial.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 500) {
-          ...GatsbyImageSharpFluid
-        }
+      fluid(maxWidth: 600, maxHeight: 450) {
+      ...GatsbyImageSharpFluid
+    }
       }
     }
-    bannerImage: file(relativePath: { eq: "headers/student-life-header.jpg" }) {
+    bannerImage: file(relativePath: {eq: "headers/student-life-header.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1440, maxHeight: 350) {
-          ...GatsbyImageSharpFluid
-        }
+      fluid(maxWidth: 1440, maxHeight: 350) {
+      ...GatsbyImageSharpFluid
+    }
       }
     }
   }

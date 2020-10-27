@@ -265,8 +265,10 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           <div className="col-40 dark-grey-section">
             <div className="wrapper">
               <h3>Student Success</h3>
+              <p>College of America is dedicated to investing in promising students. From awarding merit scholarships to funding renewable grants that allow students to pursue their passions, we make it possible for you to focus on solving the world’s biggest problems—not how you’re going to pay for your education.</p>
+              <p>Explore the interactive content below to learn more about how one of our students is making the most of their scholarship.</p>
               <IWC
-                containerHeight="640px"
+                containerHeight="560px"
                 title="Megan Bursch"
                 institution="121317"
                 dataType="inline-embed"

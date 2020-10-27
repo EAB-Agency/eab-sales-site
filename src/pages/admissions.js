@@ -43,8 +43,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           <p>
             Whether you want to make the world a better place through a career
             in health care, business, public service or even the arts, CoA will
-            help you plan your path—and seize your future. That’s because our
-            community holds the shar
+            help you plan your path—and seize your future.
           </p>
           <p>
             Your classes and extracurriculars will prepare you for a real
@@ -149,8 +148,8 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             <div className="group step">
               <h4>Submit Application for Admission</h4>
               <p>
-                Freshman applicants may apply using our streamlined CoA Choice
-                Application or the Common App.
+                Freshman applicants may apply using our streamlined <a href="">CoA Choice
+                Application</a> or the <a href="">Common App.</a>
               </p>
             </div>
             <div className="group step">

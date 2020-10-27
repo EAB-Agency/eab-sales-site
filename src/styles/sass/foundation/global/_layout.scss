@@ -32,6 +32,9 @@ body {
   @extend %wrapper;
   @extend %padding;
 }
+.site-content{
+  overflow: hidden;
+}
 
 // ================================
 // Hero Images
@@ -62,6 +65,7 @@ body {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
+    margin-bottom: -1px;
     @extend %wrapper;
     @include fluidRem(padding-left, 1rem, 2rem);
 
@@ -78,11 +82,11 @@ body {
       &::after {
         content: '';
         display: block;
-        width: 100%;
+        width: 100vw;
         height: 100%;
         background: white;
         position: absolute;
-        left: -99.99%;
+        left: -99.99vw;
         top: 0;
       }
     }
@@ -150,7 +154,7 @@ body {
   color: white;
   @extend %centeredTitle;
 
-  p {
+  p, a {
     color: white;
   }
 }
@@ -281,6 +285,7 @@ body {
       font-size: 1rem;
       line-height: 2;
       text-align: center;
+      width: 100%;
 
       @media (min-width: $mq-800) {
         margin-bottom: 0;
@@ -297,6 +302,11 @@ body {
         margin-bottom: 0.5em;
       }
     }
+  }
+  p,
+  small{
+    display: block;
+    text-align: center;
   }
 }
 
@@ -373,6 +383,11 @@ body {
 
   address {
     @extend small;
+    margin-bottom: 0;
+
+    @media(min-width: $mq-800){
+      margin-bottom: 1em;
+    }
   }
 
   .phone {
@@ -420,10 +435,11 @@ body {
 .social-nav {
   display: flex;
   list-style: none;
-  margin-bottom: 1em;
+  margin-bottom: 0.2em;
 
   @media (min-width: $mq-800) {
     justify-content: flex-end;
+    margin-bottom: 1em;
   }
 
   li {
