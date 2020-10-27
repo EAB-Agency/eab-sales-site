@@ -256,7 +256,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               Everyone was so welcoming at CoA when I came to visit that I knew
               this would be my second home. I’ve truly found a family here.
             </q>
-            <small>Callie Robertson</small>
+            <small>Michael Robertson</small>
           </p>
         </div>
       </section>
