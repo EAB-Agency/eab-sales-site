@@ -255,12 +255,12 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <strong>Courses</strong>Biology,** Chemistry and Algebra II
             </li>
           </ul>
-          <p style="text-align: center">
+          <p>
             *While CoA has instituted a test-optional policy for the 2021-22
             admission cycle, Dual Admission applicants must still submit
             official SAT or ACT scores. <a href="">Learn more</a>
           </p>
-          <small style="text-align: center">
+          <small>
             **Anatomy and Physiology, and Living Environment may be substituted
             for Biology.
           </small>
