@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import { Button } from '../components'
-// import styles from './navigation.module.css'
 
-// export default function navigation() {
-export default class App extends Component {
+export default class Navigation extends Component {
   state = {
     toggle: false,
   }
