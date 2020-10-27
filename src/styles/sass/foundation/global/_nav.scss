@@ -84,8 +84,6 @@ nav[role=navigation] {
 			}
 
 			button{
-				// color: white;
-				// @include buttons($c-cta);
 				margin: 0;
 			}
 		}
@@ -243,6 +241,12 @@ nav[role=navigation] {
 
 						}
 					}
+				}
+
+				button{
+					display: block;
+					width: 70%;
+					margin: 1.5em auto 0;
 				}
 
 			}
