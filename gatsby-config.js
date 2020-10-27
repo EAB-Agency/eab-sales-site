@@ -36,7 +36,7 @@ module.exports = {
     description:
       'Founded in 1492, %s is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
     url: 'https://www.collegeofamerica.com', // No trailing slash allowed!
-    image: '/images/snape.jpg', // Path to your image you placed in the 'static' folder
+    image: '/images/favicon.ico',
   },
   plugins: [
     {
@@ -44,6 +44,10 @@ module.exports = {
       options: {
         name: `fonts`,
         path: `${__dirname}/src/fonts/`,
+      },
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     'gatsby-plugin-react-helmet',
@@ -55,14 +59,6 @@ module.exports = {
         // onLoad: `() => Sentry.init({dsn:"${process.env.SENTRY_DSN}"})`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
-    },
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {

@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import favicon from '../images/favicon.ico'
 import { Helmet } from 'react-helmet'
 import { useLocation } from '@reach/router'
 import { useStaticQuery, graphql } from 'gatsby'
@@ -28,7 +27,6 @@ const SEO = ({ title, description, image, article }) => {
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <html lang="en" />
-      <link rel="icon" href={favicon} />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
 
