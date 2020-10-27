@@ -450,6 +450,15 @@ picture{
     text-align: left;
     position: relative;
     z-index: 10;
+    p{
+      @include fluidRem(font-size, 0.95rem, 1rem);
+    }
+
+    button{
+      @media(min-width: $mq-800){
+        margin-left: 0;
+      }
+    }
   }
 
   &.grey-section{
