@@ -22,7 +22,7 @@ export default class App extends Component {
         <nav role="navigation">
           <ul className="no-list">
             <li>
-              <Link to="/">{this.state.toggle ? 'Home' : 'Academics'}</Link>
+              <Link to="/">Academics</Link>
             </li>
             <li>
               <Link to="/funding-your-education/">Funding</Link>
