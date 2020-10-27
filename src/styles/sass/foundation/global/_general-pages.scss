@@ -292,6 +292,19 @@
     align-items: center;
     div[class*='col-']:first-child {
       margin-right: 3em;
+      
+    }
+
+    @media(max-width: $mq-800){
+      div[class*='col-']:first-child {
+        order: 2;
+      }
+      figure{
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        max-height: 20em;
+      }
     }
   }
 
@@ -343,6 +356,12 @@
       margin-right: 3em;
     }
   }
+
+  .gatsby-image-wrapper{
+    @media(max-width: $mq-800){
+      max-height: 20em;
+    }
+  }
 }
 
 .student-stories {
@@ -375,7 +394,12 @@
       figure {
         display: block;
         width: 100%;
-        // height: 12em;
+
+        @media(max-width: $mq-800){
+          max-height: 20em;
+          overflow: hidden;
+        }
+
 
         img {
           display: block;
