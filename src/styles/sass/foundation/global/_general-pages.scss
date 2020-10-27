@@ -574,10 +574,10 @@ picture{
 
 .ambassadors{
   .iwc{
-    // @include fluidRem(height, 18rem, 35rem);
-    height: 18rem !important;
+    // @include fluidRem(height, 10rem, 35rem);
+    height: 10rem !important;
     @media(min-width: $mq-500){
-      height: calc(18rem + 17 * ((100vw - 18.75rem) / 56.25)) !important;
+      height: calc(10rem + 25 * ((100vw - 18.75rem) / 56.25)) !important;
     }
   }
 }
