@@ -1,6 +1,5 @@
 import React from 'react'
-// do not remove this import base line! site break on reload. I think it has something to do with layout components unmounting
-import base from './base.css'
+import '../styles/sass/styles.scss'
 import Container from './container'
 import Footer from './Footer'
 import PreFooter from './preFooter'

@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
-import '../styles/sass/styles.scss'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
@@ -42,11 +41,12 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <p>
             If you’re interested in providing compassionate and personalized
             care as a P.A., College of America’s Physician Assistant Dual
-            Admission program can help you reach your goals. Our nationally ranked P.A. program
-            trains competent, caring medical professionals who are dedicated to
-            improving health care quality and outcomes. Through clinical
-            experiences and professional exposure, you’ll practice diagnosing
-            illness, prescribing medications and developing treatment plans.
+            Admission program can help you reach your goals. Our nationally
+            ranked P.A. program trains competent, caring medical professionals
+            who are dedicated to improving health care quality and outcomes.
+            Through clinical experiences and professional exposure, you’ll
+            practice diagnosing illness, prescribing medications and developing
+            treatment plans.
           </p>
           <p>
             Keep reading to discover the type of skills you’ll learn and
