@@ -32,6 +32,9 @@ body {
   @extend %wrapper;
   @extend %padding;
 }
+.site-content{
+  overflow: hidden;
+}
 
 // ================================
 // Hero Images

@@ -289,6 +289,7 @@
 
 .moving-section {
   .cols {
+    align-items: center;
     div[class*='col-']:first-child {
       margin-right: 3em;
     }
@@ -317,6 +318,9 @@
 }
 
 .testimonial {
+  .cols{
+    align-items: center;
+  }
   q {
     display: block;
     @include fluidRem(font-size, 1.1rem, 1.6rem);
@@ -390,5 +394,98 @@
 picture{
   img{
     position: relative !important;
+  }
+}
+
+.residence-life{
+  header{
+    @extend %wrapper;
+    @include fluidRem(padding,1rem 1rem, 2rem 2rem);
+    position: relative;
+    
+    h3{
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      width:100vw;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: $c-darkgrey;
+    }
+  }
+
+}
+
+.iwc-container{
+  @include fluidRem(padding,1rem 1rem, 4rem 4rem);
+    
+  .iwc-iframe{
+    position: relative;
+    z-index: 10;
+    
+    & > button{
+      position: absolute;
+      right: 1.5em;
+      top: 1.2em;
+      max-width: 11em;
+      z-index: 999;
+    }
+
+    @media(min-width:$mq-800){
+      margin-right: 3em;
+    }
+  }
+  .iwc-copy{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+  }
+
+  &.grey-section{
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      width:100vw;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: lighten($c-mediumgrey, 50%);
+    }
+
+    @media(min-width: $mq-800){
+      .iwc-iframe{
+        order: 2;
+        margin-right: 0;
+        margin-left: 3em;
+      }
+
+      
+    }
+  }
+}
+
+.explore-more{
+  .wrapper{
+    text-align: center;
+
+    h4{
+      color: white;
+      font-weight: 600;
+    }
   }
 }

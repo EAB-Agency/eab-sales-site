@@ -346,7 +346,7 @@ export default ProgramsIndex
 export const squareImage = graphql`
   fragment squareImage on File {
     childImageSharp {
-      fluid(maxWidth: 255, maxHeight: 260) {
+      fluid(maxWidth: 355, maxHeight: 360) {
         ...GatsbyImageSharpFluid
       }
     }
