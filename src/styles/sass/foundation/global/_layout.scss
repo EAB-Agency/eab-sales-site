@@ -376,6 +376,11 @@ body {
 
   address {
     @extend small;
+    margin-bottom: 0;
+
+    @media(min-width: $mq-800){
+      margin-bottom: 1em;
+    }
   }
 
   .phone {
@@ -423,10 +428,11 @@ body {
 .social-nav {
   display: flex;
   list-style: none;
-  margin-bottom: 1em;
+  margin-bottom: 0.2em;
 
   @media (min-width: $mq-800) {
     justify-content: flex-end;
+    margin-bottom: 1em;
   }
 
   li {
