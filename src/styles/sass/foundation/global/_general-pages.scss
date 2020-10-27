@@ -261,6 +261,12 @@
 }
 
 .iwc{
+
+  h3{
+    span{
+      display: block;
+    }
+  }
   .css-fzsut5{
     display: flex;
     flex-direction: column;
@@ -562,6 +568,16 @@ picture{
     h4{
       color: white;
       font-weight: 600;
+    }
+  }
+}
+
+.ambassadors{
+  .iwc{
+    // @include fluidRem(height, 18rem, 35rem);
+    height: 18rem !important;
+    @media(min-width: $mq-500){
+      height: calc(18rem + 17 * ((100vw - 18.75rem) / 56.25)) !important;
     }
   }
 }

@@ -66,13 +66,13 @@ module.exports = {
       options: {
         useAutoGen: true,
         // autoGenHomeLabel: optional 'Home' is default
-        autoGenHomeLabel: `University Home`,
+        autoGenHomeLabel: `Undergrad Home`,
 
         defaultCrumb: {
           location: {
             pathname: '/',
           },
-          crumbLabel: 'University Home',
+          crumbLabel: 'Undergrad Home',
           crumbSeparator: ' / ',
         },
         crumbLabelUpdates: [

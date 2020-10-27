@@ -117,7 +117,8 @@ body {
   p,
   li,
   span {
-    display: inline;
+    display: inline !important;
+    visibility: visible !important;
     position: relative;
     background: white;
     text-transform: uppercase;
@@ -127,6 +128,7 @@ body {
     @include fluidRem(font-size, 0.8rem, 0.95rem);
     z-index: 10;
     margin-top: -1px;
+
   }
   .breadcrumb__link {
     text-decoration: none;

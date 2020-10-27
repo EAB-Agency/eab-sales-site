@@ -243,7 +243,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       </section>
 
       {/*IWC*/}
-      <section className="iwc dark-grey-section">
+      <section className="iwc dark-grey-section ambassadors">
         <div className="wrapper">
           <h3>Meet our Student Admissions Ambassadors</h3>
           <IWC

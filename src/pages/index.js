@@ -84,7 +84,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*IWC*/}
       <section className="iwc dark-grey-section">
         <div className="wrapper">
-          <h3>Make Your Dream a Reality: Explore the Virtual Anatomy Lab</h3>
+          <h3><span>Make Your Dream a Reality:</span> Explore the Virtual Anatomy Lab</h3>
 
           <IWC
             containerHeight="490px"
