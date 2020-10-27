@@ -241,28 +241,28 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <h3>Undergraduate Admission Requirements</h3>
           <ul className="no-list">
             <li>
-              <strong>31% Growth</strong> Job Outlook, 2018-2028
+              <strong>GPA</strong> 3.5 Weighted GPA in High School
             </li>
             <li>
-              <strong>$112,260</strong> Median Pay, 2019{' '}
-              <small>Source: Bureau of Labor Statistics</small>
+              <strong>ACT/SAT</strong> 25 composite ACT 1220 total SAT
             </li>
             <li>
-              <strong>118,800</strong> Number of Jobs as of 2018
+              <strong>Years of ...</strong> Math: 4<br />
+              Science: 3<br />
+              English: 4<br />
+            </li>
+            <li>
+              <strong>Courses</strong>Biology,** Chemistry and Algebra II
             </li>
           </ul>
-          <p>
-            <center>
-              *While CoA has instituted a test-optional policy for the 2021-22
-              admission cycle, Dual Admission applicants must still submit
-              official SAT or ACT scores. <a href="">Learn more</a>
-            </center>
+          <p style="text-align: center">
+            *While CoA has instituted a test-optional policy for the 2021-22
+            admission cycle, Dual Admission applicants must still submit
+            official SAT or ACT scores. <a href="">Learn more</a>
           </p>
-          <small>
-            <center>
-              ** Anatomy and Physiology, and Living Environment may be substituted
-              for Biology.
-            </center>
+          <small style="text-align: center">
+            **Anatomy and Physiology, and Living Environment may be substituted
+            for Biology.
           </small>
         </div>
       </section>
@@ -355,7 +355,9 @@ export const squareImage = graphql`
 
 export const query = graphql`
   query {
-    startJourney: file(relativePath: { eq: "inset-photos/female-testimonial.jpg" }) {
+    startJourney: file(
+      relativePath: { eq: "inset-photos/female-testimonial.jpg" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 500, maxHeight: 500) {
           ...GatsbyImageSharpFluid
