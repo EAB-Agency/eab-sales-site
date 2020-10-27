@@ -149,8 +149,8 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             <div className="group step">
               <h4>Submit Application for Admission</h4>
               <p>
-                Freshman applicants may apply using our streamlined CoA Choice
-                Application or the Common App.
+                Freshman applicants may apply using our streamlined <a href="">CoA Choice
+                Application</a> or the <a href="">Common App.</a>
               </p>
             </div>
             <div className="group step">
