@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/sass/styles.scss'
 import Container from './container'
-import Footer from './Footer'
+import Footer from './footer'
 import PreFooter from './preFooter'
 import Head from './head'
 
