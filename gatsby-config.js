@@ -34,7 +34,7 @@ module.exports = {
     title: 'Bear University',
     titleTemplate: '%s · The Real College',
     description:
-      'Founded in 1492, %s is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
+      'Founded in 1492, Bear University is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
     url: 'https://www.bearuniversity.com', // No trailing slash allowed!
     image: '/images/favicon.ico',
   },
