@@ -33,14 +33,12 @@ const NewsIndex = ({ data, location, pageContext }) => {
           <h3>Construction begins on residence hall</h3>
           <p>
             <strong>
-              The $42 million Premier Living-Learning Community at College of
-              America will provide housing for 500 students and flexible spaces
-              to study and attend class.
+              The $42 million Premier Living-Learning Community at Bear University will provide housing for 500 students and flexible spaces to study and attend class.
             </strong>
           </p>
 
           <p>
-            College of America has broken ground for an innovative mixed-purpose
+            Bear University has broken ground for an innovative mixed-purpose
             residence hall, which is set to open in July 2021.
           </p>
 

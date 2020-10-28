@@ -31,11 +31,11 @@ const { gtmId } = gtmConfig
 
 module.exports = {
   siteMetadata: {
-    title: 'College of America',
+    title: 'Bear University',
     titleTemplate: '%s · The Real College',
     description:
       'Founded in 1492, %s is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
-    url: 'https://www.collegeofamerica.com', // No trailing slash allowed!
+    url: 'https://www.bearuniversity.com', // No trailing slash allowed!
     image: '/images/favicon.ico',
   },
   plugins: [

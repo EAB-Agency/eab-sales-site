@@ -21,7 +21,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
         <Breadcrumb crumbs={crumbs} crumbLabel="Funding Your Education" />
         <h1>Financial Aid</h1>
         <p>
-          A degree from College of America is a smart investment in your future.
+          A degree from Bear University is a smart investment in your future.
           At CoA, you’ll get a world-class education for an affordable price.
           You’ll also build industry connections and gain hands-on experience
           that will give you an edge in today’s competitive job market.
@@ -173,7 +173,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 Scholarships are one of the best ways to pay for your college
                 education. They don’t cost you anything, you don’t have to pay
                 them back and some are considered prestigious honors that you
-                can reference on your resume. College of America offers both
+                can reference on your resume. Bear University offers both
                 need- and merit-based scholarships, and our friendly staff is
                 available to help you find private scholarships to supplement
                 your financial aid package if needed.

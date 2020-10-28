@@ -34,7 +34,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         <div className="col-70">
           <h3>Freshman Applicants</h3>
           <p>
-            At College of America, we prepare students for lives of purpose. We
+            At Bear University, we prepare students for lives of purpose. We
             give students the tools they need to become confident, capable and
             caring professionals who outsmart, outperform and outlast their
             competition. With this competitive advantage, our graduates go on to
@@ -110,12 +110,12 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       <section className="page-content admissions-process">
         <div className="wrapper intro">
           <h3>Admissions Process</h3>
-          <p>Follow this step-by-step guide to apply to College of America.</p>
+          <p>Follow this step-by-step guide to apply to Bear University.</p>
         </div>
         <div className="wrapper cols admissions-steps">
           <aside className="col-30">
             <p>
-              Applying to College of America is quick and easy whether you
+              Applying to Bear University is quick and easy whether you
               choose to apply with our <a href="">CoA Choice Application</a> or
               the <a href="">Common App.</a>
             </p>
@@ -166,7 +166,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                 admissions counselor or mailed to:
               </p>
               <p>
-                College of America
+                Bear University
                 <br />
                 Office of Undergraduate Admissions
                 <br />

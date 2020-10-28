@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="site-footer">
       <div className="wrapper cols">
         <div className="col-70">
-          <div className="logo">College of America</div>
+          <div className="logo">Bear University</div>
           <ul className="footer-nav">
             <li>Contact Us</li>
             <li>Using Our Site</li>

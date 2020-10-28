@@ -33,7 +33,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
         <div className="col-70">
           <h3>Financial Aid</h3>
           <p>
-            A degree from College of America is a smart investment in your
+            A degree from Bear University is a smart investment in your
             future. At CoA, you’ll get a world-class education for an affordable
             price. You’ll also build industry connections and gain hands-on
             experience that will give you an edge in today’s competitive job
@@ -212,7 +212,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                   Scholarships are one of the best ways to pay for your college
                   education. They don’t cost you anything, you don’t have to pay
                   them back and some are considered prestigious honors that you
-                  can reference on your resume. College of America offers both
+                  can reference on your resume. Bear University offers both
                   need- and merit-based scholarships, and our friendly staff is
                   available to help you find private scholarships to supplement
                   your financial aid package if needed.
@@ -265,7 +265,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           <div className="col-40 dark-grey-section">
             <div className="wrapper">
               <h3>Student Success</h3>
-              <p>College of America is dedicated to investing in promising students. From awarding merit scholarships to funding renewable grants that allow students to pursue their passions, we make it possible for you to focus on solving the world’s biggest problems—not how you’re going to pay for your education.</p>
+              <p>Bear University is dedicated to investing in promising students. From awarding merit scholarships to funding renewable grants that allow students to pursue their passions, we make it possible for you to focus on solving the world’s biggest problems—not how you’re going to pay for your education.</p>
               <p>Explore the interactive content below to learn more about how one of our students is making the most of their scholarship.</p>
               <IWC
                 containerHeight="560px"

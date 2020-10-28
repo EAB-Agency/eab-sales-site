@@ -5,7 +5,7 @@ const PreFooter = () => {
   return (
     <section className="dark-grey-section">
       <div className="wrapper narrow centered">
-        <h3>Why College of America</h3>
+        <h3>Why Bear University</h3>
         <p>
           Here, you’ll have access to all the resources of a large public
           research university—and the personalized attention that makes you feel

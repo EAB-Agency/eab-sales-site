@@ -167,7 +167,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <ul className="no-list">
             <li>
-              <strong>Top 100</strong> Best College Campuses in America
+              <strong>Top 100</strong> Best University Campuses in America
               (niche.com)
             </li>
             <li>

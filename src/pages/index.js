@@ -40,7 +40,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
           </h3>
           <p>
             If you’re interested in providing compassionate and personalized
-            care as a P.A., College of America’s Physician Assistant Dual
+            care as a P.A., Bear University’s Physician Assistant Dual
             Admission program can help you reach your goals. Our nationally
             ranked P.A. program trains competent, caring medical professionals
             who are dedicated to improving health care quality and outcomes.
@@ -101,7 +101,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
         <div className="col-60">
           <h3>What Can You Do with a Physician Assistant Degree?</h3>
           <p>
-            College of America’s physician assitant program will prepare you to
+            Bear University’s physician assitant program will prepare you to
             fulfill an integral role in patient care. Completing the program
             will prepare you to perform a comprehensive range of clinical
             services, from taking histories and ordering diagnostic tests to

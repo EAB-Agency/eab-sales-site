@@ -6,7 +6,7 @@ export default function Head({ children }) {
   return (
     <header className="site-header" role="banner">
       <Link to="/">
-        <div className="logo">College of America</div>
+        <div className="logo">Bear University</div>
       </Link>
       <Navigation />
       {children}
