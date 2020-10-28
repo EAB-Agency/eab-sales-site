@@ -34,7 +34,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           <h3>Financial Aid</h3>
           <p>
             A degree from Bear University is a smart investment in your
-            future. At CoA, you’ll get a world-class education for an affordable
+            future. At Bear University, you’ll get a world-class education for an affordable
             price. You’ll also build industry connections and gain hands-on
             experience that will give you an edge in today’s competitive job
             market.
@@ -44,7 +44,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
             figure it out alone. Our friendly admissions staff will help you and
             your family build a financial aid and scholarship package that
             works. We’ll even help you map out the best steps to fund your
-            education so you can reap the full value of your CoA degree and earn
+            education so you can reap the full value of your Bear University degree and earn
             a competitive advantage in your career, community and life.
           </p>
           <p>
@@ -54,7 +54,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           </p>
           <p>
             We also encourage you to check out some{' '}
-            <a href="">CoA success stories</a> to see the type of outcomes our
+            <a href="">Bear University success stories</a> to see the type of outcomes our
             students and alumni enjoy.
           </p>
         </div>
@@ -100,7 +100,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
               <strong>$41 Million+</strong> in Scholarships Awarded
             </li>
             <li>
-              <strong>$55,000</strong> Average Starting Salary of Recent CoA
+              <strong>$55,000</strong> Average Starting Salary of Recent Bear University
               Graduates
             </li>
             <li>
@@ -123,7 +123,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 <strong>as soon as possible</strong> to avoid delays and make
                 sure you’re considered for the maximum potential amount of aid.
                 Remember to include our FAFSA code, <strong>000000</strong>, so
-                that CoA receives your information—we’ll send you an email
+                that Bear University receives your information—we’ll send you an email
                 confirmation with next steps once we do.
               </p>
               <p>
@@ -149,7 +149,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
               </p>
               <p>
                 <a href="" className="button wire-button">
-                  FAFSA Tips from CoA
+                  FAFSA Tips from Bear University
                 </a>
               </p>
             </div>
@@ -163,17 +163,17 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 are a dependent) must be a resident for 12 consecutive months
                 prior to the first day of classes for the academic year for
                 which state aid funds are being requested. Certain exceptions
-                apply, so we encourage you to review CoA’s State Aid Application
+                apply, so we encourage you to review Bear University’s State Aid Application
                 for more details.
               </p>
               <p>
                 <a href="" className="button wire-button">
-                  CoA’s State Aid Application
+                  Bear University’s State Aid Application
                 </a>
               </p>
             </div>
             <div className="group">
-              <h4>Explore Florida Scholarship and Grant Programs</h4>
+              <h4>Explore In-State Scholarship and Grant Programs</h4>
               <p>
                 Merit- and need-based opportunities are available for residents.
               </p>
@@ -227,7 +227,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 <h4>Student Employment</h4>
                 <p>
                   Are you ready to get more than a paycheck while earning your
-                  degree? CoA provides assistance to students who are looking
+                  degree? Bear provides assistance to students who are looking
                   for employment opportunities they can balance with their
                   school responsibilities. Students can participate in either
                   need-based employment programs, such as Federal Work-Study, or
@@ -245,7 +245,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 <h4>Tuition Calculator</h4>
                 <p>
                   Using your own financial information, estimate how much your
-                  degree from CoA could cost. It could be much less than you
+                  degree from Bear could cost. It could be much less than you
                   think!
                 </p>
                 <p>
@@ -290,11 +290,11 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           <h3>Premier Program Scholarships</h3>
           <ul className="no-list">
             <li>
-              <strong>Full Tuition*</strong> Presidential Scholars{' '}
+              <strong>Full Tuition*</strong> Premier Scholars{' '}
               <small>(*Up to Full Tuition, by Invitation Only)</small>
             </li>
             <li>
-              <strong>$23,000</strong> American Excellence Scholarship{' '}
+              <strong>$23,000</strong> Bear Excellence Scholarship{' '}
               <small>(Tuition + Roomand Board)</small>
             </li>
             <li>

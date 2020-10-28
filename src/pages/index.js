@@ -194,7 +194,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <h4>Interview Required</h4>
               <p>
                 Students applying for dual admission must interview during{' '}
-                <a href="">CoA Preview Weekend</a>, an exclusive admitted
+                <a href="">Bear Preview Weekend</a>, an exclusive admitted
                 students event.
               </p>
             </div>
@@ -256,7 +256,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             </li>
           </ul>
           <p>
-            *While CoA has instituted a test-optional policy for the 2021-22
+            *While Bear has instituted a test-optional policy for the 2021-22
             admission cycle, Dual Admission applicants must still submit
             official SAT or ACT scores. <a href="">Learn more</a>
           </p>
@@ -321,7 +321,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             <p>
               The first step to making a difference in patient outcomes is to
               find a college that will give you the tools and support to excel.
-              You’ll find that (and more) at CoA. You can finish your
+              You’ll find that (and more) at Bear. You can finish your
               streamlined application in just a few minutes—and if you’re not
               ready to apply yet, we hope you’ll still drop us a line and let us
               know you’re interested.

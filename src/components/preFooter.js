@@ -14,7 +14,7 @@ const PreFooter = () => {
           be beat.
         </p>
         <p>
-          <strong>Explore campus and see yourself at CoA:</strong>
+          <strong>Explore campus and see yourself at Bear University:</strong>
         </p>
         <Button variant="solid" color="grey">
           Take a Virtual Tour

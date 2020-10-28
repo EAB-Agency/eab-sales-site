@@ -34,7 +34,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
         <div className="col-70">
           <h3>Living On Campus</h3>
           <p>
-            On-campus living is a huge part of the college experience. You’ll
+            On-campus living is a huge part of the college experience. At Bear University, you’ll
             meet new people from all over the world, and you’ll make lasting
             friendships that will define your life.{' '}
           </p>
@@ -51,7 +51,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             soaking in the culture downtown.
           </p>
           <p>
-            Keep reading to explore where you could live, eat and play as a CoA
+            Keep reading to explore where you could live, eat and play as a Bear University
             student. You’ll see why we call this “the good life.”
           </p>
         </div>
@@ -123,7 +123,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             </div>
             <div className="iwc-copy col-30">
               <h4>On Campus Dining</h4>
-              <p>All students who live on campus are required to enroll in a meal plan. You can use your funds at any CoA Dining location, which includes dining halls as well as popular restaurants like Subway, Einstein Brothers, Sushi Maki and more.
+              <p>All students who live on campus are required to enroll in a meal plan. You can use your funds at any Bear University Dining location, which includes dining halls as well as popular restaurants like Subway, Einstein Brothers, Sushi Maki and more.
               Vegetarian or vegan? We ensure all our facilities have delicious options for you!</p>
               <Button variant="solid" color="primary">
                 Eat On Campus
@@ -155,7 +155,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       {/*DARK GREY SECTION*/}
       <setion className="explore-more dark-grey-section centered">
         <div className="wrapper">
-          <h4>Explore More Places Where You’ll Live and Learn at CoA</h4>
+          <h4>Explore More Places Where You’ll Live and Learn at Bear University</h4>
           <Button variant="solid" color="primary">
             Take a Virtual Tour
               </Button>
@@ -189,23 +189,23 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           <ul className="no-list">
             <li>
               <strong>Events</strong> There’s something going on every day of
-              the week at CoA.
+              the week at Bear.
               <a href="" className="button wire-button">
                 See What’s Happening
               </a>
             </li>
             <li>
-              <strong>CoA Traditions</strong> Every year, there are a handful of
+              <strong>Bear Traditions</strong> Every year, there are a handful of
               big events students enjoy.
               <a href="" className="button wire-button">
-                Discover CoA Traditions
+                Discover Bear University Traditions
               </a>
             </li>
             <li>
               <strong>Secret Handshake</strong> Get a head start on showing your
-              CoA pride with this move.
+              Bear pride with this move.
               <a href="" className="button wire-button">
-                Learn the CoA Clap
+                Learn the Bear Clap
               </a>
             </li>
           </ul>
@@ -216,7 +216,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       <section className="white-section moving-section">
         <div className="wrapper cols">
           <div className="col-50">
-            <h3>Get ready for your first big CoA tradition: Move-In Weekend</h3>
+            <h3>Get ready for your first big Bear tradition: Move-In Weekend</h3>
             <div className="cols">
               <div className="group col-50 box-icon">
                 <p>
@@ -227,7 +227,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               </div>
               <div className="group col-50 truck-icon">
                 <p>
-                  Current CoA students will help you move into your room and
+                  Current Bear students will help you move into your room and
                   answer any questions you still have about living on campus.
                 </p>
               </div>
@@ -247,7 +247,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </figure>
           <p className="col-50">
             <q>
-              Everyone was so welcoming at CoA when I came to visit that I knew
+              Everyone was so welcoming at Bear University when I came to visit that I knew
               this would be my second home. I’ve truly found a family here.
             </q>
             <small>Michael Robertson</small>
@@ -271,7 +271,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             <figure>
               <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
             </figure>
-            <h5>CoA students support public health with mask project</h5>
+            <h5>Bear students support public health with mask project</h5>
             <p>
               See how our Future Physicians club members strengthen the
               community.

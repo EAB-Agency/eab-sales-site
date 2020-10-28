@@ -76,7 +76,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
             Built through a public-private partnership, the $42 million project
             is being funded through a combination of tax-exempt bonds and
             private donations. While the initial phases are completely funded,
-            CoA is still working diligently to secure funding to finalize
+            Bear University is still working diligently to secure funding to finalize
             construction.
           </p>
 
@@ -84,7 +84,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
             If you’re interested in making a lasting mark on campus and ensuring
             the students of tomorrow are receiving a comprehensive, competitive
             education, we encourage you to learn more about supporting the
-            Campaign for CoA today.
+            Campaign for Bear University today.
           </p>
 
           <p className="buttons">
@@ -105,8 +105,8 @@ const NewsIndex = ({ data, location, pageContext }) => {
             <figure>
               <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
             </figure>
-            <h5>Cutting-edge upgrades coming to CoA labs</h5>
-            <p>CoA’s STEM labs are getting a major upgrade this summer.</p>
+            <h5>Cutting-edge upgrades coming to Bear labs</h5>
+            <p>Bear’s STEM labs are getting a major upgrade this summer.</p>
           </div>
           <div className="group">
             <figure>
@@ -122,7 +122,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
             <figure>
               <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
             </figure>
-            <h5>CoA professor Jon Doe’s top-ranked TED talk</h5>
+            <h5>Bear professor Jon Doe’s top-ranked TED talk</h5>
             <p>Watch the acclaimed TED talk about the future of AI.</p>
           </div>
           <div className="group">
@@ -131,7 +131,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
             </figure>
             <h5>Where are they now: Class of 2020</h5>
             <p>
-              The survey is in! See how recent grads are using their CoA
+              The survey is in! See how recent grads are using their Bear
               degrees.
             </p>
           </div>
