@@ -299,7 +299,7 @@ nav[role=navigation] {
 	background: none;
 	color: $c-purple !important;
 	position: absolute;
-	z-index: 9999;
+	z-index: 999;
 	right: 1.2em;
 	@include fluidRem(top,1rem,1.8rem);
 	text-indent: -999em;
