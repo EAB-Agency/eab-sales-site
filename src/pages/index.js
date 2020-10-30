@@ -43,9 +43,9 @@ const ProgramsIndex = ({ data, pageContext }) => {
             care as a P.A., Bear University’s Physician Assistant Dual
             Admission program can help you reach your goals. Our nationally
             ranked P.A. program trains competent, caring medical professionals
-            who are dedicated to improving health care quality and outcomes.
+            who are dedicated to improving health-care quality and outcomes.
             Through clinical experiences and professional exposure, you’ll
-            practice diagnosing illness, prescribing medications and developing
+            practice diagnosing illnessess, prescribing medications and developing
             treatment plans.
           </p>
           <p>
@@ -101,11 +101,11 @@ const ProgramsIndex = ({ data, pageContext }) => {
         <div className="col-60">
           <h3>What Can You Do with a Physician Assistant Degree?</h3>
           <p>
-            Bear University’s physician assitant program will prepare you to
+            Bear University’s physician assistant program will prepare you to
             fulfill an integral role in patient care. Completing the program
             will prepare you to perform a comprehensive range of clinical
             services, from taking histories and ordering diagnostic tests to
-            treating minor injuries. While a P.A. usually works with a
+            treating minor injuries. While a P.A., usually works with a
             supervising physician, they can function as a primary care physician
             in some more rural areas.
           </p>
@@ -244,7 +244,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <strong>GPA</strong> 3.5 Weighted GPA in High School
             </li>
             <li>
-              <strong>ACT/SAT</strong> 25 composite ACT 1220 total SAT
+              <strong>ACT/SAT</strong> 25 Composite ACT 1220 Total SAT
             </li>
             <li>
               <strong>Years of ...</strong> Math: 4<br />
@@ -276,7 +276,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <p>
                 {' '}
                 You must complete a <strong>bachelor’s degree</strong> in any
-                major you choose.Additional prerequisites may be communicated
+                major you choose. Additional prerequisites may be communicated
                 upon admission.
               </p>
             </div>
@@ -285,7 +285,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <p>
                 {' '}
                 You must maintain a <strong> 3.2</strong> cumulative and science
-                GPA.You must also earn at least a C in each prerequisite course.
+                GPA. You must also earn at least a C in each prerequisite course.
               </p>
             </div>
           </div>
@@ -297,7 +297,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
                 the verbal reasoning and quantitative reasoning sections, and no
                 less than a <strong> 4.0</strong> on analytical writing.{' '}
                 <small>
-                  * All minimum test scores must be achieved on the same test
+                  All minimum test scores must be achieved on the same test
                   attempt(no superscoring).
                 </small>
               </p>
@@ -307,7 +307,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <p>
                 {' '}
                 You must earn at least <strong> 120</strong> credits to enter
-                the P.A.graduate program.{' '}
+                the P.A. graduate program.{' '}
               </p>
             </div>
           </div>

@@ -54,7 +54,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           </p>
           <p>
             We also encourage you to check out some{' '}
-            <a href="">Bear University success stories</a> to see the type of outcomes our
+            <a href="">Bear University success stories</a> to see the types of outcomes our
             students and alumni enjoy.
           </p>
         </div>
@@ -100,8 +100,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
               <strong>$41 Million+</strong> in Scholarships Awarded
             </li>
             <li>
-              <strong>$55,000</strong> Average Starting Salary of Recent Bear University
-              Graduates
+              <strong>$55,000</strong> Average Starting Salary of Recent Bear University Graduates
             </li>
             <li>
               <strong>#14 of 66</strong> Best Value Colleges <br />
@@ -139,7 +138,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 videoSrcURL="https://www.youtube.com/embed/Y8nfk5ApcQ4"
                 videoTitle="Free Application For Federal Student Aid"
               />
-              <h4>How to Fill out Your FAFSA</h4>
+              <h4>How to Fill Out Your FAFSA</h4>
               <p>
                 <i>
                   This video from the Federal Student Aid Office will walk you
@@ -291,11 +290,11 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           <ul className="no-list">
             <li>
               <strong>Full Tuition*</strong> Premier Scholars{' '}
-              <small>(*Up to Full Tuition, by Invitation Only)</small>
+              <small>(*Up to Full Tuition, by <span className="no-break">Invitation Only)</span></small>
             </li>
             <li>
               <strong>$23,000</strong> Bear Excellence Scholarship{' '}
-              <small>(Tuition + Roomand Board)</small>
+              <small>(Tuition + Room and Board)</small>
             </li>
             <li>
               <strong>$19,000</strong> The Teaching Academy Scholarship

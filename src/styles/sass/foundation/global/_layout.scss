@@ -310,6 +310,9 @@ body {
     display: block;
     text-align: center;
   }
+  a{
+    color: white;
+  }
 }
 
 .group {
@@ -486,4 +489,8 @@ body {
 
 .copyright {
   @extend small;
+}
+
+.no-break{
+  display: inline;
 }

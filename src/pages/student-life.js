@@ -32,7 +32,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       {/*PAGE DESCRIPTION*/}
       <section className="page-description wrapper cols">
         <div className="col-70">
-          <h3>Living On Campus</h3>
+          <h3>Living on Campus</h3>
           <p>
             On-campus living is a huge part of the college experience. At Bear University, you’ll
             meet new people from all over the world, and you’ll make lasting
@@ -122,8 +122,8 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               />
             </div>
             <div className="iwc-copy col-30">
-              <h4>On Campus Dining</h4>
-              <p>All students who live on campus are required to enroll in a meal plan. You can use your funds at any Bear University Dining location, which includes dining halls as well as popular restaurants like Subway, Einstein Brothers, Sushi Maki and more.
+              <h4>On-Campus Dining</h4>
+              <p>All students who live on campus are required to enroll in a meal plan. You can use your funds at any Bear University Dining location, which includes dining halls as well as popular restaurants such as Subway, Einstein Brothers, Sushi Maki and more.
               Vegetarian or vegan? We ensure all our facilities have delicious options for you!</p>
               <Button variant="solid" color="primary">
                 Eat On Campus

@@ -44,12 +44,12 @@ const NewsIndex = ({ data, location, pageContext }) => {
 
           <p>
             “We are just so thrilled to have this project getting underway,”
-            says University President Lauren Ipsum.
+            says university president Lauren Ipsum.
           </p>
 
           <p>
             The new building will be home to the school’s Premier Program
-            Academy and including both freshman and upperclass housing
+            Academy and includes both freshman and upperclass housing
             opportunities. The center also will contain space to house student
             businesses, a student maker space and technology-infused classrooms.
           </p>

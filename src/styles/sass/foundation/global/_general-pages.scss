@@ -18,7 +18,7 @@
 .affy-outcomes {
   ul {
     li {
-      @include fluidRem(padding, 2rem 2rem, 4rem 3rem);
+      @include fluidRem(padding, 2rem 2rem, 4rem 3.5rem);
 
       @media (min-width: $mq-800) {
         border-right: 1px solid rgba(white, 0.3);

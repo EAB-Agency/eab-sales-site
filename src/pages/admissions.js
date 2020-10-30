@@ -109,13 +109,13 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       {/*PAGE CONTENT*/}
       <section className="page-content admissions-process">
         <div className="wrapper intro">
-          <h3>Admissions Process</h3>
+          <h3>Admission Process</h3>
           <p>Follow this step-by-step guide to apply to Bear University.</p>
         </div>
         <div className="wrapper cols admissions-steps">
           <aside className="col-30">
             <p>
-              Applying to Bear University is quick and easy whether you
+              Applying to Bear University is quick and easy, whether you
               choose to apply with our <a href="">Big Blue Application</a> or
               the <a href="">Common App.</a>
             </p>
@@ -156,19 +156,19 @@ const AdmissionsIndex = ({ data, pageContext }) => {
               <h4>Submit Letter(s) of Recommendation</h4>
               <p>
                 One letter of recommendation from a teacher is required, but you
-                may submit up to a total of three letters. The letter can be
+                may submit up to a total of three letters. The letters can be
                 completed online through the Common App Teacher Evaluation form,
                 or you can submit the letter(s) in the supplemental items area
                 of the Big Blue Application.
               </p>
               <p>
                 Paper letters of recommendation may be emailed to your
-                admissions counselor or mailed to:
+                admission counselor or mailed to:
               </p>
               <p>
-                Bear University
-                <br />
                 Office of Undergraduate Admissions
+                <br />
+                Bear University
                 <br />
                 1234 College Avenue
                 <br />
@@ -187,13 +187,11 @@ const AdmissionsIndex = ({ data, pageContext }) => {
               </p>
               <p>
                 For more detailed instructions, see the{' '}
-                <a href="">Resources for Guidance Counselors page.</a>
+                <a href="">Resources for Guidance Counselors page</a>.
               </p>
               <p>
                 If you’re curious about how AP and IB credits transfer, visit{' '}
-                <a href="">
-                  Transfer Evaluation Services for Undergraduate Students.
-                </a>
+                <a href="">Transfer Evaluation Services for Undergraduate Students</a>.
               </p>
               <p>
                 Send Verification of Compliance and Completion of Home Education
@@ -245,7 +243,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       {/*IWC*/}
       <section className="iwc dark-grey-section ambassadors">
         <div className="wrapper">
-          <h3>Meet our Student Admissions Ambassadors</h3>
+          <h3>Meet Our Student Admission Ambassadors</h3>
           <IWC
             containerHeight="560px"
             title="Admissions Ambassadors"
@@ -282,10 +280,10 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <ul className="no-list">
             <li>
-              <strong>60%</strong> In-State
+              <strong>60%</strong> In State
             </li>
             <li>
-              <strong>35%</strong> Out-of-State
+              <strong>35%</strong> Out of State
             </li>
             <li>
               <strong>5%</strong> International
