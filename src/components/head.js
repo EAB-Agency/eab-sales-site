@@ -4,12 +4,12 @@ import Navigation from './navigation'
 
 export default function Head({ children }) {
   return (
-    <header className="site-header" role="banner">
+    <div className="site-header" role="banner">
       <Link to="/">
-        <div className="logo">Bear University</div>
+        <div className="logo">College of America</div>
       </Link>
       <Navigation />
       {children}
-    </header>
+    </div>
   )
 }
