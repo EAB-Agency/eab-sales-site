@@ -24,7 +24,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           <h2 className="page-title">Undergrad Admissions</h2>
           <Breadcrumb
             crumbs={crumbs}
-            crumbLabel="Undergraduate Admission / Freshman Applicants"
+            crumbLabel="Undergraduate Admissions / Freshman Applicants"
           />
         </div>
       </header>

@@ -16,6 +16,7 @@
 	max-width: $mq-1440;
 	z-index: 9999;
 	justify-content: space-between;
+	transform: translate3d(0,0,0);
 
 	nav{
 		flex-shrink: 0;
@@ -31,9 +32,9 @@
 	// }
 
 	&.sticked{
-		position: -webkit-sticky;
-		position: sticky;
-		// position: fixed;
+		// position: -webkit-sticky;
+		// position: sticky;
+		position: fixed;
 		top: 0;
 		left: 50%;
 		transform: translateX(-50%);
@@ -54,6 +55,11 @@
 			left: 50%;
 			top: 0;
 			transform: translateX(-50%);
+		}
+
+		& + .content-header{
+			margin-top: 3.8em;
+			transition: margin-top 0.2s ease-in;
 		}
 	}
 
