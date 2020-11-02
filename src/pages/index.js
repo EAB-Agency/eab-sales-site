@@ -16,7 +16,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Dual Admission: Physician Assistan Program" />
+      <SEO title="Dual Admission: Physician Assistant Program" />
 
       {/*CONTENT HEADER*/}
       <header className="content-header">
