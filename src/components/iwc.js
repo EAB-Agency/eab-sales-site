@@ -15,16 +15,9 @@ class IWC extends Component {
   }
 
   componentWillUnmount() {
-    // hack to remove all of the iframes so the yvscript doesn't get confused
-    let molotav = document.getElementsByTagName('iFrame')
-    let i = 0
-    while (i < molotav.length) {
-      if (molotav[i].id.startsWith('virtualtour_iframe')) {
-        console.log('==================removing iFrame', molotav[i])
-        molotav[i].remove()
-      }
-      i += 1
-    }
+    // console.log('about to reset embeds')
+    const yvObj = window.YVScript
+    yvObj && yvObj.resetEmbeds()
   }
 
   componentDidMount() {
