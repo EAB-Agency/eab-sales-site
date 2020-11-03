@@ -8,47 +8,59 @@ class IWC extends Component {
   }
   scan() {
     scriptjs(this.YVSource, () => {
+      console.log('scanning for links')
       const yvObj = window.YVScript
-      // console.log('issue #1 : YVScript', yvObj)
       yvObj && yvObj.scanEmbeds()
     })
+  }
+
+  componentWillUnmount() {
+    // hack to remove all of the iframes so the yvscript doesn't get confused
+    let molotav = document.getElementsByTagName('iFrame')
+    let i = 0
+    while (i < molotav.length) {
+      if (molotav[i].id.startsWith('virtualtour_iframe')) {
+        console.log('==================removing iFrame', molotav[i])
+        molotav[i].remove()
+      }
+      i += 1
+    }
   }
 
   componentDidMount() {
     this.scan()
   }
-  componentDidUpdate(prevProps) {
-    if (prevProps.location !== this.props.location) {
-      this.scan()
-    }
-  }
 
   render() {
     return (
-      <div
-        className="iwc"
-        style={{
-          height: this.props.containerHeight,
-          width: this.props.containerWidth,
-        }}
-      >
-        <a
-          href="https://www.youvisit.com"
-          className="virtualtour_embed"
-          title={this.props.title}
-          data-platform="v"
-          data-link-type={this.props.linkType}
-          data-inst={this.props.institution}
-          data-image-width={this.props.iwcWidth}
-          data-image-height={this.props.iwcHeight}
-          data-loc={this.props.location}
-          data-hover-width={this.props.hoverWidth}
-          data-hover-height={this.props.hoverHeight}
-          data-type={this.props.dataType}
+      <>
+        <div
+          className="iwc"
+          style={{
+            height: this.props.containerHeight,
+            width: this.props.containerWidth,
+            display: 'block',
+          }}
         >
-          Virtual Tour
-        </a>
-      </div>
+          <a
+            style={{ display: 'block' }}
+            href="https://www.youvisit.com"
+            className="virtualtour_embed"
+            title={this.props.title}
+            data-platform="v"
+            data-link-type={this.props.linkType}
+            data-inst={this.props.institution}
+            data-image-width={this.props.iwcWidth}
+            data-image-height={this.props.iwcHeight}
+            data-loc={this.props.location}
+            data-hover-width={this.props.hoverWidth}
+            data-hover-height={this.props.hoverHeight}
+            data-type={this.props.dataType}
+          >
+            Virtual Tour
+          </a>
+        </div>
+      </>
     )
   }
 }
@@ -64,6 +76,7 @@ IWC.defaultProps = {
   location: '',
   hoverWidth: '90%',
   hoverHeight: '70%',
+  showCode: false,
 }
 
 export default IWC
