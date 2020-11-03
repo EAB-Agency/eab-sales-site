@@ -8,7 +8,6 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 
-
 const StudentLifeIndex = ({ data, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
   const {
@@ -34,9 +33,9 @@ const StudentLifeIndex = ({ data, pageContext }) => {
         <div className="col-70">
           <h3>Living on Campus</h3>
           <p>
-            On-campus living is a huge part of the college experience. At Bear University, you’ll
-            meet new people from all over the world, and you’ll make lasting
-            friendships that will define your life.{' '}
+            On-campus living is a huge part of the college experience. At Bear
+            University, you’ll meet new people from all over the world, and
+            you’ll make lasting friendships that will define your life.{' '}
           </p>
           <p>
             Plus, when you live on campus, everything is convenient. Walk over
@@ -51,8 +50,8 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             soaking in the culture downtown.
           </p>
           <p>
-            Keep reading to explore where you could live, eat and play as a Bear University
-            student. You’ll see why we call this “the good life.”
+            Keep reading to explore where you could live, eat and play as a Bear
+            University student. You’ll see why we call this “the good life.”
           </p>
         </div>
         <div className="col-30 alternate-navigation">
@@ -92,7 +91,6 @@ const StudentLifeIndex = ({ data, pageContext }) => {
 
           <div className="iwc-container cols">
             <div className="iwc-iframe col-70">
-
               <IWC
                 containerHeight="351px"
                 title="See Resident Life"
@@ -103,16 +101,21 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             </div>
             <div className="iwc-copy col-30">
               <h4>Freshman Housing</h4>
-              <p>Many freshmen choose to live in The Commons. This coed, state-of-the-art, living learning community includes more than 500 student beds, various classrooms and meeting spaces, 16 community living rooms, 16 study rooms and plenty of indoor and outdoor common space.</p>
+              <p>
+                Many freshmen choose to live in The Commons. This coed,
+                state-of-the-art, living learning community includes more than
+                500 student beds, various classrooms and meeting spaces, 16
+                community living rooms, 16 study rooms and plenty of indoor and
+                outdoor common space.
+              </p>
               <Button variant="solid" color="primary">
                 Live On Campus
-               </Button>
+              </Button>
             </div>
           </div>
 
           <div className="iwc-container grey-section cols">
             <div className="iwc-iframe col-70">
-
               <IWC
                 containerHeight="351px"
                 title="Dining Hall"
@@ -123,16 +126,21 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             </div>
             <div className="iwc-copy col-30">
               <h4>On-Campus Dining</h4>
-              <p>All students who live on campus are required to enroll in a meal plan. You can use your funds at any Bear University Dining location, which includes dining halls as well as popular restaurants such as Subway, Einstein Brothers, Sushi Maki and more.
-              Vegetarian or vegan? We ensure all our facilities have delicious options for you!</p>
+              <p>
+                All students who live on campus are required to enroll in a meal
+                plan. You can use your funds at any Bear University Dining
+                location, which includes dining halls as well as popular
+                restaurants such as Subway, Einstein Brothers, Sushi Maki and
+                more. Vegetarian or vegan? We ensure all our facilities have
+                delicious options for you!
+              </p>
               <Button variant="solid" color="primary">
                 Eat On Campus
-               </Button>
+              </Button>
             </div>
           </div>
           <div className="iwc-container cols">
             <div className="iwc-iframe col-70">
-
               <IWC
                 containerHeight="373px"
                 title="Rec Center"
@@ -143,7 +151,14 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             </div>
             <div className="iwc-copy col-30">
               <h4>The RecPlex</h4>
-              <p>Whether you’re interested in group fitness classes, hitting the weight racks, running laps or starting a game of pickup basketball, the RecPlex is a perfect place to stay active. There’s even a world-class rock climbing room with certified instructors so you can practice your skills before hitting the local climbing spots.</p>
+              <p>
+                Whether you’re interested in group fitness classes, hitting the
+                weight racks, running laps or starting a game of pickup
+                basketball, the RecPlex is a perfect place to stay active.
+                There’s even a world-class rock climbing room with certified
+                instructors so you can practice your skills before hitting the
+                local climbing spots.
+              </p>
               <Button variant="solid" color="primary">
                 Play On Campus
               </Button>
@@ -153,14 +168,16 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       </section>
 
       {/*DARK GREY SECTION*/}
-      <setion className="explore-more dark-grey-section centered">
+      <section className="explore-more dark-grey-section centered">
         <div className="wrapper">
-          <h4>Explore More Places Where You’ll Live and Learn at Bear University</h4>
+          <h4>
+            Explore More Places Where You’ll Live and Learn at Bear University
+          </h4>
           <Button variant="solid" color="primary">
             Take a Virtual Tour
-              </Button>
+          </Button>
         </div>
-      </setion>
+      </section>
 
       {/*PURPLE SECTION*/}
       <section className="purple-section statistics">
@@ -195,8 +212,8 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               </a>
             </li>
             <li>
-              <strong>Bear Traditions</strong> Every year, there are a handful of
-              big events students enjoy.
+              <strong>Bear Traditions</strong> Every year, there are a handful
+              of big events students enjoy.
               <a href="" className="button wire-button">
                 Discover Bear University Traditions
               </a>
@@ -216,7 +233,9 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       <section className="white-section moving-section">
         <div className="wrapper cols">
           <div className="col-50">
-            <h3>Get ready for your first big Bear tradition: Move-In Weekend</h3>
+            <h3>
+              Get ready for your first big Bear tradition: Move-In Weekend
+            </h3>
             <div className="cols">
               <div className="group col-50 box-icon">
                 <p>
@@ -247,8 +266,9 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </figure>
           <p className="col-50">
             <q>
-              Everyone was so welcoming at Bear University when I came to visit that I knew
-              this would be my second home. I’ve truly found a family here.
+              Everyone was so welcoming at Bear University when I came to visit
+              that I knew this would be my second home. I’ve truly found a
+              family here.
             </q>
             <small>Michael Robertson</small>
           </p>
@@ -303,51 +323,51 @@ export default StudentLifeIndex
 
 export const squareImage = graphql`
   fragment squareImage on File {
-      childImageSharp {
+    childImageSharp {
       fluid(maxWidth: 355, maxHeight: 360) {
-      ...GatsbyImageSharpFluid
-    }
+        ...GatsbyImageSharpFluid
+      }
     }
   }
 `
 
 export const query = graphql`
   query {
-      imageOne: file(
-      relativePath: {eq: "news-thumbnails/news-conference.jpg" }
+    imageOne: file(
+      relativePath: { eq: "news-thumbnails/news-conference.jpg" }
     ) {
       ...squareImage
     }
-    imageTwo: file(relativePath: {eq: "news-thumbnails/news-masks.jpg" }) {
+    imageTwo: file(relativePath: { eq: "news-thumbnails/news-masks.jpg" }) {
       ...squareImage
     }
     imageThree: file(
-      relativePath: {eq: "news-thumbnails/news-construction.jpg" }
+      relativePath: { eq: "news-thumbnails/news-construction.jpg" }
     ) {
       ...squareImage
     }
-    imageFour: file(relativePath: {eq: "news-thumbnails/news-books.jpg" }) {
+    imageFour: file(relativePath: { eq: "news-thumbnails/news-books.jpg" }) {
       ...squareImage
     }
-    imageFive: file(relativePath: {eq: "inset-photos/community-hands.jpg" }) {
+    imageFive: file(relativePath: { eq: "inset-photos/community-hands.jpg" }) {
       childImageSharp {
-      fluid(maxWidth: 600, maxHeight: 450) {
-      ...GatsbyImageSharpFluid
-    }
+        fluid(maxWidth: 600, maxHeight: 450) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
-    imageSix: file(relativePath: {eq: "inset-photos/male-testimonial.jpg" }) {
+    imageSix: file(relativePath: { eq: "inset-photos/male-testimonial.jpg" }) {
       childImageSharp {
-      fluid(maxWidth: 600, maxHeight: 450) {
-      ...GatsbyImageSharpFluid
-    }
+        fluid(maxWidth: 600, maxHeight: 450) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
-    bannerImage: file(relativePath: {eq: "headers/student-life-header.jpg" }) {
+    bannerImage: file(relativePath: { eq: "headers/student-life-header.jpg" }) {
       childImageSharp {
-      fluid(maxWidth: 1440, maxHeight: 350) {
-      ...GatsbyImageSharpFluid
-    }
+        fluid(maxWidth: 1440, maxHeight: 350) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }
