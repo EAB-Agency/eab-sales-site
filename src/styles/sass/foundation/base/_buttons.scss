@@ -34,8 +34,12 @@ a{
 %wire-button,
 .wire-button{
   text-decoration: none;
-  color: $c-blue;
+  color: $c-blue !important;
   background: transparent;
+
+  &:hover, &:focus{
+    color: white !important;
+  }
 }
 
 .extra-link{
