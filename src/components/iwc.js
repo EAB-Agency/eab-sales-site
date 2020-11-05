@@ -16,8 +16,8 @@ class IWC extends Component {
 
   componentWillUnmount() {
     // console.log('about to reset embeds')
-    const yvObj = window.YVScript
-    yvObj && yvObj.resetEmbeds()
+    // const yvObj = window.YVScript
+    // yvObj && yvObj.resetEmbeds()
   }
 
   componentDidMount() {
