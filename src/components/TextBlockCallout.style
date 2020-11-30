@@ -1,0 +1,58 @@
+import styled from "styled-components";
+
+export const TextBlockCallout = styled.div`
+  background-color: ${props =>
+    props.theme.colors.greenSecondary};
+  padding: 24px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 8px solid ${props => props.theme.colors.white};
+  max-width: 300px;
+`;
+export const SingleQuote = styled.img`
+  margin-bottom: 6px;
+`;
+export const MainCopy = styled.p`
+  max-width: 236px;
+  font-family: ${props =>
+    props.theme.fonts.montExtraBoldTitle.family};
+  font-size: ${props =>
+    props.theme.fonts.montExtraBoldTitle.size};
+  font-weight: ${props =>
+    props.theme.fonts.montExtraBoldTitle.weight};
+  line-height: ${props =>
+    props.theme.fonts.montExtraBoldTitle.lineHeight};
+  color: ${props => props.theme.textColors.whitePrimary};
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+`;
+export const AuthorGroup = styled.div`
+//   padding: 0 57px 0 58px;
+  display: flex;
+  align-items: flex-start;
+`;
+export const Dash = styled.p`
+  width: 5px;
+  font-family: ${props =>
+    props.theme.fonts.montNormal.family};
+  font-size: ${props => props.theme.fonts.montNormal.size};
+  font-weight: ${props =>
+    props.theme.fonts.montNormal.weight};
+  line-height: ${props =>
+    props.theme.fonts.montNormal.lineHeight};
+  color: ${props => props.theme.textColors.whitePrimary};
+  text-align: center;
+`;
+export const Author = styled.p`
+//   width: 116px;
+  font-family: ${props =>
+    props.theme.fonts.montNormal.family};
+  font-size: ${props => props.theme.fonts.montNormal.size};
+  font-weight: ${props =>
+    props.theme.fonts.montNormal.weight};
+  line-height: ${props =>
+    props.theme.fonts.montNormal.lineHeight};
+  color: ${props => props.theme.textColors.whitePrimary};
+`;
