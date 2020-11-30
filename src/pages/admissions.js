@@ -42,8 +42,8 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           </p>
           <p>
             Whether you want to make the world a better place through a career
-            in health care, business, public service or even the arts, Bear University will
-            help you plan your path—and seize your future.
+            in health care, business, public service or even the arts, Bear
+            University will help you plan your path—and seize your future.
           </p>
           <p>
             Your classes and extracurriculars will prepare you for a real
@@ -63,7 +63,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             </li>
             <li>
               <Button variant="solid" color="primary">
-                Connect with a Counselor
+                Connect with Counselor
               </Button>
             </li>
             <li>
@@ -115,9 +115,9 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         <div className="wrapper cols admissions-steps">
           <aside className="col-30">
             <p>
-              Applying to Bear University is quick and easy, whether you
-              choose to apply with our <a href="">Big Blue Application</a> or
-              the <a href="">Common App.</a>
+              Applying to Bear University is quick and easy, whether you choose
+              to apply with our <a href="">Big Blue Application</a> or the{' '}
+              <a href="">Common App.</a>
             </p>
             <p>
               Either way, the <strong>essay is optional.</strong> You can choose
@@ -148,8 +148,9 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             <div className="group step">
               <h4>Submit Application for Admission</h4>
               <p>
-                Freshman applicants may apply using our streamlined <a href="">Big Blue
-                Application</a> or the <a href="">Common App.</a>
+                Freshman applicants may apply using our streamlined{' '}
+                <a href="">Big Blue Application</a> or the{' '}
+                <a href="">Common App.</a>
               </p>
             </div>
             <div className="group step">
@@ -162,8 +163,8 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                 of the Big Blue Application.
               </p>
               <p>
-                Paper letters of recommendation may be emailed to your
-                admission counselor or mailed to:
+                Paper letters of recommendation may be emailed to your admission
+                counselor or mailed to:
               </p>
               <p>
                 Office of Undergraduate Admissions
@@ -191,7 +192,10 @@ const AdmissionsIndex = ({ data, pageContext }) => {
               </p>
               <p>
                 If you’re curious about how AP and IB credits transfer, visit{' '}
-                <a href="">Transfer Evaluation Services for Undergraduate Students</a>.
+                <a href="">
+                  Transfer Evaluation Services for Undergraduate Students
+                </a>
+                .
               </p>
               <p>
                 Send Verification of Compliance and Completion of Home Education
@@ -218,9 +222,9 @@ const AdmissionsIndex = ({ data, pageContext }) => {
               <p>
                 Applicants who choose to have their application reviewed with
                 test scores can self-report SAT and/or ACT score(s) on the
-                application for admission. Upon enrollment to Bear University, official test
-                scores must be submitted directly from the testing agency using
-                the following information:
+                application for admission. Upon enrollment to Bear University,
+                official test scores must be submitted directly from the testing
+                agency using the following information:
               </p>
               <p>
                 ISAT Code: 0000
@@ -228,11 +232,11 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                 ACT Code: 0000
               </p>
               <p>
-                Bear University superscores both the SAT and ACT, so if you take the exam
-                more than once, you must submit all of your test scores to
-                ensure we have your best and highest composite scores on record.
-                Bear currently considers only the critical reading and math
-                scores for the SAT. For the ACT, Bear does not utilize the
+                Bear University superscores both the SAT and ACT, so if you take
+                the exam more than once, you must submit all of your test scores
+                to ensure we have your best and highest composite scores on
+                record. Bear currently considers only the critical reading and
+                math scores for the SAT. For the ACT, Bear does not utilize the
                 optional writing section.
               </p>
             </div>
