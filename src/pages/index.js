@@ -5,6 +5,7 @@ import { Button } from '../components'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
+import HeroVideo from '../video/sales-site-hero.mp4'
 import { Link, graphql } from 'gatsby'
 
 // import { Button, Stack, Box, Columns } from '../components/'
@@ -20,79 +21,100 @@ const ProgramsIndex = ({ data, pageContext }) => {
 
       {/*CONTENT HEADER*/}
       <header className="content-header">
-        <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+        <div className="hero-video-container">
+          <video autoPlay loop className="hero-video">
+            <source src={HeroVideo} type="video/mp4" />
+          </video>
+          <div className="hero-content">
+            <h2 className="video-title">{"Discover Your Future at Bear University"}</h2>
+            <Button variant="solid" color="orange">
+                Find Out More
+              </Button>
+            </div>
         </div>
-        <div className="page-title-container">
-          <h2 className="page-title">Academic Programs</h2>
-          <Breadcrumb
-            crumbs={crumbs}
-            crumbLabel="Academics / Programs / Physician Assistant"
-          />
-        </div>
+        <div className="page-title-container homepage-title"></div>
       </header>
 
       {/*PAGE DESCRIPTION*/}
-      <section className="page-description wrapper cols">
-        <div className="col-70">
+      <section className="page-description homepage-desc">
+        <div className="wrapper cols">
+          <div className="col-60 desc">
           <h3>
-            <span>Dual Admission:</span> Physician Assistant Program
+          Become Your Best Self at Bear
           </h3>
           <p>
-            If you’re interested in providing compassionate and personalized
-            care as a P.A., Bear University’s Physician Assistant Dual
-            Admission program can help you reach your goals. Our nationally
-            ranked P.A. program trains competent, caring medical professionals
-            who are dedicated to improving health-care quality and outcomes.
-            Through clinical experiences and professional exposure, you’ll
-            practice diagnosing illnessess, prescribing medications and developing
-            treatment plans.
-          </p>
+          At Bear University, you’ll have limitless opportunites to grow academically, personally and professionally.</p>
           <p>
-            Keep reading to discover the type of skills you’ll learn and
-            possible career outcomes. We’ll also share admission requirements
-            and other program-specific information.
+          Our small classes are experience-oriented, meaning you’ll focus on real-world learning in a setting that encourages your professors to get to know you. Plus, you’ll find a support group of advisors, faculty and peers to cheer you on every step of the way.
           </p>
+          <Button variant="solid" color="secondary">
+                Get to Know Bear
+              </Button>
         </div>
-        <div className="col-30 alternate-navigation">
-          {/* <AltNav /> */}
-          <ul className="no-list">
-            <li>
-              <Button variant="outline" color="primary">
-                Apply Now
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                College of Health Sciences
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Related Programs
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Contact Us
-              </Button>
-            </li>
-          </ul>
+        <div className="col-40 start-career">
+          <figure>
+            <Img fluid={data.startCareer.childImageSharp.fluid} alt="" />
+            <figcaption className="img-caption-green">I’VE FOUND A SECOND FAMILY AT BEAR. <span className="caption-by">Mia Carmichael</span></figcaption>  
+          </figure>
+        </div>
+
         </div>
       </section>
 
-      {/*IWC*/}
-      <section className="iwc dark-grey-section">
+      {/*JOIN US CTA*/}
+      <section className="join-us">
         <div className="wrapper">
-          <h3><span>Make Your Dream a Reality:</span> Explore the Virtual Anatomy Lab</h3>
+          <h3>Join Us In January</h3>
+          <p>We’ve launched a range of courses with a January start date, meaning it’s not too late to join Bear University this academic year.</p>
+          <Button variant="outline" color="white">Discover More</Button>
+        </div>
+      </section>
 
-          <IWC
-            containerHeight="490px"
-            title="Anotomy Lab"
-            institution="121317"
-            dataType="inline-embed"
-            location="143202"
-          />
+      {/*IWC POST*/}
+      <section className="iwc-post">
+        <div className="wrapper cols">
+          <div className="col-50">
+            <h3>
+            Schedule a Virtual Visit Today
+            </h3>
+            <p>The best way to learn whether a school is right for you is to come visit. Since campus visits are limited right now, we’ve done our best to recreate the experience virtually!</p>
+            <p>Your virtual visit includes a personalized virtual tour with an admission counselor, a video chat with a student ambassador and a meeting with your dedicated financial aid advisor.</p>
+            <Button variant="solid" color="primary">Schedule Your Visit</Button>
+          </div>
+
+          <div className="col-50">
+            <IWC
+              containerHeight="490px"
+              title="Anotomy Lab"
+              institution="121317"
+              dataType="inline-embed"
+              location="143202"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/*INVEST IN YOUR FUTURE*/}
+      <section className="invest-future">
+        <div className="wrapper">
+          <h3>
+            Invest In Your Future
+          </h3>
+          <div className="cols">
+            <div className="col-50">
+              <ul>
+                <li><strong>$41 Million+</strong> in Scholarships Awarded</li>
+                <li><strong>$55,000</strong> Average Starting Salary of Bear Graduates</li>
+                <li><strong>#14 of 66</strong>Best Value Colleges (niche.com)</li>
+              </ul>
+              <p>One of the first people you’ll build a relationship with at Bear is your financial aid advisor. They’ll be with you and your family from the beginning of the admission process, helping you to navigate state and federal aid, find scholarships and build a financial aid package that works.</p>
+              <Button variant="solid" color="primary">Fund Your Education</Button>
+            </div>
+
+            <figure className="col-50">
+              <Img fluid={data.investFuture.childImageSharp.fluid} alt="Invest in Your Future" />
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -285,7 +307,8 @@ const ProgramsIndex = ({ data, pageContext }) => {
               <p>
                 {' '}
                 You must maintain a <strong> 3.2</strong> cumulative and science
-                GPA. You must also earn at least a C in each prerequisite course.
+                GPA. You must also earn at least a C in each prerequisite
+                course.
               </p>
             </div>
           </div>
@@ -314,7 +337,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
         </div>
         <div className="wrapper cols">
           <figure className="col-50">
-            <Img fluid={data.startJourney.childImageSharp.fluid} alt="" />
+            {/* <Img fluid={data.startJourney.childImageSharp.fluid} alt="" /> */}
           </figure>
           <div className="col-50">
             <h3>Start Your Journey to a Rewarding Career in Medicine Today</h3>
@@ -355,18 +378,19 @@ export const squareImage = graphql`
 
 export const query = graphql`
   query {
-    startJourney: file(
-      relativePath: { eq: "inset-photos/female-testimonial.jpg" }
+    
+    startCareer: file(
+      relativePath: { eq: "inset-photos/start-succesful-career.jpg" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 500) {
+        fluid(maxWidth: 600, maxHeight: 700) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    bannerImage: file(relativePath: { eq: "headers/program-header.jpg" }) {
+    investFuture: file(relativePath: { eq: "inset-photos/invest-future.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1440, maxHeight: 350) {
+        fluid(maxWidth: 600, maxHeight: 700) {
           ...GatsbyImageSharpFluid
         }
       }

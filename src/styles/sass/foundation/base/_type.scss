@@ -38,8 +38,8 @@ h1 {
 
 h2 {
   font-family: $f-sans;
-  font-weight: 700;
-  line-height: 1.2;
+  font-weight: 800;
+  line-height: 1.1;
   @include fluidRem('font-size', 1.5rem, 2.8rem );
 }
 

@@ -34,6 +34,16 @@ const palette = {
     300: '#888',
     400: '#666',
   },
+  orange: {
+    main: '#DE6B00',
+    light: '#FF9A3D',
+    contrastText: white,
+  },
+  white: {
+    main: '#ff5500',
+    light: '#ff0000',
+    contrastText: black,
+  },
 }
 
 const shadows = {

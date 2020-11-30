@@ -8,15 +8,23 @@
 }
 
 .site-header{
-	display: flex;
+	display: block;
 	width: 100%;
-	max-width: $mq-1300;
-	margin: 0 auto;
-	@include fluidRem(padding, 1rem, 2rem);
-	max-width: $mq-1440;
 	z-index: 9999;
-	justify-content: space-between;
-	// transform: translate3d(0,0,0);
+	border-top: 3px solid $c-blue;
+	background: white;
+	transform: translate3d(0,0,0);
+	// position: fixed;
+
+	.wrapper{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		max-width: $mq-1300;
+		margin: 0 auto;
+		max-width: $mq-1440;
+		@include fluidRem(padding, 1rem 1rem, 1rem 2rem);
+	}
 
 	nav{
 		flex-shrink: 0;

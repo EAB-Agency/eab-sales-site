@@ -36,6 +36,11 @@ const getPropsByVariant = ({ variant, color, theme }) => {
       backgroundColor: theme.palette.common.white,
       color: theme.palette.common.black,
     },
+    focus: {
+      border: `1px solid ${theme.palette.common.black}`,
+      backgroundColor: theme.palette.common.white,
+      color: theme.palette.common.black,
+    },
   }
 
   const outlineVariantPropsByPalette = colorInPalette && {
@@ -45,6 +50,11 @@ const getPropsByVariant = ({ variant, color, theme }) => {
       color: colorInPalette.main,
     },
     hover: {
+      border: `1px solid ${colorInPalette.light}`,
+      backgroundColor: theme.palette.common.white,
+      color: colorInPalette.light,
+    },
+    focus: {
       border: `1px solid ${colorInPalette.light}`,
       backgroundColor: theme.palette.common.white,
       color: colorInPalette.light,
@@ -61,6 +71,10 @@ const getPropsByVariant = ({ variant, color, theme }) => {
       border: `1px solid ${theme.palette.grey[200]}`,
       backgroundColor: theme.palette.grey[200],
     },
+    focus: {
+      border: `1px solid ${theme.palette.grey[200]}`,
+      backgroundColor: theme.palette.grey[200],
+    },
   }
 
   const solidVariantPropsByPalette = colorInPalette && {
@@ -70,6 +84,10 @@ const getPropsByVariant = ({ variant, color, theme }) => {
       color: colorInPalette.contrastText,
     },
     hover: {
+      border: `1px solid ${colorInPalette.light}`,
+      backgroundColor: colorInPalette.light,
+    },
+    focus: {
       border: `1px solid ${colorInPalette.light}`,
       backgroundColor: colorInPalette.light,
     },
