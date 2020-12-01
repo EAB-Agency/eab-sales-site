@@ -114,10 +114,10 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <div className="col-60">
             <IWC
               containerHeight="490px"
-              title="Anotomy Lab"
+              title="Academic Mall"
               institution="121317"
               dataType="inline-embed"
-              location="143202"
+              location="143339"
             />
           </div>
         </div>
@@ -180,7 +180,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
           title="Anotomy Lab"
           institution="121317"
           dataType="inline-embed"
-          location="143200"
+          location="143340"
         />
       </section>
 
