@@ -22,7 +22,14 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-video-container">
-          <video autoPlay loop muted playsInline id="hero-video" className="hero-video">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            id="hero-video"
+            className="hero-video"
+          >
             <source src={HeroVideo} type="video/mp4" />
           </video>
           <div className="hero-content">
@@ -47,10 +54,11 @@ const ProgramsIndex = ({ data, pageContext }) => {
               academically, personally and professionally.
             </p>
             <p>
-              Our small classes are <strong>experience-oriented</strong>, meaning you’ll focus on
-              real-world learning in a setting that encourages your professors
-              to get to know you. Plus, you’ll find a support group of advisors,
-              faculty and peers to cheer you on every step of the way.
+              Our small classes are <strong>experience-oriented</strong>,
+              meaning you’ll focus on real-world learning in a setting that
+              encourages your professors to get to know you. Plus, you’ll find a
+              support group of advisors, faculty and peers to cheer you on every
+              step of the way.
             </p>
             <Button variant="solid" color="secondary">
               Get to Know Bear
@@ -93,9 +101,10 @@ const ProgramsIndex = ({ data, pageContext }) => {
               best to recreate the experience virtually!
             </p>
             <p>
-              Your virtual visit includes a <strong>personalized virtual tour</strong> with an
-              admission counselor, a video chat with a student ambassador and a
-              meeting with your dedicated financial aid advisor.
+              Your virtual visit includes a{' '}
+              <strong>personalized virtual tour</strong> with an admission
+              counselor, a video chat with a student ambassador and a meeting
+              with your dedicated financial aid advisor.
             </p>
             <Button variant="solid" color="primary">
               Schedule Your Visit
@@ -171,7 +180,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
           title="Anotomy Lab"
           institution="121317"
           dataType="inline-embed"
-          location="143202"
+          location="143200"
         />
       </section>
 
@@ -192,11 +201,12 @@ const ProgramsIndex = ({ data, pageContext }) => {
             <div className="group events">
               <figure>
                 <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
-                <div className="date">Sep <span class="date-day">8</span></div>
+                <div className="date">
+                  Sep <span class="date-day">8</span>
+                </div>
               </figure>
               <h5>Bear professor Jon Doe’s top-ranked TED talk</h5>
               <p>Watch the acclaimed TED talk about the future of AI.</p>
-              
             </div>
             <div className="group news">
               <figure>
@@ -204,25 +214,28 @@ const ProgramsIndex = ({ data, pageContext }) => {
               </figure>
               <h5>Celebrating 2020’s All-American Scholars</h5>
               <p>
-                More than a dozen student-athletes qualified for the program this
-                year.
+                More than a dozen student-athletes qualified for the program
+                this year.
               </p>
             </div>
             <div className="group events">
               <figure>
                 <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
-                <div className="date">Jun <span class="date-day">28</span></div>
+                <div className="date">
+                  Jun <span class="date-day">28</span>
+                </div>
               </figure>
               <h5>Where are they now: Class of 2020</h5>
               <p>
                 The survey is in! See how recent grads are using their Bear
                 degrees.
               </p>
-              
             </div>
           </div>
           <div className="button-container">
-            <Button variant="solid" color="primary">More News</Button>
+            <Button variant="solid" color="primary">
+              More News
+            </Button>
           </div>
         </div>
       </section>
