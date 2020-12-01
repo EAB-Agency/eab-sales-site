@@ -50,11 +50,11 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <div className="col-60 desc">
             <h3>Become Your Best Self at Bear</h3>
             <p>
-              At Bear University, you’ll have limitless opportunites to grow
+              At Bear University, you’ll have limitless opportunities to grow
               academically, personally and professionally.
             </p>
             <p>
-              Our small classes are <strong>experience-oriented</strong>,
+              Our small classes are <strong>experience-oriented,</strong>
               meaning you’ll focus on real-world learning in a setting that
               encourages your professors to get to know you. Plus, you’ll find a
               support group of advisors, faculty and peers to cheer you on every
@@ -171,8 +171,8 @@ const ProgramsIndex = ({ data, pageContext }) => {
       <section className="page-content dark-grey-section take-virtual-tour">
         <div className="wrapper">
           <h3>
-            Picture Yourself at Bear University:
-            <strong>Take a Virtual Tour!</strong>
+            Picture Yourself at Bear University
+            {/* <strong>Take a Virtual Tour!</strong> */}
           </h3>
         </div>
         <IWC

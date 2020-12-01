@@ -13,7 +13,7 @@ export default function Footer() {
             <li>Contact Us</li>
             <li>Using Our Site</li>
             <li>Privacy Policy</li>
-            <li>GDPR Privary Notice</li>
+            <li>GDPR Privacy Notice</li>
             <li>ADA Policy</li>
           </ul>
           <div className="copyright">© 2020 EAB. All Rights Reserved.</div>
