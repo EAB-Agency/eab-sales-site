@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/layout'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
@@ -15,6 +15,17 @@ const ProgramsIndex = ({ data, pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext
 
+  // useEffect(() => {
+  //   const theVideo = document.getElementById('hero-video')
+  //   // theVideo.play()
+  //   console.log('Video Playeder!')
+
+  //   // return () => {
+  //   //   console.log('Video Played!')
+  //   //   alert('boomer')
+  //   // }
+  // })
+
   return (
     <Layout>
       <SEO title="Dual Admission: Physician Assistant Program" />
@@ -22,15 +33,17 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-video-container">
-          <video autoPlay loop className="hero-video">
+          <video autoPlay loop muted id="hero-video" className="hero-video">
             <source src={HeroVideo} type="video/mp4" />
           </video>
           <div className="hero-content">
-            <h2 className="video-title">{"Discover Your Future at Bear University"}</h2>
+            <h2 className="video-title">
+              {'Discover Your Future at Bear University'}
+            </h2>
             <Button variant="solid" color="orange">
-                Find Out More
-              </Button>
-            </div>
+              Find Out More
+            </Button>
+          </div>
         </div>
         <div className="page-title-container homepage-title"></div>
       </header>
@@ -39,25 +52,30 @@ const ProgramsIndex = ({ data, pageContext }) => {
       <section className="page-description homepage-desc">
         <div className="wrapper cols">
           <div className="col-60 desc">
-          <h3>
-          Become Your Best Self at Bear
-          </h3>
-          <p>
-          At Bear University, you’ll have limitless opportunites to grow academically, personally and professionally.</p>
-          <p>
-          Our small classes are experience-oriented, meaning you’ll focus on real-world learning in a setting that encourages your professors to get to know you. Plus, you’ll find a support group of advisors, faculty and peers to cheer you on every step of the way.
-          </p>
-          <Button variant="solid" color="secondary">
-                Get to Know Bear
-              </Button>
-        </div>
-        <div className="col-40 start-career">
-          <figure>
-            <Img fluid={data.startCareer.childImageSharp.fluid} alt="" />
-            <figcaption className="img-caption-green">I’VE FOUND A SECOND FAMILY AT BEAR. <span className="caption-by">Mia Carmichael</span></figcaption>  
-          </figure>
-        </div>
-
+            <h3>Become Your Best Self at Bear</h3>
+            <p>
+              At Bear University, you’ll have limitless opportunites to grow
+              academically, personally and professionally.
+            </p>
+            <p>
+              Our small classes are experience-oriented, meaning you’ll focus on
+              real-world learning in a setting that encourages your professors
+              to get to know you. Plus, you’ll find a support group of advisors,
+              faculty and peers to cheer you on every step of the way.
+            </p>
+            <Button variant="solid" color="secondary">
+              Get to Know Bear
+            </Button>
+          </div>
+          <div className="col-40 start-career">
+            <figure>
+              <Img fluid={data.startCareer.childImageSharp.fluid} alt="" />
+              <figcaption className="img-caption-green">
+                I’VE FOUND A SECOND FAMILY AT BEAR.{' '}
+                <span className="caption-by">Mia Carmichael</span>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 
@@ -65,8 +83,13 @@ const ProgramsIndex = ({ data, pageContext }) => {
       <section className="join-us">
         <div className="wrapper">
           <h3>Join Us In January</h3>
-          <p>We’ve launched a range of courses with a January start date, meaning it’s not too late to join Bear University this academic year.</p>
-          <Button variant="outline" color="white">Discover More</Button>
+          <p>
+            We’ve launched a range of courses with a January start date, meaning
+            it’s not too late to join Bear University this academic year.
+          </p>
+          <Button variant="outline" color="white">
+            Discover More
+          </Button>
         </div>
       </section>
 
@@ -74,12 +97,20 @@ const ProgramsIndex = ({ data, pageContext }) => {
       <section className="iwc-post">
         <div className="wrapper cols">
           <div className="col-50">
-            <h3>
-            Schedule a Virtual Visit Today
-            </h3>
-            <p>The best way to learn whether a school is right for you is to come visit. Since campus visits are limited right now, we’ve done our best to recreate the experience virtually!</p>
-            <p>Your virtual visit includes a personalized virtual tour with an admission counselor, a video chat with a student ambassador and a meeting with your dedicated financial aid advisor.</p>
-            <Button variant="solid" color="primary">Schedule Your Visit</Button>
+            <h3>Schedule a Virtual Visit Today</h3>
+            <p>
+              The best way to learn whether a school is right for you is to come
+              visit. Since campus visits are limited right now, we’ve done our
+              best to recreate the experience virtually!
+            </p>
+            <p>
+              Your virtual visit includes a personalized virtual tour with an
+              admission counselor, a video chat with a student ambassador and a
+              meeting with your dedicated financial aid advisor.
+            </p>
+            <Button variant="solid" color="primary">
+              Schedule Your Visit
+            </Button>
           </div>
 
           <div className="col-50">
@@ -97,22 +128,38 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*INVEST IN YOUR FUTURE*/}
       <section className="invest-future">
         <div className="wrapper">
-          <h3>
-            Invest In Your Future
-          </h3>
+          <h3>Invest In Your Future</h3>
           <div className="cols">
             <div className="col-50">
               <ul>
-                <li><strong>$41 Million+</strong> in Scholarships Awarded</li>
-                <li><strong>$55,000</strong> Average Starting Salary of Bear Graduates</li>
-                <li><strong>#14 of 66</strong>Best Value Colleges (niche.com)</li>
+                <li>
+                  <strong>$41 Million+</strong> in Scholarships Awarded
+                </li>
+                <li>
+                  <strong>$55,000</strong> Average Starting Salary of Bear
+                  Graduates
+                </li>
+                <li>
+                  <strong>#14 of 66</strong>Best Value Colleges (niche.com)
+                </li>
               </ul>
-              <p>One of the first people you’ll build a relationship with at Bear is your financial aid advisor. They’ll be with you and your family from the beginning of the admission process, helping you to navigate state and federal aid, find scholarships and build a financial aid package that works.</p>
-              <Button variant="solid" color="primary">Fund Your Education</Button>
+              <p>
+                One of the first people you’ll build a relationship with at Bear
+                is your financial aid advisor. They’ll be with you and your
+                family from the beginning of the admission process, helping you
+                to navigate state and federal aid, find scholarships and build a
+                financial aid package that works.
+              </p>
+              <Button variant="solid" color="primary">
+                Fund Your Education
+              </Button>
             </div>
 
             <figure className="col-50">
-              <Img fluid={data.investFuture.childImageSharp.fluid} alt="Invest in Your Future" />
+              <Img
+                fluid={data.investFuture.childImageSharp.fluid}
+                alt="Invest in Your Future"
+              />
             </figure>
           </div>
         </div>

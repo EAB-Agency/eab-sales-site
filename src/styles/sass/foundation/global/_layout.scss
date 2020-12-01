@@ -50,6 +50,7 @@ body {
   background: lightslategray;
   position: relative;
   overflow: hidden;
+  @include fluidRem(margin-top, 3.5rem, 4rem);
 
   .hero-image {
     .gatsby-image-wrapper{
