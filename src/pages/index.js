@@ -158,50 +158,21 @@ const ProgramsIndex = ({ data, pageContext }) => {
         </div>
       </section>
 
-      {/*PAGE CONTENT*/}
-      <section className="page-content wrapper cols">
-        <div className="col-60">
-          <h3>What Can You Do with a Physician Assistant Degree?</h3>
-          <p>
-            Bear University’s physician assistant program will prepare you to
-            fulfill an integral role in patient care. Completing the program
-            will prepare you to perform a comprehensive range of clinical
-            services, from taking histories and ordering diagnostic tests to
-            treating minor injuries. While a P.A., usually works with a
-            supervising physician, they can function as a primary care physician
-            in some more rural areas.
-          </p>
-          <p>
-            Between a population that is living longer and the impact of a
-            global pandemic, the demand continues to grow for skilled medical
-            professionals that provide competent, compassionate care. As a P.A.
-            you can make a real difference in the lives of patients of all ages
-            and medical histories.
-          </p>
+      {/*IWC TOUR*/}
+      <section className="page-content dark-grey-section take-virtual-tour">
+        <div className="wrapper">
+          <h3>
+          Picture Yourself at Bear University:
+          <strong>Take a Virtual Tour!</strong>
+          </h3>
         </div>
-        <aside className="col-40">
-          <div className="group">
-            <h4>Related Careers</h4>
-            <ul>
-              <li>Physician assitant</li>
-              <li>Clinical advisor</li>
-              <li>Emergency room P.A.</li>
-              <li>Infection control specialist</li>
-              <li>Medical practitioner</li>
-            </ul>
-          </div>
-          <div className="group">
-            <h4>Competencies</h4>
-            <ul>
-              <li>Diagnose and treat illnesses and minor injuries</li>
-              <li>
-                Work with supervising physician and team to provide
-                outcome-oriented care
-              </li>
-              <li>Take patient histories and update charts</li>
-            </ul>
-          </div>
-        </aside>
+        <IWC
+              containerHeight="550px"
+              title="Anotomy Lab"
+              institution="121317"
+              dataType="inline-embed"
+              location="143202"
+            />
       </section>
 
       {/*NUMBERS SECTION*/}

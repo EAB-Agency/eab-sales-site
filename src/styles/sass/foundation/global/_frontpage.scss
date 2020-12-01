@@ -159,7 +159,7 @@
         padding-top: 3em;
         li{
             display: block;
-            background: $c-purple;
+            background: darken($c-purple, 10%);
             padding: 1em;
             color: white;
             @include fluidRem(font-size, 1rem, 1.5rem);
@@ -182,5 +182,21 @@
     .img-caption-purple{
         left: initial;
         right: 0;
+    }
+}
+
+.take-virtual-tour{
+    .wrapper{
+        @include fluidRem(padding, 1rem 1rem, 3rem 4rem);
+        h3{
+            color: white;
+            font-weight: 500;
+            margin: 0 auto;
+            @include fluidRem(font-size, 1.5rem, 2.8rem);
+            strong{
+                display: block;
+                font-weight: 800;
+            }
+        }
     }
 }
