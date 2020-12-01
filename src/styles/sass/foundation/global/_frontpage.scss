@@ -113,6 +113,9 @@
         transform: translateX(-40%);
     }
 
+    figcaption{
+
+    }
 }
 
 .join-us{
@@ -123,7 +126,12 @@
     overflow: hidden;
 
     .wrapper{
-        @include fluidRem(padding-right, 0, 40rem);
+        display: block;;
+        background:rgba(darken($c-blue, 10%), 0.6);
+        @media(min-width: $mq-800){
+            background: transparent;
+            @include fluidRem(padding-right, 0, 40rem);
+        }
     }
 
     h3{
@@ -145,7 +153,10 @@
 
 .iwc-post{
     .cols{
-        flex-direction: row-reverse;
+        flex-direction: column;
+        @media(min-width: $mq-800){
+            flex-direction: row-reverse;
+        }
     }
     @media(min-width: $mq-800){
         [class*="col-"]{
@@ -171,9 +182,12 @@
     }
 
     ul{
-        width: 120%;
-        padding-top: 3em;
         list-style: none;
+
+        @media(min-width: $mq-800){
+            width: 120%;
+            padding-top: 3em;
+        }
 
         li{
             display: block;
@@ -213,8 +227,11 @@
           }
     }
     .img-caption-purple{
-        left: initial;
-        right: 0;
+
+        @media(min-width: $mq-800){
+            left: initial;
+            right: 0;
+        }
     }
 }
 
