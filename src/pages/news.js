@@ -175,9 +175,9 @@ export const query = graphql`
     ) {
       ...squareImage
     }
-    bannerImage: file(relativePath: { eq: "headers/news-header.jpg" }) {
+    bannerImage: file(relativePath: { eq: "headers/news-header-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1440, maxHeight: 350) {
+        fluid(maxWidth: 1840, maxHeight: 450) {
           ...GatsbyImageSharpFluid
         }
       }
