@@ -30,7 +30,7 @@ const { gtmId } = gtmConfig
 // }
 
 module.exports = {
-  pathPrefix: '/sales',
+  pathPrefix: '/partner',
 
   siteMetadata: {
     title: 'Bear University',
