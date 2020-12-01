@@ -304,9 +304,9 @@ export default AdmissionsIndex
 
 export const query = graphql`
   query {
-    bannerImage: file(relativePath: { eq: "headers/admissions-header.jpg" }) {
+    bannerImage: file(relativePath: { eq: "headers/admissions-header-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1440, maxHeight: 350) {
+        fluid(maxWidth: 1840, maxHeight: 350) {
           ...GatsbyImageSharpFluid
         }
       }

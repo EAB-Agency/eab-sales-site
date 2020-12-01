@@ -99,7 +99,7 @@ body {
   display: block;
   position: relative;
   @include fluidRem(padding-right, 1rem, 2rem);
-  margin-top: -1px;
+  margin-top: -3px;
   &::before {
     content: '';
     display: block;

@@ -370,9 +370,9 @@ export const query = graphql`
         }
       }
     }
-    bannerImage: file(relativePath: { eq: "headers/program-header.jpg" }) {
+    bannerImage: file(relativePath: { eq: "headers/program-header-2.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1440, maxHeight: 350) {
+        fluid(maxWidth: 1840, maxHeight: 350) {
           ...GatsbyImageSharpFluid
         }
       }
