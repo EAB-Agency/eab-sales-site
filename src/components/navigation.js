@@ -38,12 +38,13 @@ export default class Navigation extends Component {
               <Link to="/news/">News</Link>
             </li>
             <li>
-              <Button variant="solid" color="primary">
+              
+              <Button variant="solid" color="primary" size="medium">
                 Apply Now
               </Button>
             </li>
             <li>
-              <Button variant="solid" color="primary">
+              <Button variant="solid" color="primary" size="medium">
                 Request Info
               </Button>
             </li>

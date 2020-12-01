@@ -15,17 +15,6 @@ const ProgramsIndex = ({ data, pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext
 
-  // useEffect(() => {
-  //   const theVideo = document.getElementById('hero-video')
-  //   // theVideo.play()
-  //   console.log('Video Playeder!')
-
-  //   // return () => {
-  //   //   console.log('Video Played!')
-  //   //   alert('boomer')
-  //   // }
-  // })
-
   return (
     <Layout>
       <SEO title="Dual Admission: Physician Assistant Program" />
@@ -96,7 +85,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*IWC POST*/}
       <section className="iwc-post">
         <div className="wrapper cols">
-          <div className="col-50">
+          <div className="col-40">
             <h3>Schedule a Virtual Visit Today</h3>
             <p>
               The best way to learn whether a school is right for you is to come
@@ -113,7 +102,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             </Button>
           </div>
 
-          <div className="col-50">
+          <div className="col-60">
             <IWC
               containerHeight="490px"
               title="Anotomy Lab"
@@ -150,7 +139,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
                 to navigate state and federal aid, find scholarships and build a
                 financial aid package that works.
               </p>
-              <Button variant="solid" color="primary">
+              <Button variant="solid" color="purple">
                 Fund Your Education
               </Button>
             </div>
@@ -160,6 +149,10 @@ const ProgramsIndex = ({ data, pageContext }) => {
                 fluid={data.investFuture.childImageSharp.fluid}
                 alt="Invest in Your Future"
               />
+                 <figcaption className="img-caption-purple">
+                 AT BEAR MY DREAMS BECAME A REALITY
+                <span className="caption-by">Anthony Cerezo</span>
+              </figcaption>
             </figure>
           </div>
         </div>
@@ -425,7 +418,6 @@ export const squareImage = graphql`
 
 export const query = graphql`
   query {
-    
     startCareer: file(
       relativePath: { eq: "inset-photos/start-succesful-career.jpg" }
     ) {
@@ -437,7 +429,7 @@ export const query = graphql`
     }
     investFuture: file(relativePath: { eq: "inset-photos/invest-future.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 700) {
+        fluid(maxWidth: 700, maxHeight: 700) {
           ...GatsbyImageSharpFluid
         }
       }

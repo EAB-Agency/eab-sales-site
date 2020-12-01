@@ -545,4 +545,7 @@ figcaption[class*="img-caption-"]{
   &[class*="green"]{
     background: $c-green;
   }
+  &[class*="purple"]{
+    background: $c-purple;
+  }
 }

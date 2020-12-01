@@ -5,15 +5,15 @@ import Navigation from './navigation'
 
 export default function Head({ children }) {
 
-  const [pos, setPos] = useState("sticky")
+  const [pos, setPos] = useState('top')
 
   useEffect (()=>{
     document.addEventListener("scroll", e => {
         let scrolled = document.scrollingElement.scrollTop;
-        if (scrolled >= 200){
-          setPos("sticky")
+        if (scrolled >= 300) {
+          setPos('sticky')
         } else {
-          setPos("top")
+          setPos('top')
         }
     })
   })

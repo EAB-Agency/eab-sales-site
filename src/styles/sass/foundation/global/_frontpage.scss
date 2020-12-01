@@ -127,9 +127,27 @@
     }
 }
 
+.iwc-post{
+    .cols{
+        flex-direction: row-reverse;
+    }
+    @media(min-width: $mq-800){
+        [class*="col-"]{
+            margin-right: 3vw !important;
+            &:first-child{
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+
 .invest-future{
     display: block;
     background-image: linear-gradient(to top, white, rgba(white, 0));
+
+    .wrapper{
+        padding-top: 0;
+    }
 
     h3{
         @extend h2;
@@ -137,13 +155,14 @@
     }
 
     ul{
-        width: 140%;
+        width: 120%;
         padding-top: 3em;
         li{
             display: block;
             background: $c-purple;
             padding: 1em;
             color: white;
+            @include fluidRem(font-size, 1rem, 1.5rem);
         }
     }
 
@@ -152,7 +171,16 @@
             position: relative;
             &:first-child{
                 z-index: 10;
+
+                @media(min-width: $mq-800){
+                    margin-right: 3vw;
+                }
             }
         }
+    }
+
+    .img-caption-purple{
+        left: initial;
+        right: 0;
     }
 }

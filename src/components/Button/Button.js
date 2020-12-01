@@ -13,11 +13,11 @@ const buttonSizeProps = {
     padding: `${spacing['xsmall']} ${spacing['small']}`,
   },
   medium: {
-    fontSize: fontSizes['small'],
+    fontSize: fontSizes['medium'],
     padding: `${spacing['small']} ${spacing['medium']}`,
   },
   large: {
-    fontSize: fontSizes['medium'],
+    fontSize: fontSizes['large'],
     padding: `${spacing['medium']} ${spacing['large']}`,
   },
 }
@@ -46,18 +46,19 @@ const getPropsByVariant = ({ variant, color, theme }) => {
   const outlineVariantPropsByPalette = colorInPalette && {
     main: {
       border: `1px solid ${colorInPalette.main}`,
-      backgroundColor: theme.palette.common.white,
+      // backgroundColor: theme.palette.common.white,
+      backgroundColor: `transparent`,
       color: colorInPalette.main,
     },
     hover: {
       border: `1px solid ${colorInPalette.light}`,
-      backgroundColor: theme.palette.common.white,
-      color: colorInPalette.light,
+      backgroundColor: colorInPalette.light,
+      color: colorInPalette.main,
     },
     focus: {
       border: `1px solid ${colorInPalette.light}`,
-      backgroundColor: theme.palette.common.white,
-      color: colorInPalette.light,
+      backgroundColor: colorInPalette.light,
+      color: colorInPalette.main,
     },
   }
 
@@ -123,12 +124,12 @@ const StyledButton = ({
   const propsByVariant = getPropsByVariant({ variant, theme, color })
 
   return {
-    fontWeight: 500,
+    fontWeight: 700,
     cursor: 'pointer',
     opacity: disabled && 0.7,
-    transition: 'all 0.3s linear',
+    transition: 'all 0.2s ease-in',
     padding: buttonSizeProps.medium.padding,
-    fontSize: buttonSizeProps.medium.fontSize,
+    fontSize: buttonSizeProps.large.fontSize,
     borderRadius: theme.shape.borderRadius,
     fontFamily: theme.typography.fontFamily,
     boxShadow: enableElevation && theme.shadows[1],

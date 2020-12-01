@@ -40,9 +40,14 @@ const palette = {
     contrastText: white,
   },
   white: {
-    main: '#ff5500',
-    light: '#ff0000',
+    main: white,
+    light: '#0032A0',
     contrastText: black,
+  },
+  purple: {
+    main: '#45296b',
+    light: '#58328B',
+    contrastText: white,
   },
 }
 
@@ -54,7 +59,7 @@ const shadows = {
 
 const typography = {
   fontFamily:
-    "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif",
+    "'Montserrat', Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Ubuntu, Roboto,  Helvetica Neue, sans-serif",
 }
 
 const shape = {
