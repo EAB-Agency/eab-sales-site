@@ -157,12 +157,21 @@
     ul{
         width: 120%;
         padding-top: 3em;
+        list-style: none;
+
         li{
             display: block;
-            background: darken($c-purple, 10%);
+            background: lighten(black, 97%);
             padding: 1em;
-            color: white;
             @include fluidRem(font-size, 1rem, 1.5rem);
+
+            &::before{
+                display: none;
+            }
+
+            strong{
+                color: $c-purple;
+            }
         }
     }
 
@@ -197,6 +206,67 @@
                 display: block;
                 font-weight: 800;
             }
+        }
+    }
+}
+
+.news-section{
+    .wrapper{
+        .news-head{
+            display: flex;
+            justify-content: space-between;
+            h3{
+            }
+            button{
+                margin: auto 0;
+            }
+        }
+        .news-wrapper{
+            display: flex;
+
+            @media (min-width: $mq-500) {
+                flex-direction: row;
+                flex-wrap: wrap;
+              }
+          
+              .group {
+                display: block;
+                width: 100%;
+                text-align: center;
+          
+                @media (min-width: $mq-500) {
+                  width: calc(50% - 1.125rem);
+                  margin-right: 1.5rem;
+                }
+                @media (min-width: $mq-1000) {
+                  width: calc(25% - 1.125rem);
+                }
+          
+                &:last-child {
+                  margin-right: 0;
+                }
+          
+                figure {
+                  display: block;
+                  width: 100%;
+          
+                  @media(max-width: $mq-800){
+                    max-height: 20em;
+                    overflow: hidden;
+                  }
+          
+          
+                  img {
+                    display: block;
+                    object-fit: cover;
+                    object-position: center;
+                  }
+                }
+          
+                p {
+                  font-size: 0.95rem;
+                }
+              }
         }
     }
 }
