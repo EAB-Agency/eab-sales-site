@@ -14,7 +14,8 @@
 	border-top: 3px solid $c-blue;
 	background: white;
 	transform: translate3d(0,0,0);
-	// position: fixed;
+	position: absolute;
+	top: 0;
 
 	.wrapper{
 		display: flex;
@@ -28,11 +29,7 @@
 
 	nav{
 		flex-shrink: 0;
-	}	
-	// position: fixed;
-	// top: 0;
-	// @include animation(stickyheader 0.2s ease forwards);
-	
+	}
 	
 	// @media screen and (-webkit-min-device-pixel-ratio:0) {
 	// 	position: -webkit-sticky;
@@ -47,50 +44,11 @@
 		left: 50%;
 		transform: translateX(-50%);
 		background: white;
-		@include animation(stickyheader 0.3s ease forwards);
-		padding-top: 0.5rem;
-		padding-bottom: 0.5rem;
+		@include animation(stickyheader 0.5s ease-out forwards);
 		box-shadow: 0 0 0.8em rgba(black, 0.08);
-		transition: top 0.2s ease-in;
+		// transition: top 0.35s ease-in;
 
-		&::before{
-			content:"";
-			display: block;
-			width: 100vw;
-			height: 100%;
-			background: white;
-			position: absolute;
-			left: 50%;
-			top: 0;
-			transform: translateX(-50%);
-		}
-
-		& + .content-header{
-			margin-top: 3.8em;
-			transition: margin-top 0.2s ease-in;
-		}
 	}
-
-	// @media(max-width: $nav-breakpoint) {
-	// 	height: 4em;
-	// 	transition: height 0.2s;
-	// }
-
-	// &.sticked-shadow{
-	// 	transition: box-shadow 0.2s;
-
-	// 	@media(max-width: $nav-breakpoint) {
-	// 		height: 3.2em;
-	// 		transition: height 0.2s;
-	// 	}
-
-	// 	.site-branding-nav {
-	// 		// margin: 0.3em auto;
-	// 	}
-	// }
-
-
-	
 }
 
 .site-branding-nav{
@@ -107,11 +65,9 @@
 	&.toggled{
 
 		@media(max-width: $nav-breakpoint){
-			// background: white;
 		}
 
 		.site-branding{
-			// margin-bottom: 0.3em;
 			padding-bottom: 2em;
 			background: $c-blue;
 			position: relative;
