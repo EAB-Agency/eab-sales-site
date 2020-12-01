@@ -34,52 +34,52 @@ const ProgramsIndex = ({ data, pageContext }) => {
 
       {/*PAGE DESCRIPTION*/}
       <section className="page-description">
-      <div className="wrapper cols">
-        <div className="col-70">
-          <h3>
-            <span>Dual Admission:</span> Physician Assistant Program
-          </h3>
-          <p>
-            If you’re interested in providing compassionate and personalized
-            care as a P.A., Bear University’s Physician Assistant Dual Admission
-            program can help you reach your goals. Our nationally ranked P.A.
-            program trains competent, caring medical professionals who are
-            dedicated to improving health-care quality and outcomes. Through
-            clinical experiences and professional exposure, you’ll practice
-            diagnosing illnessess, prescribing medications and developing
-            treatment plans.
-          </p>
-          <p>
-            Keep reading to discover the type of skills you’ll learn and
-            possible career outcomes. We’ll also share admission requirements
-            and other program-specific information.
-          </p>
-        </div>
-        <div className="col-30 alternate-navigation">
-          {/* <AltNav /> */}
-          <ul className="no-list">
-            <li>
-              <Button variant="outline" color="primary">
-                Apply Now
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                College of Health Sciences
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Related Programs
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Contact Us
-              </Button>
-            </li>
-          </ul>
-        </div>
+        <div className="wrapper cols">
+          <div className="col-70">
+            <h3>
+              <span>Dual Admission:</span> Physician Assistant Program
+            </h3>
+            <p>
+              If you’re interested in providing compassionate and personalized
+              care as a P.A., Bear University’s Physician Assistant Dual
+              Admission program can help you reach your goals. Our nationally
+              ranked P.A. program trains competent, caring medical professionals
+              who are dedicated to improving health-care quality and outcomes.
+              Through clinical experiences and professional exposure, you’ll
+              practice diagnosing illnessess, prescribing medications and
+              developing treatment plans.
+            </p>
+            <p>
+              Keep reading to discover the type of skills you’ll learn and
+              possible career outcomes. We’ll also share admission requirements
+              and other program-specific information.
+            </p>
+          </div>
+          <div className="col-30 alternate-navigation">
+            {/* <AltNav /> */}
+            <ul className="no-list">
+              <li>
+                <Button variant="outline" color="primary">
+                  Apply Now
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  College of Health Sciences
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Related Programs
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Contact Us
+                </Button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -96,7 +96,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             title="Anotomy Lab"
             institution="121317"
             dataType="inline-embed"
-            location="143202"
+            location="143338"
           />
         </div>
       </section>
