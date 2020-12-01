@@ -5,7 +5,7 @@ import { Button } from '../components'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
-import HeroVideo from '../video/sales-site-hero.mp4'
+import HeroVideo from '../video/sales-site-hero2.mp4'
 import { Link, graphql } from 'gatsby'
 
 // import { Button, Stack, Box, Columns } from '../components/'
