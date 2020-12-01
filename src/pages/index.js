@@ -15,13 +15,16 @@ const ProgramsIndex = ({ data, pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext
 
-  useEffect(() => {
-    const theVideo = document.getElementById('hero-video')
-    return () => {
-      theVideo.play()
-      alert(theVideo)
-    }
-  })
+  // useEffect(() => {
+  //   const theVideo = document.getElementById('hero-video')
+  //   // theVideo.play()
+  //   console.log('Video Playeder!')
+
+  //   // return () => {
+  //   //   console.log('Video Played!')
+  //   //   alert('boomer')
+  //   // }
+  // })
 
   return (
     <Layout>
@@ -30,7 +33,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-video-container">
-          <video autoPlay loop id="hero-video" className="hero-video">
+          <video autoPlay loop muted id="hero-video" className="hero-video">
             <source src={HeroVideo} type="video/mp4" />
           </video>
           <div className="hero-content">
