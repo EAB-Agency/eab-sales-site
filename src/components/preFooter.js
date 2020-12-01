@@ -3,7 +3,7 @@ import { Button } from '../components'
 
 const PreFooter = () => {
   return (
-    <section className="dark-grey-section">
+    <section className="dark-grey-section why-bear">
       <div className="wrapper narrow centered">
         <h3>Why Bear University</h3>
         <p>
@@ -16,7 +16,7 @@ const PreFooter = () => {
         <p>
           <strong>Explore campus and see yourself at Bear University</strong>
         </p>
-        <Button variant="solid" color="grey">
+        <Button variant="solid" color="orange">
           Take a Virtual Tour
         </Button>
       </div>

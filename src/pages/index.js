@@ -180,17 +180,25 @@ const ProgramsIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <div className="news-head">
             <h3>News and Events at Bear</h3>
-            <Button variant="solid" color="primary">More News</Button>
           </div>
           <div className="news-wrapper">
-            <div className="group">
+            <div className="group news">
               <figure>
                 <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
               </figure>
               <h5>Cutting-edge upgrades coming to Bear labs</h5>
               <p>Bear’s STEM labs are getting a major upgrade this summer.</p>
             </div>
-            <div className="group">
+            <div className="group events">
+              <figure>
+                <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+                <div className="date">Sep <span class="date-day">8</span></div>
+              </figure>
+              <h5>Bear professor Jon Doe’s top-ranked TED talk</h5>
+              <p>Watch the acclaimed TED talk about the future of AI.</p>
+              
+            </div>
+            <div className="group news">
               <figure>
                 <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
               </figure>
@@ -200,23 +208,21 @@ const ProgramsIndex = ({ data, pageContext }) => {
                 year.
               </p>
             </div>
-            <div className="group">
-              <figure>
-                <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
-              </figure>
-              <h5>Bear professor Jon Doe’s top-ranked TED talk</h5>
-              <p>Watch the acclaimed TED talk about the future of AI.</p>
-            </div>
-            <div className="group">
+            <div className="group events">
               <figure>
                 <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+                <div className="date">Jun <span class="date-day">28</span></div>
               </figure>
               <h5>Where are they now: Class of 2020</h5>
               <p>
                 The survey is in! See how recent grads are using their Bear
                 degrees.
               </p>
+              
             </div>
+          </div>
+          <div className="button-container">
+            <Button variant="solid" color="primary">More News</Button>
           </div>
         </div>
       </section>

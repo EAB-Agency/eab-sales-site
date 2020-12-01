@@ -30,58 +30,60 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       </header>
 
       {/*PAGE DESCRIPTION*/}
-      <section className="page-description wrapper cols">
-        <div className="col-70">
-          <h3>Freshman Applicants</h3>
-          <p>
-            At Bear University, we prepare students for lives of purpose. We
-            give students the tools they need to become confident, capable and
-            caring professionals who outsmart, outperform and outlast their
-            competition. With this competitive advantage, our graduates go on to
-            change the world.
-          </p>
-          <p>
-            Whether you want to make the world a better place through a career
-            in health care, business, public service or even the arts, Bear University will
-            help you plan your path—and seize your future.
-          </p>
-          <p>
-            Your classes and extracurriculars will prepare you for a real
-            career, real contributions and real life. You may enter looking to
-            take on the world, but you will emerge prepared to dominate your
-            future.
-          </p>
-        </div>
-        <div className="col-30 alternate-navigation">
-          {/* <AltN av /> */}
+      <section className="page-description">
+        <div className="wrapper cols">
+          <div className="col-70">
+            <h3>Freshman Applicants</h3>
+            <p>
+              At Bear University, we prepare students for lives of purpose. We
+              give students the tools they need to become confident, capable and
+              caring professionals who outsmart, outperform and outlast their
+              competition. With this competitive advantage, our graduates go on to
+              change the world.
+            </p>
+            <p>
+              Whether you want to make the world a better place through a career
+              in health care, business, public service or even the arts, Bear University will
+              help you plan your path—and seize your future.
+            </p>
+            <p>
+              Your classes and extracurriculars will prepare you for a real
+              career, real contributions and real life. You may enter looking to
+              take on the world, but you will emerge prepared to dominate your
+              future.
+            </p>
+          </div>
+          <div className="col-30 alternate-navigation">
+            {/* <AltN av /> */}
 
-          <ul className="no-list">
-            <li>
-              <Button variant="outline" color="primary">
-                APPLY NOW
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Connect with a Counselor
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Degrees &amp; Majors
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Funding Your Education
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Take a Virtual Tour
-              </Button>
-            </li>
-          </ul>
+            <ul className="no-list">
+              <li>
+                <Button variant="outline" color="primary">
+                  APPLY NOW
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Connect with a Counselor
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Degrees &amp; Majors
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Funding Your Education
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Take a Virtual Tour
+                </Button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 

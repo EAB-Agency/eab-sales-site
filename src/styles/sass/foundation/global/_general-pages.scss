@@ -4,6 +4,7 @@
 //////////////////////
 
 .page-description {
+   background-image: linear-gradient(to bottom, white, rgba(white, 0));
   h3 {
     span {
       display: block;
@@ -461,20 +462,6 @@ picture{
   .iwc-iframe{
     position: relative;
     z-index: 10;
-    
-    // & > button{
-    //   position: absolute;
-    //   right: 1.5em;
-    //   top: 1.2em;
-    //   max-width: 11em;
-    //   z-index: 999;
-    //   background: #146DE1;
-    //   border-color: #146DE1;
-    //   &:hover, &focus{
-    //     background: darken(#146DE1, 20%);
-    //   }
-
-    // }
 
     @media(min-width:$mq-800){
       margin-right: 3em;
@@ -574,10 +561,13 @@ picture{
 
 .ambassadors{
   .iwc{
-    // @include fluidRem(height, 10rem, 30rem);
     height: 11rem !important;
     @media(min-width: $mq-500){
       height: calc(11rem + 19 * ((100vw - 18.75rem) / 56.25)) !important;
     }
   }
+}
+
+.top-news{
+  background-image: linear-gradient(to bottom, white, rgba(white, 0) 30%, rgba(white, 0) 40%);
 }

@@ -33,7 +33,8 @@ const ProgramsIndex = ({ data, pageContext }) => {
       </header>
 
       {/*PAGE DESCRIPTION*/}
-      <section className="page-description wrapper cols">
+      <section className="page-description">
+      <div className="wrapper cols">
         <div className="col-70">
           <h3>
             <span>Dual Admission:</span> Physician Assistant Program
@@ -78,6 +79,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               </Button>
             </li>
           </ul>
+        </div>
         </div>
       </section>
 

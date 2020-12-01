@@ -30,7 +30,8 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       </header>
 
       {/*PAGE DESCRIPTION*/}
-      <section className="page-description wrapper cols">
+      <section className="page-description">
+      <div className="wrapper cols">
         <div className="col-70">
           <h3>Living on Campus</h3>
           <p>
@@ -80,6 +81,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
               </Button>
             </li>
           </ul>
+        </div>
         </div>
       </section>
 
