@@ -37,7 +37,7 @@ module.exports = {
     titleTemplate: '%s · Bear University',
     description:
       'Founded in 1942, Bear University is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
-    url: 'https://www.bearuniversity.com', // No trailing slash allowed!
+    url: 'https://agency.eab.com/partner', // No trailing slash allowed!
     image: '/images/favicon.png',
   },
   plugins: [
