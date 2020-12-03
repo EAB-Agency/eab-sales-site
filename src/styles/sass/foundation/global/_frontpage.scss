@@ -249,6 +249,13 @@
             }
         }
     }
+    .virtual-tour{
+        iframe{
+            height: 28em;
+            min-height: 28em;
+            max-height: 28em;
+        }
+    }
 }
 
 .news-section{

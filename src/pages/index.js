@@ -54,7 +54,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               academically, personally and professionally.
             </p>
             <p>
-              Our small classes are <strong>experience-oriented,</strong>
+              Our small classes are <strong>experience-oriented, </strong>
               meaning you’ll focus on real-world learning in a setting that
               encourages your professors to get to know you. Plus, you’ll find a
               support group of advisors, faculty and peers to cheer you on every
@@ -175,13 +175,16 @@ const ProgramsIndex = ({ data, pageContext }) => {
             {/* <strong>Take a Virtual Tour!</strong> */}
           </h3>
         </div>
-        <IWC
-          containerHeight="550px"
-          title="Anotomy Lab"
-          institution="121317"
-          dataType="inline-embed"
-          location="143340"
-        />
+        
+         <div className="virtual-tour">
+   
+
+   <a alt="Launch Experience" href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=60231&data-image-width=100%&data-image-height=100%&">Launch Experience</a>
+   
+   
+   <script async="async" defer="defer" src="https://www.youvisit.com/tour/Embed/js3"></script>
+     
+         </div>
       </section>
 
       {/*NEWS SECTION*/}

@@ -126,7 +126,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <div className="group">
             <h4>Related Careers</h4>
             <ul>
-              <li>Physician assitant</li>
+              <li>Physician assistant</li>
               <li>Clinical advisor</li>
               <li>Emergency room P.A.</li>
               <li>Infection control specialist</li>
