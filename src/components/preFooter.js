@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '../components'
 
-const PreFooter = () => {
+const PreFooter = ({cta}) => {
   return (
     <section className="dark-grey-section why-bear">
       <div className="wrapper narrow centered">
@@ -17,7 +17,7 @@ const PreFooter = () => {
           <strong>Explore campus and see yourself at Bear University</strong>
         </p>
         <Button variant="solid" color="orange">
-          Take a Virtual Tour
+          {cta}
         </Button>
       </div>
     </section>

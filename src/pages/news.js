@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
@@ -6,6 +6,7 @@ import { Button } from '../components/'
 import Img from 'gatsby-image'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
+import PreFooter from '../components/preFooter'
 
 const NewsIndex = ({ data, location, pageContext }) => {
   const {
@@ -33,7 +34,9 @@ const NewsIndex = ({ data, location, pageContext }) => {
           <h3>Construction begins on residence hall</h3>
           <p>
             <strong>
-              The $42 million Premier Living-Learning Community at Bear University will provide housing for 500 students and flexible spaces to study and attend class.
+              The $42 million Premier Living-Learning Community at Bear
+              University will provide housing for 500 students and flexible
+              spaces to study and attend class.
             </strong>
           </p>
 
@@ -76,8 +79,8 @@ const NewsIndex = ({ data, location, pageContext }) => {
             Built through a public-private partnership, the $42 million project
             is being funded through a combination of tax-exempt bonds and
             private donations. While the initial phases are completely funded,
-            Bear University is still working diligently to secure funding to finalize
-            construction.
+            Bear University is still working diligently to secure funding to
+            finalize construction.
           </p>
 
           <p>
@@ -137,6 +140,9 @@ const NewsIndex = ({ data, location, pageContext }) => {
           </div>
         </div>
       </section>
+      <Fragment>
+        <PreFooter cta="Take a Virtual Tour" />
+      </Fragment>
     </Layout>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
@@ -6,6 +6,8 @@ import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
+import PreFooter from '../components/preFooter'
+
 
 // import { Button, Stack, Box, Columns } from '../components/'
 
@@ -343,6 +345,9 @@ const ProgramsIndex = ({ data, pageContext }) => {
           </div>
         </div>
       </section>
+      <Fragment>
+        <PreFooter cta="Take a Virtual Tour" />
+      </Fragment>
     </Layout>
   )
 }

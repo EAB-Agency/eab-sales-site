@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 import Video from '../components/video'
@@ -6,6 +6,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button, Box, Columns } from '../components'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
+import Prefooter from '../components/preFooter'
 
 const FinancialAidIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -21,8 +22,8 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
         <Breadcrumb crumbs={crumbs} crumbLabel="Funding Your Education" />
         <h1>Financial Aid</h1>
         <p>
-          A degree from Bear University is a smart investment in your future.
-          At CoA, you’ll get a world-class education for an affordable price.
+          A degree from Bear University is a smart investment in your future. At
+          CoA, you’ll get a world-class education for an affordable price.
           You’ll also build industry connections and gain hands-on experience
           that will give you an edge in today’s competitive job market.
         </p>
@@ -173,8 +174,8 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
                 Scholarships are one of the best ways to pay for your college
                 education. They don’t cost you anything, you don’t have to pay
                 them back and some are considered prestigious honors that you
-                can reference on your resume. Bear University offers both
-                need- and merit-based scholarships, and our friendly staff is
+                can reference on your resume. Bear University offers both need-
+                and merit-based scholarships, and our friendly staff is
                 available to help you find private scholarships to supplement
                 your financial aid package if needed.
               </p>
@@ -260,6 +261,9 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
           </Columns>
         </section>
       </div>
+      <Fragment>
+        <PreFooter cta="Take a Virtual Tour" />
+      </Fragment>
     </Layout>
   )
 }

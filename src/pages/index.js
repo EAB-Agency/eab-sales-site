@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import Layout from '../components/layout'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
@@ -6,6 +6,8 @@ import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import Img from 'gatsby-image'
 import HeroVideo from '../video/sales-site-hero2.mp4'
+// import Container from '../components/container'
+import PreFooter from '../components/preFooter'
 import { Link, graphql } from 'gatsby'
 
 // import { Button, Stack, Box, Columns } from '../components/'
@@ -247,7 +249,11 @@ const ProgramsIndex = ({ data, pageContext }) => {
           </div>
         </div>
       </section>
+      <Fragment>
+        <PreFooter cta="Meet Your Counselor" />
+      </Fragment>  
     </Layout>
+    
   )
 }
 

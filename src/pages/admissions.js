@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Layout from '../components/layout'
 import { Button } from '../components'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
@@ -7,6 +7,7 @@ import IWC from '../components/iwc'
 import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 import Accordion from '../components/accordion'
+import PreFooter from '../components/preFooter'
 
 const AdmissionsIndex = ({ data, pageContext }) => {
   const {
@@ -148,15 +149,15 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             </a>
           </aside>
           <div className="col-70">
-          <Accordion
-                title="Submit Application for Admission"
-                content="<p>Freshman applicants may apply using our streamlined</p>
+            <Accordion
+              title="Submit Application for Admission"
+              content="<p>Freshman applicants may apply using our streamlined</p>
                 <p><a href=''>Big Blue Application</a> or the</p>
                 <p><a href=''>Common App.</a></p>"
-              />
-              <Accordion
-                  title="Submit Letter(s) of Recommendation"
-                  content="
+            />
+            <Accordion
+              title="Submit Letter(s) of Recommendation"
+              content="
                     <p>One letter of recommendation from a teacher is required, but you
                     may submit up to a total of three letters. The letters can be
                     completed online through the Common App Teacher Evaluation form,
@@ -174,10 +175,10 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                     <br />
                     Anywhere, U.S. 12345
                   </p>"
-                />
-                <Accordion
-                  title="Request Submission of Official Transcripts"
-                  content="
+            />
+            <Accordion
+              title="Request Submission of Official Transcripts"
+              content="
                   <p>
                   Your guidance counselor will need to submit your transcripts and
                   recommendation. They can do so electronically through Naviance,
@@ -204,11 +205,11 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                   state student assessment test, administered by a certified
                   teacher.
                 </p>"
-                />
+            />
 
-                <Accordion
-                  title="Submit Test Scores (Optional)"
-                  content="
+            <Accordion
+              title="Submit Test Scores (Optional)"
+              content="
                   <p>
                 Due to testing challenges related to COVID-19, undergraduate
                 applicants for the 2021-22 admission cycle may choose to have
@@ -241,8 +242,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
                 math scores for the SAT. For the ACT, Bear does not utilize the
                 optional writing section.
               </p>"
-                />
-            
+            />
           </div>
         </div>
       </section>
@@ -301,6 +301,9 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           </ul>
         </div>
       </section>
+      <Fragment>
+        <PreFooter cta="Take a Virtual Tour" />
+      </Fragment>
     </Layout>
   )
 }
