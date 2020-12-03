@@ -61,7 +61,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
               step of the way.
             </p>
             <Button variant="solid" color="secondary">
-              Get to Know Bear
+              Explore Our Programs
             </Button>
           </div>
           <div className="col-40 start-career">
@@ -102,7 +102,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             </p>
             <p>
               Your virtual visit includes a{' '}
-              <strong>personalized virtual tour</strong> with an admission
+              <strong>guided virtual tour</strong> with an admission
               counselor, a video chat with a student ambassador and a meeting
               with your dedicated financial aid advisor.
             </p>
@@ -172,26 +172,31 @@ const ProgramsIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <h3>
             Picture Yourself at Bear University
-            {/* <strong>Take a Virtual Tour!</strong> */}
+            <strong>Take a Virtual Tour!</strong>
           </h3>
         </div>
-        
-         <div className="virtual-tour">
-   
 
-   <a alt="Launch Experience" href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=60231&data-image-width=100%&data-image-height=100%&">Launch Experience</a>
-   
-   
-   <script async="async" defer="defer" src="https://www.youvisit.com/tour/Embed/js3"></script>
-     
-         </div>
+        <div className="virtual-tour">
+          <a
+            alt="Launch Experience"
+            href="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=60231&data-image-width=100%&data-image-height=100%&"
+          >
+            Launch Experience
+          </a>
+
+          <script
+            async="async"
+            defer="defer"
+            src="https://www.youvisit.com/tour/Embed/js3"
+          ></script>
+        </div>
       </section>
 
       {/*NEWS SECTION*/}
       <section className="grey-section news-section">
         <div className="wrapper">
           <div className="news-head">
-            <h3>News and Events at Bear</h3>
+            <h3>News and Events</h3>
           </div>
           <div className="news-wrapper">
             <div className="group news">
