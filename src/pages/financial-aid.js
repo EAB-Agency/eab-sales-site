@@ -6,7 +6,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button, Box, Columns } from '../components'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
-import Prefooter from '../components/preFooter'
+import PreFooter from '../components/preFooter'
 
 const FinancialAidIndex = ({ data, location, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
