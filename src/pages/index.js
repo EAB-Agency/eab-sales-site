@@ -103,10 +103,10 @@ const ProgramsIndex = ({ data, pageContext }) => {
               best to recreate the experience virtually!
             </p>
             <p>
-              Your virtual visit includes a{' '}
-              <strong>guided virtual tour</strong> with an admission
-              counselor, a video chat with a student ambassador and a meeting
-              with your dedicated financial aid advisor.
+              Your virtual visit includes a <strong>guided virtual tour</strong>{' '}
+              with an admission counselor, a video chat with a student
+              ambassador and a meeting with your dedicated financial aid
+              advisor.
             </p>
             <Button variant="solid" color="primary">
               Schedule Your Visit
@@ -251,9 +251,8 @@ const ProgramsIndex = ({ data, pageContext }) => {
       </section>
       <Fragment>
         <PreFooter cta="Meet Your Counselor" />
-      </Fragment>  
+      </Fragment>
     </Layout>
-    
   )
 }
 
