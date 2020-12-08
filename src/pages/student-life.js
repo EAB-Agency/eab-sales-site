@@ -9,7 +9,6 @@ import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import PreFooter from '../components/preFooter'
 
-
 const StudentLifeIndex = ({ data, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
   const {
@@ -60,7 +59,6 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </div>
           <div className="col-30 alternate-navigation">
             {/* <AltNav /> */}
-
             <ul className="no-list">
               <li>
                 <Button variant="outline" color="primary">
@@ -173,7 +171,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       </section>
 
       {/*DARK GREY SECTION*/}
-      <setion className="explore-more dark-grey-section centered">
+      <section className="explore-more dark-grey-section centered">
         <div className="wrapper">
           <h4>
             Explore More Places Where You’ll Live and Learn at Bear University
@@ -182,7 +180,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             Take a Virtual Tour
           </Button>
         </div>
-      </setion>
+      </section>
 
       {/*PURPLE SECTION*/}
       <section className="purple-section statistics">
@@ -334,10 +332,10 @@ export default StudentLifeIndex
 
 export const squareImage = graphql`
   fragment squareImage on File {
-      childImageSharp {
+    childImageSharp {
       fluid(maxWidth: 355, maxHeight: 360) {
-      ...GatsbyImageSharpFluid
-    }
+        ...GatsbyImageSharpFluid
+      }
     }
   }
 `
