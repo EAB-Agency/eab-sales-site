@@ -20,7 +20,10 @@ export default class Navigation extends Component {
         <nav role="navigation">
           <ul className="no-list">
             <li>
-              <Link to="/">Academics</Link>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/academics/">Academics</Link>
             </li>
             <li>
               <Link to="/funding-your-education/">Funding</Link>
@@ -35,12 +38,13 @@ export default class Navigation extends Component {
               <Link to="/news/">News</Link>
             </li>
             <li>
-              <Button variant="solid" color="primary">
+              
+              <Button variant="solid" color="primary" size="medium">
                 Apply Now
               </Button>
             </li>
             <li>
-              <Button variant="solid" color="primary">
+              <Button variant="solid" color="primary" size="medium">
                 Request Info
               </Button>
             </li>

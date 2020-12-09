@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
@@ -7,6 +7,7 @@ import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
+import PreFooter from '../components/preFooter'
 
 const StudentLifeIndex = ({ data, pageContext }) => {
   const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -29,56 +30,58 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       </header>
 
       {/*PAGE DESCRIPTION*/}
-      <section className="page-description wrapper cols">
-        <div className="col-70">
-          <h3>Living on Campus</h3>
-          <p>
-            On-campus living is a huge part of the college experience. At Bear
-            University, you’ll meet new people from all over the world, and
-            you’ll make lasting friendships that will define your life.{' '}
-          </p>
-          <p>
-            Plus, when you live on campus, everything is convenient. Walk over
-            to a friend's place to hang out. Stop by the library to get some
-            work done. Attend an athletic event right outside your room. Go to
-            Starbucks at midnight for a study break. Participate in a variety of
-            club and organizational events in the halls.{' '}
-          </p>
-          <p>
-            You don’t have to worry about paying utility bills or shopping for
-            groceries. That’s more time you can spend in the rec center or
-            soaking in the culture downtown.
-          </p>
-          <p>
-            Keep reading to explore where you could live, eat and play as a Bear
-            University student. You’ll see why we call this “the good life.”
-          </p>
-        </div>
-        <div className="col-30 alternate-navigation">
-          {/* <AltNav /> */}
-
-          <ul className="no-list">
-            <li>
-              <Button variant="outline" color="primary">
-                Take a Virtual Tour
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Campus Housing
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Clubs &amp; Associations
-              </Button>
-            </li>
-            <li>
-              <Button variant="solid" color="primary">
-                Athletics
-              </Button>
-            </li>
-          </ul>
+      <section className="page-description">
+        <div className="wrapper cols">
+          <div className="col-70">
+            <h3>Living on Campus</h3>
+            <p>
+              On-campus living is a huge part of the college experience. At Bear
+              University, you’ll meet new people from all over the world, and
+              you’ll make lasting friendships that will define your life.{' '}
+            </p>
+            <p>
+              Plus, when you live on campus, everything is convenient. Walk over
+              to a friend's place to hang out. Stop by the library to get some
+              work done. Attend an athletic event right outside your room. Go to
+              Starbucks at midnight for a study break. Participate in a variety
+              of club and organizational events in the halls.{' '}
+            </p>
+            <p>
+              You don’t have to worry about paying utility bills or shopping for
+              groceries. That’s more time you can spend in the rec center or
+              soaking in the culture downtown.
+            </p>
+            <p>
+              Keep reading to explore where you could live, eat and play as a
+              Bear University student. You’ll see why we call this “the good
+              life.”
+            </p>
+          </div>
+          <div className="col-30 alternate-navigation">
+            {/* <AltNav /> */}
+            <ul className="no-list">
+              <li>
+                <Button variant="outline" color="primary">
+                  Take a Virtual Tour
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Campus Housing
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Clubs &amp; Associations
+                </Button>
+              </li>
+              <li>
+                <Button variant="solid" color="primary">
+                  Athletics
+                </Button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -315,6 +318,12 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </div>
         </div>
       </section>
+      <Fragment>
+        <PreFooter
+          cta="Take a Virtual Tour"
+          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=60231&data-image-width=100%&data-image-height=100%&"
+        />
+      </Fragment>
     </Layout>
   )
 }
@@ -363,9 +372,11 @@ export const query = graphql`
         }
       }
     }
-    bannerImage: file(relativePath: { eq: "headers/student-life-header.jpg" }) {
+    bannerImage: file(
+      relativePath: { eq: "headers/student-life-header-2.jpg" }
+    ) {
       childImageSharp {
-        fluid(maxWidth: 1440, maxHeight: 350) {
+        fluid(maxWidth: 1840, maxHeight: 450) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -34,11 +34,16 @@ module.exports = {
 
   siteMetadata: {
     title: 'Bear University',
-    titleTemplate: '%s · The Real College',
+    titleTemplate: '%s · Bear University',
     description:
       'Founded in 1942, Bear University is a leading institution in America with more than 50 online degree programs. Learn more about our great academic opportunities!',
+<<<<<<< HEAD
     url: 'https://agency.eab.com/partner/', // No trailing slash allowed!
     image: '/images/favicon.ico',
+=======
+    url: 'https://agency.eab.com/partner', // No trailing slash allowed!
+    image: '/images/favicon.png',
+>>>>>>> e5d155202d9ebb6900bfffa8160c4b1959d108ee
   },
   plugins: [
     {
@@ -95,7 +100,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Montserrat\:300,400, 400i,600,700`,
+          `Montserrat\:300,400, 400i,600,700,800`,
           // `source sans pro\:300,400,600,700`, // you can also specify font weights and styles
         ],
         display: 'swap',

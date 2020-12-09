@@ -19,7 +19,6 @@ class Template extends React.Component {
       <Container>
         <Head />
         {children}
-        <PreFooter />
         <Footer />
       </Container>
     )
