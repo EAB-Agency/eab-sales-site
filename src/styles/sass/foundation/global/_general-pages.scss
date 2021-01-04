@@ -566,11 +566,11 @@ picture{
   padding-left: 4rem;
   position: relative;
   margin-bottom: 0.8em;
-  background: none;
+  background: none !important;
   border: none;
   width: 100%;
   outline: none;
-  transition: background-color 0.6s ease;
+  // transition: background-color 0.6s ease;
 
   &::before {
     content: counter(steps);
@@ -601,7 +601,7 @@ picture{
 .accordion:hover,
 .active {
   // background-color: #ccc;
-  background: none;
+  background: none !important;
 }
 
 /* Style the accordion content title */
