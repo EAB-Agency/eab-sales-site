@@ -129,5 +129,18 @@ module.exports = {
         // routeChangeEventName: 'YOUR_ROUTE_CHANGE_EVENT_NAME',
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Bear University`,
+        short_name: `Bear U`,
+        start_url: `/`,
+        background_color: `#0032a0`,
+        theme_color: `#fff`,
+        display: `standalone`,
+        icon: `src/images/bear-icon-phone.svg`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
