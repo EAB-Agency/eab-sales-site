@@ -38,9 +38,8 @@ export default class Navigation extends Component {
               <Link to="/news/">News</Link>
             </li>
             <li>
-              
               <Button variant="solid" color="primary" size="medium">
-                Apply Now
+                Apply Today
               </Button>
             </li>
             <li>
