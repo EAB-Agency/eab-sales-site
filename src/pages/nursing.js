@@ -85,9 +85,15 @@ const AdmissionsIndex = ({ data, pageContext }) => {
 
       <section className="white-section">
         <div className="wrapper cols">
-          <figure className="col-50">
-            <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
-          </figure>
+          <div className="col-50">
+            <IWC
+              containerHeight="560px"
+              title="MBA"
+              institution="121317"
+              dataType="inline-embed"
+              location="143503"
+            />
+          </div>
           <div className="col-50">
             <h3>Targeted Hands-On Learning:</h3>
             <h4>The perfect blend of in-person and online learning.</h4>
@@ -137,9 +143,15 @@ const AdmissionsIndex = ({ data, pageContext }) => {
               </a>
             </div>
           </div>
-          <figure className="col-50">
-            <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
-          </figure>
+          <div className="col-50">
+            <IWC
+              containerHeight="560px"
+              title="MBA"
+              institution="121317"
+              dataType="inline-embed"
+              location="143504"
+            />
+          </div>
         </div>
       </section>
 
