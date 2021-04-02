@@ -4,7 +4,7 @@
 //////////////////////
 
 .page-description {
-   background-image: linear-gradient(to bottom, white, rgba(white, 0));
+  background-image: linear-gradient(to bottom, white, rgba(white, 0));
   h3 {
     span {
       display: block;
@@ -145,7 +145,7 @@
         text-align: left;
       }
 
-      .iwc + p{
+      .iwc + p {
         margin-top: 2em;
       }
     }
@@ -240,34 +240,33 @@
   }
 }
 
-.iwc{
-
-  h3{
-    span{
+.iwc {
+  h3 {
+    span {
       display: block;
     }
   }
-  .css-fzsut5{
+  .css-fzsut5 {
     display: flex;
     flex-direction: column;
 
-    .css-15jaxh1{
+    .css-15jaxh1 {
       margin-top: 1em;
     }
 
-    @media(min-width: $mq-900){
+    @media (min-width: $mq-900) {
       flex-direction: row;
 
-      .css-15jaxh1{
+      .css-15jaxh1 {
         margin-right: 1em;
-  
-        &:last-child{
+
+        &:last-child {
           margin-right: 0;
         }
       }
-    }    
+    }
   }
-  iframe{
+  iframe {
     width: 100% !important;
     min-width: 100% !important;
   }
@@ -278,14 +277,13 @@
     align-items: center;
     div[class*='col-']:first-child {
       margin-right: 3em;
-      
     }
 
-    @media(max-width: $mq-800){
+    @media (max-width: $mq-800) {
       div[class*='col-']:first-child {
         order: 2;
       }
-      figure{
+      figure {
         display: block;
         width: 100%;
         overflow: hidden;
@@ -317,7 +315,7 @@
 }
 
 .testimonial {
-  .cols{
+  .cols {
     align-items: center;
   }
   q {
@@ -343,8 +341,8 @@
     }
   }
 
-  .gatsby-image-wrapper{
-    @media(max-width: $mq-800){
+  .gatsby-image-wrapper {
+    @media (max-width: $mq-800) {
       max-height: 20em;
     }
   }
@@ -381,11 +379,10 @@
         display: block;
         width: 100%;
 
-        @media(max-width: $mq-800){
+        @media (max-width: $mq-800) {
           max-height: 20em;
           overflow: hidden;
         }
-
 
         img {
           display: block;
@@ -401,28 +398,28 @@
   }
 }
 
-picture{
-  img{
+picture {
+  img {
     position: relative !important;
   }
 }
 
-.residence-life{
-  header{
+.residence-life {
+  header {
     @extend %wrapper;
-    @include fluidRem(padding,1rem 1rem, 2rem 2rem);
+    @include fluidRem(padding, 1rem 1rem, 2rem 2rem);
     position: relative;
-    
-    h3{
+
+    h3 {
       margin: 0 auto;
       position: relative;
       z-index: 10;
     }
 
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       display: block;
-      width:100vw;
+      width: 100vw;
       height: 100%;
       position: absolute;
       z-index: 1;
@@ -432,43 +429,42 @@ picture{
       background: $c-darkgrey;
     }
   }
-
 }
 
-.iwc-container{
-  @include fluidRem(padding,1rem 1rem, 4rem 4rem);
-    
-  .iwc-iframe{
+.iwc-container {
+  @include fluidRem(padding, 1rem 1rem, 4rem 4rem);
+
+  .iwc-iframe {
     position: relative;
     z-index: 10;
 
-    @media(min-width:$mq-800){
+    @media (min-width: $mq-800) {
       margin-right: 3em;
     }
   }
-  .iwc-copy{
+  .iwc-copy {
     display: flex;
     flex-direction: column;
     text-align: left;
     position: relative;
     z-index: 10;
-    p{
+    p {
       @include fluidRem(font-size, 0.95rem, 1rem);
     }
 
-    button{
-      @media(min-width: $mq-800){
+    button {
+      @media (min-width: $mq-800) {
         margin-left: 0;
       }
     }
   }
 
-  &.grey-section{
+  &.grey-section {
     position: relative;
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       display: block;
-      width:100vw;
+      width: 100vw;
       height: 100%;
       position: absolute;
       z-index: 1;
@@ -478,46 +474,47 @@ picture{
       background: lighten($c-mediumgrey, 50%);
     }
 
-    @media(min-width: $mq-800){
-      .iwc-iframe{
+    @media (min-width: $mq-800) {
+      .iwc-iframe {
         order: 2;
         margin-right: 0;
         margin-left: 3em;
       }
-
-      
     }
   }
-  &:nth-of-type(1){
-    .iwc-copy{
-      button{
+  &:nth-of-type(1) {
+    .iwc-copy {
+      button {
         background: $c-red;
         border-color: $c-red;
 
-        &:hover, &:focus{
+        &:hover,
+        &:focus {
           background: darken($c-red, 15%);
         }
       }
     }
   }
-  &:nth-of-type(2){
-    .iwc-copy{
-      button{
+  &:nth-of-type(2) {
+    .iwc-copy {
+      button {
         background: $c-green;
         border-color: $c-green;
 
-        &:hover, &:focus{
+        &:hover,
+        &:focus {
           background: darken($c-green, 15%);
         }
       }
     }
   }
-  &:nth-of-type(3){
-    .iwc-copy{
-      button{
+  &:nth-of-type(3) {
+    .iwc-copy {
+      button {
         background: $c-yellow;
         border-color: $c-yellow;
-        &:hover, &:focus{
+        &:hover,
+        &:focus {
           background: darken($c-yellow, 15%);
         }
       }
@@ -527,28 +524,33 @@ picture{
 
 // .iwc-container
 
-.explore-more{
-  .wrapper{
+.explore-more {
+  .wrapper {
     text-align: center;
 
-    h4{
+    h4 {
       color: white;
       font-weight: 600;
     }
   }
 }
 
-.ambassadors{
-  .iwc{
+.ambassadors {
+  .iwc {
     height: 11rem !important;
-    @media(min-width: $mq-500){
+    @media (min-width: $mq-500) {
       height: calc(11rem + 19 * ((100vw - 18.75rem) / 56.25)) !important;
     }
   }
 }
 
-.top-news{
-  background-image: linear-gradient(to bottom, white, rgba(white, 0) 30%, rgba(white, 0) 40%);
+.top-news {
+  background-image: linear-gradient(
+    to bottom,
+    white,
+    rgba(white, 0) 30%,
+    rgba(white, 0) 40%
+  );
 }
 
 // ===============
@@ -588,7 +590,7 @@ picture{
     top: 0.1em;
   }
 
-  h4{
+  h4 {
     @include fluidRem(font-size, 1.1rem, 1.8rem);
     text-align: left;
     text-transform: initial;
@@ -599,14 +601,15 @@ picture{
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .accordion:hover,
+.accordion:focus,
 .active {
   // background-color: #ccc;
-  background: none;
+  background: none !important;
 }
 
 /* Style the accordion content title */
 .accordion__title {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 14px;
 }
@@ -636,4 +639,11 @@ picture{
   // font-size: 14px;
   @include fluidRem(font-size, 1rem, 1.2rem);
   padding: 1em;
+}
+
+.note {
+  display: block;
+  width: 100%;
+  max-width: $mq-900;
+  margin: -5em auto 4em;
 }

@@ -8,7 +8,6 @@ import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 import PreFooter from '../components/preFooter'
 
-
 // import { Button, Stack, Box, Columns } from '../components/'
 
 const ProgramsIndex = ({ data, pageContext }) => {

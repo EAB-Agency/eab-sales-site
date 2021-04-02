@@ -24,6 +24,14 @@ export default class Navigation extends Component {
             </li>
             <li>
               <Link to="/academics/">Academics</Link>
+              <ul className="subnav">
+                <li>
+                  <Link to="/mba/">MBA</Link>
+                </li>
+                <li>
+                  <Link to="/nursing/">Nursing</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link to="/funding-your-education/">Funding</Link>

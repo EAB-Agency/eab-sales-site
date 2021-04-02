@@ -33,14 +33,14 @@ body {
   @extend %wrapper;
   @extend %padding;
 }
-.site-content{
+.site-content {
   overflow: hidden;
 }
 
 // ================================
 // Hero Images
 
-[aria-hidden="true"]{
+[aria-hidden='true'] {
   display: none;
   visibility: hidden;
 }
@@ -53,9 +53,8 @@ body {
   @include fluidRem(margin-top, 3.5rem, 4rem);
 
   .hero-image {
-    .gatsby-image-wrapper{
-      
-      picture{
+    .gatsby-image-wrapper {
+      picture {
         display: block;
         @include fluidRem(height, 15rem, 20rem);
       }
@@ -91,6 +90,10 @@ body {
         left: -99.99vw;
         top: 0;
       }
+
+      // &.mba {
+      //   max-width: $mq-700;
+      // }
     }
   }
 }
@@ -130,7 +133,6 @@ body {
     @include fluidRem(font-size, 0.8rem, 0.95rem);
     z-index: 10;
     margin-top: -1px;
-
   }
   .breadcrumb__link {
     text-decoration: none;
@@ -159,14 +161,15 @@ body {
   @extend %centeredTitle;
   overflow: hidden;
 
-  p, a {
+  p,
+  a {
     color: white;
   }
 
-  &.why-bear{
+  &.why-bear {
     position: relative;
-    &::before{
-      content: "";
+    &::before {
+      content: '';
       display: block;
       width: 70em;
       height: 70%;
@@ -179,7 +182,7 @@ body {
       opacity: 0.1;
     }
 
-    &::after{
+    &::after {
       @extend %diagonals;
       right: 0;
       top: 0;
@@ -187,9 +190,14 @@ body {
       // opacity: 0.5;
     }
 
-    .wrapper{
+    .wrapper {
       position: relative;
     }
+  }
+
+  .wire-button {
+    color: white !important;
+    border-color: white;
   }
 }
 
@@ -201,6 +209,13 @@ body {
 
   p {
     color: white;
+  }
+
+  &.mba {
+    button {
+      display: block;
+      margin: 3em auto 0 0;
+    }
   }
 }
 
@@ -338,11 +353,11 @@ body {
     }
   }
   p,
-  small{
+  small {
     display: block;
     text-align: center;
   }
-  a{
+  a {
     color: white;
   }
 }
@@ -363,6 +378,10 @@ body {
         margin: 0 1em 1em 0;
       }
     }
+
+    &.centered {
+      justify-content: center;
+    }
   }
 }
 
@@ -379,7 +398,7 @@ body {
     button {
       margin: 0 1em 1em 0;
 
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
     }
@@ -422,7 +441,7 @@ body {
     @extend small;
     margin-bottom: 0;
 
-    @media(min-width: $mq-800){
+    @media (min-width: $mq-800) {
       margin-bottom: 1em;
     }
   }
@@ -523,17 +542,17 @@ body {
   @extend small;
 }
 
-.no-break{
+.no-break {
   display: inline;
 }
 
-figure{
+figure {
   position: relative;
   margin-top: 0;
 }
 
-figcaption[class*="img-caption-"]{
-  display:block;
+figcaption[class*='img-caption-'] {
+  display: block;
   width: 100%;
   max-width: 15rem;
   background: $c-blue;
@@ -551,14 +570,14 @@ figcaption[class*="img-caption-"]{
   left: 50%;
   transform: translateX(-50%);
 
-  @media(min-width: $mq-800){
+  @media (min-width: $mq-800) {
     bottom: -2rem;
     left: 0;
     transform: translateX(-50%);
   }
 
-  &::before{
-    content:'"';
+  &::before {
+    content: '"';
     display: block;
     width: 100%;
     font-size: 2em;
@@ -566,23 +585,23 @@ figcaption[class*="img-caption-"]{
     margin: 0.3em 0 0.2em;
   }
 
-  .caption-by{
+  .caption-by {
     display: block;
     font-weight: 400;
     font-size: 0.8rem;
     margin-top: 0.5em;
 
-    &::before{
-      content: "-";
+    &::before {
+      content: '-';
       display: inline-block;
       margin-right: 0.3em;
     }
   }
 
-  &[class*="green"]{
+  &[class*='green'] {
     background: $c-green;
   }
-  &[class*="purple"]{
+  &[class*='purple'] {
     background: $c-purple;
   }
 }
