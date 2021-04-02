@@ -8,10 +8,16 @@ function Accordion(props) {
   const content = useRef(null)
 
   function toggleAccordion() {
-    setActiveState(setActive === '' ? 'active' : '')
-    setHeightState(
-      setActive === 'active' ? '0px' : `${content.current.scrollHeight}px`
-    )
+    const hasContent = props.content
+    if (hasContent) {
+      setActiveState(setActive === '' ? 'active' : '')
+      setHeightState(
+        setActive === 'active' ? '0px' : `${content.current.scrollHeight}px`
+      )
+    } else {
+      setActiveState(setActive === '' ? 'empty' : '')
+      setHeightState(setActive === 'empty' ? '0px' : `0px`)
+    }
   }
 
   return (

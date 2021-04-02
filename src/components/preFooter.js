@@ -1,7 +1,8 @@
 import React from 'react'
 import { Button } from '../components'
 
-const PreFooter = ({ cta, url }) => {
+// const PreFooter = ({ cta, url }) => {
+const PreFooter = (props) => {
   return (
     <section className="dark-grey-section why-bear">
       <div className="wrapper narrow centered">
@@ -14,18 +15,18 @@ const PreFooter = ({ cta, url }) => {
           <a href="">alumni outcomes</a> can’t be beat.
         </p>
         <p>
-          <strong>Explore campus and see yourself at Bear University</strong>
+          <strong>{props.callout}</strong>
         </p>
         <Button
           variant="solid"
           color="orange"
           onClick={() => {
-            if (url != undefined) {
-              return window.open(url)
+            if (props.url != undefined) {
+              return window.open(props.url)
             }
           }}
         >
-          {cta}
+          {props.cta}
         </Button>
       </div>
     </section>

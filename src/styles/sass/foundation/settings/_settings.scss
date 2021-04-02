@@ -62,7 +62,10 @@ $c-twitter: #0084b4;
 $c-linkedin: #007bb6;
 
 // Base theme colours
-$c-selection: $c-lightblue2; // Change it to a contrast color per branding guidelines.
+$c-selection: lighten(
+  $c-lightblue2,
+  20%
+); // Change it to a contrast color per branding guidelines.
 $c-basecopyblack: $c-darkgrey; // Base color for all copy blocks and regular text.
 $c-links: $c-blue; // Base color for all links.
 $c-cta: $c-blue; // Base color for all CTAs

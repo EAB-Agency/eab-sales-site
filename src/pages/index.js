@@ -250,7 +250,10 @@ const ProgramsIndex = ({ data, pageContext }) => {
         </div>
       </section>
       <Fragment>
-        <PreFooter cta="Meet Your Counselor" />
+        <PreFooter
+          cta="Meet Your Counselor"
+          callout="Explore campus and see yourself at Bear University"
+        />
       </Fragment>
     </Layout>
   )

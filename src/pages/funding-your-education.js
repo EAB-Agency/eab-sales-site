@@ -326,6 +326,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
         <PreFooter
           cta="Take a Virtual Tour"
           url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=60231&data-image-width=100%&data-image-height=100%&"
+          callout="Explore campus and see yourself at Bear University"
         />
       </Fragment>
     </Layout>

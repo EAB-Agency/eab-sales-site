@@ -97,10 +97,11 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           </div>
           <p className="col-50">
             <q>
-              Faculty and staff in the MBA program keep class sizes small and
-              build personal connections with students. They care for students
-              as individuals and focus on helping them achieve positive outcomes
-              in their studies and careers.
+              Even in an online environment, the faculty and staff in the MBA
+              program keep class sizes small and build personal connections with
+              students. They care for students as individuals and focus on
+              helping them achieve positive outcomes in their studies and
+              careers.
             </q>
             <small>Jake Johnson '18</small>
             <Button variant="solid" color="terciary">
@@ -310,91 +311,19 @@ const AdmissionsIndex = ({ data, pageContext }) => {
               title="What is an MBA?"
               content="<p>An MBA is a general business administration degree offered at the graduate level. Core coursework within an MBA emphasizes foundational business knowledge and skills in management, accounting, and marketing. Individuals with an undergraduate degree in a field other than business may pursue an MBA to build essential business competencies.</p>"
             />
-            <Accordion
-              title="How much does it cost to attend Bear University?"
-              content="
-                    <p>One letter of recommendation from a teacher is required, but you
-                    may submit up to a total of three letters. The letters can be
-                    completed online through the Common App Teacher Evaluation form,
-                    or you can submit the letter(s) in the supplemental items area
-                    of the Big Blue Application.</p>
-                    <p>Paper letters of recommendation may be emailed to your admission
-                    counselor or mailed to:
-                  </p>
-                  <p>
-                    Office of Undergraduate Admissions
-                    <br />
-                    Bear University
-                    <br />
-                    1234 College Avenue
-                    <br />
-                    Anywhere, U.S. 12345
-                  </p>"
-            />
-            <Accordion
-              title="What skills will I learn as an MBA?"
-              content="
-                  <p>
-                  Your guidance counselor will need to submit your transcripts and
-                  recommendation. They can do so electronically through Naviance,
-                  SENDedu or the Common App, or by mail using the address above.
-                  If you’re applying with the <a href=''>Common App</a>, your
-                  counselor should also complete the School Report and submit it
-                  with your transcripts and school profile.
-                </p>
-                <p>
-                  For more detailed instructions, see the
-                  <a href=''>Resources for Guidance Counselors page</a>.
-                </p>
-                <p>
-                  If you’re curious about how AP and IB credits transfer, visit
-                  <a href=''>
-                    Transfer Evaluation Services for Undergraduate Students
-                  </a>
-                  .
-                </p>
-                <p>
-                  Send Verification of Compliance and Completion of Home Education
-                  Program. It should include a copy of a teacher’s evaluation or
-                  district confirmation, or verification of a passing score on the
-                  state student assessment test, administered by a certified
-                  teacher.
-                </p>"
-            />
-
-            <Accordion
-              title="How many credits are required to complete the MBA program?"
-              content="
-                  <p>
-                Due to testing challenges related to COVID-19, undergraduate
-                applicants for the 2021-22 admission cycle may choose to have
-                their application reviewed for admission
-                <strong>with or without</strong> the submission of SAT or ACT
-                scores.
-              </p>
-              "
-            />
-
-            <Accordion
-              title="Are there any dual degree options with an MBA?"
-              content="
-                  <p>
-                Due to testing challenges related to COVID-19, undergraduate
-                applicants for the 2021-22 admission cycle may choose to have
-                their application reviewed for admission
-                <strong>with or without</strong> the submission of SAT or ACT
-                scores.
-              </p>
-              "
-            />
+            <Accordion title="How much does it cost to attend Bear University?" />
+            <Accordion title="What skills will I learn as an MBA?" />
+            <Accordion title="How many credits are required to complete the MBA program?" />
+            <Accordion title="Are there any dual degree options with an MBA?" />
           </div>
         </div>
       </section>
 
       <Fragment>
         <PreFooter
-          cta="Take a Virtual Tour"
-          url="https://www.youvisit.com/#/vte/?data-platform=v&data-link-type=immersive&data-inst=60231&data-image-width=100%&data-image-height=100%&"
+          type="mba-prefooter"
+          cta="VIEW STUDENT STORIES"
+          callout="See what our recent grads are up to — and imagine what you could do with an MBA from Bear!"
         />
       </Fragment>
     </Layout>

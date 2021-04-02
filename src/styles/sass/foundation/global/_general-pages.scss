@@ -618,6 +618,10 @@ picture {
 .accordion__icon {
   margin-left: auto;
   transition: transform 0.6s ease;
+
+  .active & {
+    transform: rotate(90deg);
+  }
 }
 
 /* Style to rotate icon when state is active */
@@ -646,4 +650,8 @@ picture {
   width: 100%;
   max-width: $mq-900;
   margin: -5em auto 4em;
+}
+
+.mba-prefooter {
+  max-width: $mq-700;
 }

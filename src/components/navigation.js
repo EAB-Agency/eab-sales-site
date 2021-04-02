@@ -22,9 +22,12 @@ export default class Navigation extends Component {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
-              <Link to="/academics/">Academics</Link>
+            <li className="menu-item-has-children">
+              <a className="no-link">Academics</a>
               <ul className="subnav">
+                <li>
+                  <Link to="/academics/">Physician Assistant</Link>
+                </li>
                 <li>
                   <Link to="/mba/">MBA</Link>
                 </li>
