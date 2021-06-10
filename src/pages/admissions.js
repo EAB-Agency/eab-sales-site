@@ -4,7 +4,7 @@ import { Button } from '../components'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import SEO from '../components/seo'
 import IWC from '../components/iwc'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, graphql } from 'gatsby'
 import Accordion from '../components/accordion'
 import PreFooter from '../components/preFooter'
@@ -20,7 +20,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Undergrad Admissions</h2>
@@ -309,19 +309,16 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default AdmissionsIndex
 
-export const query = graphql`
-  query {
-    bannerImage: file(relativePath: { eq: "headers/admissions-header-2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 350) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  bannerImage: file(relativePath: {eq: "headers/admissions-header-2.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
+}
 `

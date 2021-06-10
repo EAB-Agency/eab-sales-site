@@ -4,7 +4,7 @@ import { Button } from '../components'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import SEO from '../components/seo'
 import IWC from '../components/iwc'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, graphql } from 'gatsby'
 import Accordion from '../components/accordion'
 import PreFooter from '../components/preFooter'
@@ -20,7 +20,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title mba">Graduate Programs</h2>
@@ -202,7 +202,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
             </div>
           </div>
           <figure className="col-50">
-            <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
+            <GatsbyImage image={data.imageFour.childImageSharp.gatsbyImageData} alt="" />
           </figure>
         </div>
       </section>
@@ -327,26 +327,21 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default AdmissionsIndex
 
-export const query = graphql`
-  query {
-    imageFour: file(relativePath: { eq: "inset-photos/writing-school.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000, maxHeight: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    bannerImage: file(relativePath: { eq: "headers/mba-header.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 350) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  imageFour: file(relativePath: {eq: "inset-photos/writing-school.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
+  bannerImage: file(relativePath: {eq: "headers/mba-header.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+}
 `

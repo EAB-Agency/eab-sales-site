@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Button, Box, Columns } from '../components/'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import IWC from '../components/iwc'
@@ -21,7 +21,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Student Life</h2>
@@ -256,7 +256,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
             </div>
           </div>
           <figure className="col-50">
-            <Img fluid={data.imageFive.childImageSharp.fluid} alt="" />
+            <GatsbyImage image={data.imageFive.childImageSharp.gatsbyImageData} alt="" />
           </figure>
         </div>
       </section>
@@ -265,7 +265,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
       <section className="blue-section testimonial">
         <div className="wrapper cols">
           <figure className="col-50">
-            <Img fluid={data.imageSix.childImageSharp.fluid} alt="" />
+            <GatsbyImage image={data.imageSix.childImageSharp.gatsbyImageData} alt="" />
           </figure>
           <p className="col-50">
             <q>
@@ -283,7 +283,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <div className="group news-article">
             <figure>
-              <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageOne.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Megan Bursch takes 2nd place in 3MT competition</h5>
             <p>
@@ -292,7 +292,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </div>
           <div className="group news-article">
             <figure>
-              <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageTwo.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Bear students support public health with mask project</h5>
             <p>
@@ -303,7 +303,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           <div className="group news-article">
             <Link to="/news/">
               <figure>
-                <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+                <GatsbyImage image={data.imageThree.childImageSharp.gatsbyImageData} alt="" />
               </figure>
               <h5>Construction begins on residence hall</h5>
               <p>A dynamic blended living and learning space is coming soon.</p>
@@ -311,7 +311,7 @@ const StudentLifeIndex = ({ data, pageContext }) => {
           </div>
           <div className="group news-article">
             <figure>
-              <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageFour.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Looking for a practical summer reading list?</h5>
             <p>Learn what our professors recommend to sharpen your skills.</p>
@@ -326,61 +326,45 @@ const StudentLifeIndex = ({ data, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default StudentLifeIndex
 
-export const squareImage = graphql`
-  fragment squareImage on File {
-    childImageSharp {
-      fluid(maxWidth: 355, maxHeight: 360) {
-        ...GatsbyImageSharpFluid
-      }
-    }
+export const squareImage = graphql`fragment squareImage on File {
+  childImageSharp {
+    gatsbyImageData(width: 355, height: 360, layout: CONSTRAINED)
   }
+}
 `
 
-export const query = graphql`
-  query {
-    imageOne: file(
-      relativePath: { eq: "news-thumbnails/news-conference.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageTwo: file(relativePath: { eq: "news-thumbnails/news-masks.jpg" }) {
-      ...squareImage
-    }
-    imageThree: file(
-      relativePath: { eq: "news-thumbnails/news-construction.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageFour: file(relativePath: { eq: "news-thumbnails/news-books.jpg" }) {
-      ...squareImage
-    }
-    imageFive: file(relativePath: { eq: "inset-photos/community-hands.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 450) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    imageSix: file(relativePath: { eq: "inset-photos/male-testimonial.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 450) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    bannerImage: file(
-      relativePath: { eq: "headers/student-life-header-2.jpg" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 450) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  imageOne: file(relativePath: {eq: "news-thumbnails/news-conference.jpg"}) {
+    ...squareImage
+  }
+  imageTwo: file(relativePath: {eq: "news-thumbnails/news-masks.jpg"}) {
+    ...squareImage
+  }
+  imageThree: file(relativePath: {eq: "news-thumbnails/news-construction.jpg"}) {
+    ...squareImage
+  }
+  imageFour: file(relativePath: {eq: "news-thumbnails/news-books.jpg"}) {
+    ...squareImage
+  }
+  imageFive: file(relativePath: {eq: "inset-photos/community-hands.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, height: 450, layout: CONSTRAINED)
     }
   }
+  imageSix: file(relativePath: {eq: "inset-photos/male-testimonial.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, height: 450, layout: CONSTRAINED)
+    }
+  }
+  bannerImage: file(relativePath: {eq: "headers/student-life-header-2.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+}
 `

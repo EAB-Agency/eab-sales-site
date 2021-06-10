@@ -71,3 +71,6 @@ public
 .contentful.json
 .env*
 !.env.example
+
+# Local Netlify folder
+.netlify

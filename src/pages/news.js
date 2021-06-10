@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components/'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
 import PreFooter from '../components/preFooter'
@@ -20,7 +20,7 @@ const NewsIndex = ({ data, location, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">News & Events</h2>
@@ -106,14 +106,14 @@ const NewsIndex = ({ data, location, pageContext }) => {
         <div className="wrapper">
           <div className="group">
             <figure>
-              <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageFour.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Cutting-edge upgrades coming to Bear labs</h5>
             <p>Bear’s STEM labs are getting a major upgrade this summer.</p>
           </div>
           <div className="group">
             <figure>
-              <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageOne.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Celebrating 2020’s All-American Scholars</h5>
             <p>
@@ -123,14 +123,14 @@ const NewsIndex = ({ data, location, pageContext }) => {
           </div>
           <div className="group">
             <figure>
-              <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageTwo.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Bear professor Jon Doe’s top-ranked TED talk</h5>
             <p>Watch the acclaimed TED talk about the future of AI.</p>
           </div>
           <div className="group">
             <figure>
-              <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageThree.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>Where are they now: Class of 2020</h5>
             <p>
@@ -148,49 +148,35 @@ const NewsIndex = ({ data, location, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default NewsIndex
 
-export const squareImage = graphql`
-  fragment squareImage on File {
-    childImageSharp {
-      fluid(maxWidth: 355, maxHeight: 360) {
-        ...GatsbyImageSharpFluid
-      }
-    }
+export const squareImage = graphql`fragment squareImage on File {
+  childImageSharp {
+    gatsbyImageData(width: 355, height: 360, layout: CONSTRAINED)
   }
+}
 `
 
-export const query = graphql`
-  query {
-    imageOne: file(
-      relativePath: { eq: "news-thumbnails/news-male-portrait.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageTwo: file(
-      relativePath: { eq: "news-thumbnails/news-man-woman-machine.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageThree: file(
-      relativePath: { eq: "news-thumbnails/news-graduation.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageFour: file(
-      relativePath: { eq: "news-thumbnails/news-microchip.jpg" }
-    ) {
-      ...squareImage
-    }
-    bannerImage: file(relativePath: { eq: "headers/news-header-2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 450) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  imageOne: file(relativePath: {eq: "news-thumbnails/news-male-portrait.jpg"}) {
+    ...squareImage
+  }
+  imageTwo: file(relativePath: {eq: "news-thumbnails/news-man-woman-machine.jpg"}) {
+    ...squareImage
+  }
+  imageThree: file(relativePath: {eq: "news-thumbnails/news-graduation.jpg"}) {
+    ...squareImage
+  }
+  imageFour: file(relativePath: {eq: "news-thumbnails/news-microchip.jpg"}) {
+    ...squareImage
+  }
+  bannerImage: file(relativePath: {eq: "headers/news-header-2.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
+}
 `

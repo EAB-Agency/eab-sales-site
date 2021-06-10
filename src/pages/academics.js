@@ -4,7 +4,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, graphql } from 'gatsby'
 import PreFooter from '../components/preFooter'
 
@@ -22,7 +22,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Academic Programs</h2>
@@ -321,7 +321,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
         </div>
         <div className="wrapper cols">
           <figure className="col-50">
-            <Img fluid={data.startJourney.childImageSharp.fluid} alt="" />
+            <GatsbyImage image={data.startJourney.childImageSharp.gatsbyImageData} alt="" />
           </figure>
           <div className="col-50">
             <h3>Start Your Journey to a Rewarding Career in Medicine Today</h3>
@@ -352,38 +352,28 @@ const ProgramsIndex = ({ data, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default ProgramsIndex
 
-export const squareImage = graphql`
-  fragment squareImage on File {
-    childImageSharp {
-      fluid(maxWidth: 355, maxHeight: 360) {
-        ...GatsbyImageSharpFluid
-      }
-    }
+export const squareImage = graphql`fragment squareImage on File {
+  childImageSharp {
+    gatsbyImageData(width: 355, height: 360, layout: CONSTRAINED)
   }
+}
 `
 
-export const query = graphql`
-  query {
-    startJourney: file(
-      relativePath: { eq: "inset-photos/female-testimonial.jpg" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 500, maxHeight: 500) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    bannerImage: file(relativePath: { eq: "headers/program-header-2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 350) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  startJourney: file(relativePath: {eq: "inset-photos/female-testimonial.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 500, height: 500, layout: CONSTRAINED)
     }
   }
+  bannerImage: file(relativePath: {eq: "headers/program-header-2.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
+    }
+  }
+}
 `

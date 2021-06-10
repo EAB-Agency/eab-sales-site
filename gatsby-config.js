@@ -29,6 +29,8 @@ const { gtmId } = gtmConfig
 //   )
 // }
 
+const siteUrl = process.env.URL || `https://agency.eab.com/partner`
+
 module.exports = {
   pathPrefix: '/partner',
 
@@ -52,7 +54,32 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    'gatsby-plugin-preact',
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+        {
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map((page) => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-load-script',

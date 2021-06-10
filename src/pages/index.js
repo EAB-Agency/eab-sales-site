@@ -4,7 +4,7 @@ import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import { Button } from '../components'
 import IWC from '../components/iwc'
 import SEO from '../components/seo'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import HeroVideo from '../video/sales-site-hero2.mp4'
 // import Container from '../components/container'
 import PreFooter from '../components/preFooter'
@@ -68,7 +68,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
           </div>
           <div className="col-40 start-career">
             <figure>
-              <Img fluid={data.startCareer.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.startCareer.childImageSharp.gatsbyImageData} alt="" />
               <figcaption className="img-caption-green">
                 I’VE FOUND A SECOND FAMILY AT BEAR.{' '}
                 <span className="caption-by">Mia Carmichael</span>
@@ -156,10 +156,9 @@ const ProgramsIndex = ({ data, pageContext }) => {
             </div>
 
             <figure className="col-50">
-              <Img
-                fluid={data.investFuture.childImageSharp.fluid}
-                alt="Invest in Your Future"
-              />
+              <GatsbyImage
+                image={data.investFuture.childImageSharp.gatsbyImageData}
+                alt="Invest in Your Future" />
               <figcaption className="img-caption-purple">
                 AT BEAR MY DREAMS BECAME A REALITY
                 <span className="caption-by">Anthony Cerezo</span>
@@ -203,14 +202,14 @@ const ProgramsIndex = ({ data, pageContext }) => {
           <div className="news-wrapper">
             <div className="group news">
               <figure>
-                <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
+                <GatsbyImage image={data.imageFour.childImageSharp.gatsbyImageData} alt="" />
               </figure>
               <h5>Cutting-edge upgrades coming to Bear labs</h5>
               <p>Bear’s STEM labs are getting a major upgrade this summer.</p>
             </div>
             <div className="group events">
               <figure>
-                <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+                <GatsbyImage image={data.imageTwo.childImageSharp.gatsbyImageData} alt="" />
                 <div className="date">
                   Sep <span class="date-day">8</span>
                 </div>
@@ -220,7 +219,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             </div>
             <div className="group news">
               <figure>
-                <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+                <GatsbyImage image={data.imageOne.childImageSharp.gatsbyImageData} alt="" />
               </figure>
               <h5>Celebrating 2020’s All-American Scholars</h5>
               <p>
@@ -230,7 +229,7 @@ const ProgramsIndex = ({ data, pageContext }) => {
             </div>
             <div className="group events">
               <figure>
-                <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+                <GatsbyImage image={data.imageThree.childImageSharp.gatsbyImageData} alt="" />
                 <div className="date">
                   Jun <span class="date-day">28</span>
                 </div>
@@ -256,58 +255,40 @@ const ProgramsIndex = ({ data, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default ProgramsIndex
 
-export const squareImage = graphql`
-  fragment squareImage on File {
-    childImageSharp {
-      fluid(maxWidth: 355, maxHeight: 360) {
-        ...GatsbyImageSharpFluid
-      }
-    }
+export const squareImage = graphql`fragment squareImage on File {
+  childImageSharp {
+    gatsbyImageData(width: 355, height: 360, layout: CONSTRAINED)
   }
+}
 `
 
-export const query = graphql`
-  query {
-    imageOne: file(
-      relativePath: { eq: "news-thumbnails/news-male-portrait.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageTwo: file(
-      relativePath: { eq: "news-thumbnails/news-man-woman-machine.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageThree: file(
-      relativePath: { eq: "news-thumbnails/news-graduation.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageFour: file(
-      relativePath: { eq: "news-thumbnails/news-microchip.jpg" }
-    ) {
-      ...squareImage
-    }
-    startCareer: file(
-      relativePath: { eq: "inset-photos/start-succesful-career.jpg" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 600, maxHeight: 700) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    investFuture: file(relativePath: { eq: "inset-photos/invest-future.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 700, maxHeight: 700) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  imageOne: file(relativePath: {eq: "news-thumbnails/news-male-portrait.jpg"}) {
+    ...squareImage
+  }
+  imageTwo: file(relativePath: {eq: "news-thumbnails/news-man-woman-machine.jpg"}) {
+    ...squareImage
+  }
+  imageThree: file(relativePath: {eq: "news-thumbnails/news-graduation.jpg"}) {
+    ...squareImage
+  }
+  imageFour: file(relativePath: {eq: "news-thumbnails/news-microchip.jpg"}) {
+    ...squareImage
+  }
+  startCareer: file(relativePath: {eq: "inset-photos/start-succesful-career.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, height: 700, layout: CONSTRAINED)
     }
   }
+  investFuture: file(relativePath: {eq: "inset-photos/invest-future.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 700, height: 700, layout: CONSTRAINED)
+    }
+  }
+}
 `

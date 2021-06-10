@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import Video from '../components/video'
 import SEO from '../components/seo'
 import { Link, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import IWC from '../components/iwc'
 import PreFooter from '../components/preFooter'
 
@@ -21,7 +21,7 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title">Funding Your Education</h2>
@@ -330,19 +330,16 @@ const FinancialAidIndex = ({ data, location, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default FinancialAidIndex
 
-export const query = graphql`
-  query {
-    bannerImage: file(relativePath: { eq: "headers/funding-header-3.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 350) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  bannerImage: file(relativePath: {eq: "headers/funding-header-3.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
+}
 `

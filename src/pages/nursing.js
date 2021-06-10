@@ -4,7 +4,7 @@ import { Button } from '../components'
 import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 import SEO from '../components/seo'
 import IWC from '../components/iwc'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import { Link, graphql } from 'gatsby'
 import Accordion from '../components/accordion'
 import PreFooter from '../components/preFooter'
@@ -20,7 +20,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
       {/*CONTENT HEADER*/}
       <header className="content-header">
         <div className="hero-image">
-          <Img fluid={data.bannerImage.childImageSharp.fluid} alt="" />
+          <GatsbyImage image={data.bannerImage.childImageSharp.gatsbyImageData} alt="" />
         </div>
         <div className="page-title-container">
           <h2 className="page-title mba">Graduate Programs</h2>
@@ -377,7 +377,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         <div className="wrapper">
           <div className="group">
             <figure>
-              <Img fluid={data.imageFour.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageFour.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>
               Navy Nurse and College of Nursing, doctorate student deployed to
@@ -386,7 +386,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           </div>
           <div className="group">
             <figure>
-              <Img fluid={data.imageOne.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageOne.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>
               Bear University nursing graduate steps up to aid passenger on
@@ -395,7 +395,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           </div>
           <div className="group">
             <figure>
-              <Img fluid={data.imageTwo.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageTwo.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>
               Jess Johnson ‘19 gives Ted Talk on importance of diversity in
@@ -404,7 +404,7 @@ const AdmissionsIndex = ({ data, pageContext }) => {
           </div>
           <div className="group">
             <figure>
-              <Img fluid={data.imageThree.childImageSharp.fluid} alt="" />
+              <GatsbyImage image={data.imageThree.childImageSharp.gatsbyImageData} alt="" />
             </figure>
             <h5>
               Health care news: Nurses pioneer new tool in pediatric patient
@@ -421,33 +421,28 @@ const AdmissionsIndex = ({ data, pageContext }) => {
         />
       </Fragment>
     </Layout>
-  )
+  );
 }
 
 export default AdmissionsIndex
 
-export const query = graphql`
-  query {
-    imageOne: file(relativePath: { eq: "news-thumbnails/news-plane.jpg" }) {
-      ...squareImage
-    }
-    imageTwo: file(relativePath: { eq: "news-thumbnails/news-tedtalk.jpg" }) {
-      ...squareImage
-    }
-    imageThree: file(
-      relativePath: { eq: "news-thumbnails/news-pediatric.jpg" }
-    ) {
-      ...squareImage
-    }
-    imageFour: file(relativePath: { eq: "news-thumbnails/news-lab.jpg" }) {
-      ...squareImage
-    }
-    bannerImage: file(relativePath: { eq: "headers/nursing-header.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1840, maxHeight: 350) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+export const query = graphql`{
+  imageOne: file(relativePath: {eq: "news-thumbnails/news-plane.jpg"}) {
+    ...squareImage
+  }
+  imageTwo: file(relativePath: {eq: "news-thumbnails/news-tedtalk.jpg"}) {
+    ...squareImage
+  }
+  imageThree: file(relativePath: {eq: "news-thumbnails/news-pediatric.jpg"}) {
+    ...squareImage
+  }
+  imageFour: file(relativePath: {eq: "news-thumbnails/news-lab.jpg"}) {
+    ...squareImage
+  }
+  bannerImage: file(relativePath: {eq: "headers/nursing-header.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(layout: FULL_WIDTH)
     }
   }
+}
 `
